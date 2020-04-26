@@ -78,7 +78,7 @@ function heroDice() {
         heroDicePool = powerLevels[levels[x]].hd;
 
         let selectTraits = document.querySelectorAll('.trait');
-        for (let i = 0; i < selectTraits.length;) {
+        for (let i = 0; i < selectTraits.length; i++) {
             selectTraits[i].max = powerLevels[levels[x]].maxRank;
         }
         document.getElementById('hdRemaining').innerHTML = powerLevels[levels[x]].hd;
