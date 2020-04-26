@@ -1,0 +1,12 @@
+body {
+    font-family: 'Comfortaa', cursive;
+}
+.input-group-prepend {
+    min-width: 186px;
+}
+.input-group-prepend~span {
+    width: 100%;
+}
+.hide {
+    display: none;
+}
