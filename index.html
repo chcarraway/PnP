@@ -62,7 +62,8 @@
                         <div class="accordion" id="accordion">
                             <div class="card">
                                 <!-- FLUFF -->
-                                <div class="card-header" id="fluffHeading">
+                                <div class="card-header" id="fluffHeading" data-toggle="collapse"
+                                data-target="#fluffCollapse">
                                     <button class="btn btn-link" type="button" data-toggle="collapse"
                                         data-target="#fluffCollapse">
                                         <h3 class="font-italic mb-0">Character Details</h3>
@@ -150,7 +151,8 @@
                                     </div>
                                 </div>
                                 <!-- GAMERULES -->
-                                <div class="card-header" id="gameRulesHeading">
+                                <div class="card-header" id="gameRulesHeading" data-toggle="collapse"
+                                data-target="#gameRulesCollapse">
                                     <button class="btn btn-link" type="button" data-toggle="collapse"
                                         data-target="#gameRulesCollapse">
                                         <h3 class="font-italic mb-0">Game Rules</h3>
@@ -181,12 +183,13 @@
                                         <div class="input-group mb-3">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text w-100">Advancement Dice</span></div>
-                                            <input type="text" class="form-control" id="advancement" placeholder="0">
+                                            <input type="number" class="form-control" id="advancement" value="0" min="0">
                                         </div>
                                     </div>
                                 </div>
                                 <!-- TRAITS -->
-                                <div class="card-header" id="traitsHeading">
+                                <div class="card-header" id="traitsHeading" data-toggle="collapse"
+                                data-target="#traitsCollapse">
                                     <button class="btn btn-link" type="button" data-toggle="collapse"
                                         data-target="#traitsCollapse">
                                         <h3 class="font-italic mb-0">Traits</h3>
@@ -204,7 +207,8 @@
                                     </div>
                                 </div>
                                 <!-- POWERS -->
-                                <div class="card-header" id="powersHeading">
+                                <div class="card-header" id="powersHeading" data-toggle="collapse"
+                                data-target="#powersCollapse">
                                     <button class="btn btn-link" type="button" data-toggle="collapse"
                                         data-target="#powersCollapse">
                                         <h3 class="font-italic mb-0">Powers</h3>
@@ -214,7 +218,8 @@
                                     <!-- populateForm() runs here -->
                                 </div>
                                 <!-- PERKS -->
-                                <div class="card-header" id="perksHeading">
+                                <div class="card-header" id="perksHeading" data-toggle="collapse"
+                                data-target="#perksCollapse">
                                     <button class="btn btn-link" type="button" data-toggle="collapse"
                                         data-target="#perksCollapse">
                                         <h3 class="font-italic mb-0">Perks</h3>
@@ -224,7 +229,8 @@
                                     <!-- populateForm() runs here -->
                                 </div>
                                 <!-- INVENTORY -->
-                                <div class="card-header" id="inventoryHeading">
+                                <div class="card-header" id="inventoryHeading" data-toggle="collapse"
+                                data-target="#inventoryCollapse">
                                     <button class="btn btn-link" type="button" data-toggle="collapse"
                                         data-target="#inventoryCollapse">
                                         <h3 class="font-italic mb-0">Inventory</h3>

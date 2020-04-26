@@ -4,6 +4,7 @@ var trait = Object.keys(traits);
 var heroDicePool = 0;
 var hdSpend = 0;
 var hdRemaining = 0;
+var ad = 0
 
 function checkTabPress(e) {
     "use strict";
@@ -89,6 +90,11 @@ function heroDice() {
     }
 }
 
+function advancement() {
+    ad =  parseInt(document.getElementById('advancement').value);
+    hdRemaining = heroDicePool - hdSpend + ad;
+    document.getElementById('hdRemaining').innerHTML = hdRemaining;
+}
 
 function tallyHD() {
     hdSpend = 0;
@@ -100,7 +106,7 @@ function tallyHD() {
     //...powers...
     //...perks...
     //...pros/cons...
-    hdRemaining = heroDicePool - hdSpend;
+    hdRemaining = heroDicePool - hdSpend + ad;
     // update HD remaining in the header
     document.getElementById('hdRemaining').innerHTML = hdRemaining
 }
@@ -111,6 +117,7 @@ tier.addEventListener('change', heroDice);
 const form = document.getElementById('form');
 form.addEventListener('change', weakAttribute);
 form.addEventListener('change', tallyHD);
+form.addEventListener('change', advancement);
 
 const body = document.querySelector('body');
 body.addEventListener('keyup', checkTabPress);
