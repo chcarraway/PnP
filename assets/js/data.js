@@ -318,253 +318,253 @@ var powers = [
 var perks = [
     {
         name: "Ally",
-        Modifier: 2
+        cost: 2
     }, {
         name: "Ambidexterity",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Animal Empathy",
-        Modifier: 2
+        cost: 2
     }, {
         name: "Animal Forms",
-        Modifier: 6
+        cost: 6
     }, {
         name: "Astral Projection",
-        Modifier: 6
+        cost: 6
     }, {
         name: "Authority",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Blending",
-        Modifier: 2
+        cost: 2
     }, {
         name: "Blind Fighting",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Communicator",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Contact",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Cosmic Awareness",
-        Modifier: 2
+        cost: 2
     }, {
         name: "Dimensional Travel",
-        Modifier: 2
+        cost: 2
     }, {
         name: "Duplication",
-        Modifier: 6
+        cost: 6
     }, {
         name: "Enhanced Defense",
-        Modifier: 4
+        cost: 4
     }, {
         name: "Extra Limbs",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Fame",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Gaseous Form",
-        Modifier: 3
+        cost: 3
     }, {
         name: "Headquarters",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Hibernation",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Immortality",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Immunity (Specific)",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Immunity (Damage Type)",
-        Modifier: 3
+        cost: 3
     }, {
         name: "Invisibility",
-        Modifier: 6
+        cost: 6
     }, {
         name: "Knockdown",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Leadership",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Life Support",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Lightning Reflexes",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Liquid Form",
-        Modifier: 9
+        cost: 9
     }, {
         name: "Luck",
-        Modifier: 2
+        cost: 2
     }, {
         name: "Morph",
-        Modifier: 4
+        cost: 4
     }, {
         name: "Patron",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Phasing",
-        Modifier: 4
+        cost: 4
     }, {
         name: "Photographic Memory",
-        Modifier: 2
+        cost: 2
     }, {
         name: "Power Mimicry (single)",
-        Modifier: 12
+        cost: 12
     }, {
         name: "Power Mimicry (all)",
-        Modifier: 24
+        cost: 24
     }, {
         name: "Power Theft (single)",
-        Modifier: 12
+        cost: 12
     }, {
         name: "Power Theft (all)",
-        Modifier: 24
+        cost: 24
     }, {
         name: "Precognition",
-        Modifier: 6
+        cost: 6
     }, {
         name: "Psi-Screen",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Psychometry",
-        Modifier: 2
+        cost: 2
     }, {
         name: "Quick Change",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Reach",
-        Modifier: 2
+        cost: 2
     }, {
         name: "Regeneration (1/hour)",
-        Modifier: 3
+        cost: 3
     }, {
         name: "Regeneration (1/minute)",
-        Modifier: 6
+        cost: 6
     }, {
         name: "Regeneration (1/page)",
-        Modifier: 12
+        cost: 12
     }, {
         name: "Relentless",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Scrying",
-        Modifier: 4
+        cost: 4
     }, {
         name: "Separation",
-        Modifier: 2
+        cost: 2
     }, {
         name: "Speak with Dead",
-        Modifier: 2
+        cost: 2
     }, {
         name: "Special Vehicle",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Super Senses (Astral Sight)",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Super Senses (Attuned)",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Super Senses (Circular Vision)",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Super Senses (Danger Sense)",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Super Senses (Detection)",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Super Senses (Lie Detection)",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Super Senses (Microscopic Vision)",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Super Senses (Night Vision)",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Super Senses (Radar)",
-        Modifier: 2
+        cost: 2
     }, {
         name: "Super Senses (Radio Hearing)",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Super Senses (Sonar)",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Super Senses (Telescopic Vision)",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Super Senses (Thermal Vision)",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Super Senses (Trace)",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Super Senses (Tracking Scent)",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Super Senses (True Sight)",
-        Modifier: 4
+        cost: 4
     }, {
         name: "Super Senses (Ultra Hearing)",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Super Senses (Ultra Vision)",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Super Senses (X-Ray Vision)",
-        Modifier: 4
+        cost: 4
     }, {
         name: "Super Translation",
-        Modifier: 3
+        cost: 3
     }, {
         name: "Time Stop",
-        Modifier: 12
+        cost: 12
     }, {
         name: "Time Travel",
-        Modifier: 4
+        cost: 4
     }, {
         name: "Trackless",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Transformation",
-        Modifier: 4
+        cost: 4
     }, {
         name: "Two-Dimensional",
-        Modifier: 2
+        cost: 2
     }, {
         name: "Uncanny Defense",
-        Modifier: 2
+        cost: 2
     }, {
         name: "Unkillable",
-        Modifier: 2
+        cost: 2
     }, {
         name: "Unliving",
-        Modifier: 9
+        cost: 9
     }, {
         name: "Vanish",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Wall-Crawling",
-        Modifier: 2
+        cost: 2
     }, {
         name: "Warp Pocket",
-        Modifier: 1
+        cost: 1
     }, {
         name: "Weakness Detection",
-        Modifier: 6
+        cost: 6
     }, {
         name: "Wealth",
-        Modifier: 1
+        cost: 1
     }
 ];
 var prosCons = [

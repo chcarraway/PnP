@@ -2,6 +2,9 @@
 var levels = Object.keys(powerLevels);
 var trait = Object.keys(traits);
 var heroDicePool = 0;
+var hdSpend = 0;
+var hdRemaining = 0;
+
 function checkTabPress(e) {
     "use strict";
     // pick passed event or global event object if passed one is empty
@@ -75,19 +78,31 @@ function heroDice() {
         document.getElementById('gameTierHD').innerHTML = powerLevels[levels[x]].hd;
         document.getElementById('gameTierMax').innerHTML = powerLevels[levels[x]].maxRank;
         document.getElementById('maxRank').innerHTML = powerLevels[levels[x]].maxRank;
-        heroDicePool = powerLevels[levels[x]].hd;
+        heroDicePool = powerLevels[levels[x]].hd + 36;
+        hdRemaining = powerLevels[levels[x]].hd;
 
         let selectTraits = document.querySelectorAll('.trait');
         for (let i = 0; i < selectTraits.length; i++) {
             selectTraits[i].max = powerLevels[levels[x]].maxRank;
         }
-        document.getElementById('hdRemaining').innerHTML = powerLevels[levels[x]].hd;
+        document.getElementById('hdRemaining').innerHTML = hdRemaining;
     }
 }
 
 
-function spendHD() {
-
+function tallyHD() {
+    hdSpend = 0;
+    // count HD spent on Traits
+    let selectTraits = document.querySelectorAll('.trait');
+    for (let i = 0; i < selectTraits.length; i++) {
+        hdSpend = hdSpend + parseInt(selectTraits[i].value);
+    }
+    //...powers...
+    //...perks...
+    //...pros/cons...
+    hdRemaining = heroDicePool - hdSpend;
+    // update HD remaining in the header
+    document.getElementById('hdRemaining').innerHTML = hdRemaining
 }
 
 const tier = document.getElementById('gameTierSelect');
@@ -95,6 +110,7 @@ tier.addEventListener('change', heroDice);
 
 const form = document.getElementById('form');
 form.addEventListener('change', weakAttribute);
+form.addEventListener('change', tallyHD);
 
 const body = document.querySelector('body');
 body.addEventListener('keyup', checkTabPress);
