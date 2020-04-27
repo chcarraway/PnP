@@ -383,7 +383,8 @@ var powers = [
 var perks = [
     {
         name: "Ally",
-        cost: 2
+        cost: 2,
+        multiple: true
     }, {
         name: "Ambidexterity",
         cost: 1
@@ -410,7 +411,8 @@ var perks = [
         cost: 1
     }, {
         name: "Contact",
-        cost: 1
+        cost: 1,
+        multiple: true
     }, {
         name: "Cosmic Awareness",
         cost: 2
@@ -419,7 +421,8 @@ var perks = [
         cost: 2
     }, {
         name: "Duplication",
-        cost: 6
+        cost: 6,
+        multiple: true
     }, {
         name: "Enhanced Defense",
         cost: 4
@@ -443,10 +446,12 @@ var perks = [
         cost: 1
     }, {
         name: "Immunity (Specific)",
-        cost: 1
+        cost: 1,
+        multiple: true
     }, {
         name: "Immunity (Damage Type)",
-        cost: 3
+        cost: 3,
+        multiple: true
     }, {
         name: "Invisibility",
         cost: 6
@@ -458,7 +463,8 @@ var perks = [
         cost: 1
     }, {
         name: "Life Support",
-        cost: 1
+        cost: 1,
+        multiple: true
     }, {
         name: "Lightning Reflexes",
         cost: 1
@@ -530,7 +536,8 @@ var perks = [
         cost: 2
     }, {
         name: "Special Vehicle",
-        cost: 1
+        cost: 1,
+        multiple: true
     }, {
         name: "Super Senses (Astral Sight)",
         cost: 1

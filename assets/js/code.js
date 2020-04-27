@@ -34,7 +34,7 @@ function weakAttribute(e) {
         weakCount--;
     }
 
-    if (weakCount > 3){
+    if (weakCount > 3) {
         $('#errorModal').modal('show');
     }
 }
@@ -77,30 +77,53 @@ function populateForm() {
     let powerContainer = document.getElementById('powerContainer');
     for (let i = 0; i < powers.length; i++) {
         let noSpaceName = powers[i].name.replace(/\s+/g, '');
-        if (powers[i].strong === 'TRUE'){
-            
-        powerContainer.innerHTML +=
-        '<div class="input-group mb-3">' +
-        '<div class="input-group-prepend w186">' +
-        '<span class="input-group-text w186">' + powers[i].name + '</span> ' +
-        '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
-        '</div>' +
-        '<input type="number" class="form-control power rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
-        '<div class="input-group-append">' +
-        '<span class="input-group-text" id="strong" data-toggle="tooltip" title="Strong attributes cost twice as much">Strong</span>' +
-        '</div>' +
-        '</div>';
-        }else{
+        if (powers[i].strong === 'TRUE') {
+
             powerContainer.innerHTML +=
-            '<div class="input-group mb-3">' +
-            '<div class="input-group-prepend w186">' +
-            '<span class="input-group-text w186">' + powers[i].name + '</span> ' +
-            '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
-            '</div>' +
-            '<input type="number" class="form-control power rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
-            '<div class="input-group-append">' +
-            '</div>' +
-            '</div>';
+                '<div class="input-group mb-3">' +
+                '<div class="input-group-prepend w186">' +
+                '<span class="input-group-text w186">' + powers[i].name + '</span> ' +
+                '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
+                '</div>' +
+                '<input type="number" class="form-control power rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
+                '<div class="input-group-append">' +
+                '<span class="input-group-text" id="strong" data-toggle="tooltip" title="Strong attributes cost twice as much">Strong</span>' +
+                '</div>' +
+                '</div>';
+        } else {
+            powerContainer.innerHTML +=
+                '<div class="input-group mb-3">' +
+                '<div class="input-group-prepend w186">' +
+                '<span class="input-group-text w186">' + powers[i].name + '</span> ' +
+                '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
+                '</div>' +
+                '<input type="number" class="form-control power rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
+                '<div class="input-group-append">' +
+                '</div>' +
+                '</div>';
+        }
+    }
+    let perkContainer = document.getElementById('perkContainer');
+    for (let i = 0; i < perks.length; i++) {
+        let noSpaceName = perks[i].name.replace(/\s+/g, '');
+        if (perks[i].multiple === true) {
+            perkContainer.innerHTML +=
+                '<div class="input-group mb-3">' +
+                '<div class="input-group-prepend w186">' +
+                '<span class="input-group-text w186">' + perks[i].name + '</span>' +
+                '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span></div>' +
+                '<input type="number" class="form-control perk rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
+                '<div class="input-group-append">' + '<span class="input-group-text cost" id="' + noSpaceName + 'Cost"> ' + perks[i].cost + '</span>'
+            '</div></div>';
+        } else {
+            perkContainer.innerHTML +=
+                '<div class="input-group mb-3">' +
+                '<div class="input-group-prepend w186">' +
+                '<span class="input-group-text w186">' + perks[i].name + '</span>' +
+                '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span></div>' +
+                '<input type="number" class="form-control perk rank" id="' + noSpaceName + 'Value" value="0" min="0" max="1">' +
+                '<div class="input-group-append">' + '<span class="input-group-text cost" id="' + noSpaceName + 'Cost"> ' + perks[i].cost + '</span>'
+            '</div></div>';
         }
     }
 }
@@ -110,9 +133,9 @@ function heroDice() {
     if (x == 999) {
         document.getElementById('gameTierHD').innerHTML = "";
         //document.getElementById('gameTierMax').innerHTML = "";
-        
+
         let ranks = document.getElementsByClassName('maxRank')
-        for (let i = 0; i < ranks.length; i++){
+        for (let i = 0; i < ranks.length; i++) {
             ranks[i].innerHTML = "";
         }
         heroDicePool = "";
@@ -122,7 +145,7 @@ function heroDice() {
         //document.getElementById('gameTierMax').innerHTML = powerLevels[levels[x]].maxRank;
 
         let ranks = document.getElementsByClassName('maxRank')
-        for (let i = 0; i < ranks.length; i++){
+        for (let i = 0; i < ranks.length; i++) {
             ranks[i].innerHTML = powerLevels[levels[x]].maxRank;
         }
 
@@ -155,10 +178,10 @@ function tallyHD() {
     document.getElementById('hdRemaining').innerHTML = hdRemaining
 }
 
-function setSpend(){
+function setSpend() {
     //loop for traits
     let selectTraits = document.querySelectorAll('.trait');
-    for (i = 0; i < selectTraits.length; i++){
+    for (i = 0; i < selectTraits.length; i++) {
         let noSpaceName = traits[i].name.replace(/\s+/g, '');
         let currentRank = parseInt(selectTraits[i].value);
         traits[i].rank = currentRank - 2;
@@ -167,7 +190,7 @@ function setSpend(){
 
     //loop for powers
     let selectPowers = document.querySelectorAll('.power');
-    for (i = 0; i < selectPowers.length; i++){
+    for (i = 0; i < selectPowers.length; i++) {
         let noSpaceName = powers[i].name.replace(/\s+/g, '');
         let currentRank = parseInt(selectPowers[i].value);
         if (powers[i].strong === 'TRUE') {
@@ -177,6 +200,14 @@ function setSpend(){
             powers[i].rank = currentRank;
         }
         document.getElementById(noSpaceName + 'Spend').innerHTML = powers[i].rank;
+    }
+    //loop for perks
+    let selectperks = document.querySelectorAll('.perk');
+    for (i = 0; i < selectperks.length; i++) {
+        let noSpaceName = perks[i].name.replace(/\s+/g, '');
+        let currentRank = parseInt(selectperks[i].value);
+        perks[i].rank = currentRank;
+        document.getElementById(noSpaceName + 'Spend').innerHTML = perks[i].cost * perks[i].rank;
     }
 }
 
