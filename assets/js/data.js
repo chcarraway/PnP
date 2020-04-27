@@ -707,757 +707,632 @@ var perks = [
 var prosCons = [
     {
         name: "Languages",
-        modifier: 1,
+        cost: 1,
         tpp: "Academics",
         rank: 0,
-        proscons: ""
     }, {
         name: "Martial Arts",
-        modifier: 1,
+        cost: 1,
         tpp: "Athletics",
         rank: 0,
-        proscons: ""
     }, {
         name: "Weaponry",
-        modifier: 1,
+        cost: 1,
         tpp: "Athletics",
         rank: 0,
-        proscons: ""
     }, {
         name: "Disguise",
-        modifier: 1,
+        cost: 1,
         tpp: "Charm",
         rank: 0,
-        proscons: ""
     }, {
         name: "Gambling",
-        modifier: 1,
+        cost: 1,
         tpp: "Charm",
         rank: 0,
-        proscons: ""
     }, {
         name: "Ventriloquism",
-        modifier: 1,
+        cost: 1,
         tpp: "Charm",
         rank: 0,
-        proscons: ""
     }, {
         name: "Shockwave",
-        modifier: 2,
+        cost: 2,
         tpp: "Might",
         rank: 0,
-        proscons: ""
     }, {
         name: "Tremor",
-        modifier: 2,
+        cost: 2,
         tpp: "Might",
         rank: 0,
-        proscons: ""
     }, {
         name: "Acute Sense (Touch)",
-        modifier: 1,
+        cost: 1,
         tpp: "Perception",
         rank: 0,
-        proscons: ""
     }, {
         name: "Acute Sense (Sight)",
-        modifier: 1,
+        cost: 1,
         tpp: "Perception",
         rank: 0,
-        proscons: ""
     }, {
         name: "Acute Sense (Hearing)",
-        modifier: 1,
+        cost: 1,
         tpp: "Perception",
         rank: 0,
-        proscons: ""
     }, {
         name: "Acute Sense (Smell)",
-        modifier: 1,
+        cost: 1,
         tpp: "Perception",
         rank: 0,
-        proscons: ""
     }, {
         name: "Acute Sense (Taste)",
-        modifier: 1,
+        cost: 1,
         tpp: "Perception",
         rank: 0,
-        proscons: ""
     }, {
         name: "Investigation",
-        modifier: 1,
+        cost: 1,
         tpp: "Perception",
         rank: 0,
-        proscons: ""
     }, {
         name: "Experienced",
-        modifier: 1,
+        cost: 1,
         tpp: "Professional",
         rank: 0,
-        proscons: ""
     }, {
         name: "Aircraft",
-        modifier: 1,
+        cost: 1,
         tpp: "Vehicles",
         rank: 0,
-        proscons: ""
     }, {
         name: "Spacecraft",
-        modifier: 1,
+        cost: 1,
         tpp: "Vehicles",
         rank: 0,
-        proscons: ""
     }, {
         name: "Watercraft",
-        modifier: 1,
+        cost: 1,
         tpp: "Vehicles",
         rank: 0,
-        proscons: ""
     }, {
         name: "Siphon",
-        modifier: 1,
+        cost: 1,
         tpp: "Absorption",
         rank: 0,
-        proscons: ""
     }, {
         name: "Impenetrable",
-        modifier: "x2",
+        cost: "x2",
         tpp: "Armor",
         rank: 0,
-        proscons: ""
     }, {
         name: "Psychic",
-        modifier: 0,
+        cost: 0,
         tpp: "Force Field",
         rank: 0,
-        proscons: ""
     }, {
         name: "Active",
-        modifier: -1,
+        cost: -1,
         tpp: "Armor",
         rank: 0,
-        proscons: ""
     }, {
         name: "Blocking",
-        modifier: 2,
+        cost: 2,
         tpp: "Strike",
         rank: 0,
-        proscons: ""
     }, {
         name: "Penetrating",
-        modifier: "x2",
+        cost: "x2",
         tpp: "Strike",
         rank: 0,
-        proscons: ""
     }, {
         name: "Marksmanship (Guns)",
-        modifier: -1,
+        cost: -1,
         tpp: "Blast",
         rank: 0,
-        proscons: ""
     }, {
         name: "Marksmanship (Bows)",
-        modifier: -1,
+        cost: -1,
         tpp: "Blast",
         rank: 0,
-        proscons: ""
     }, {
         name: "Absolute",
-        modifier: 2,
+        cost: 2,
         tpp: "Darkness",
         rank: 0,
-        proscons: ""
     }, {
         name: "Deafening",
-        modifier: -1,
+        cost: -1,
         tpp: "Dazzle",
         rank: 0,
-        proscons: ""
     }, {
         name: "Defensive",
-        modifier: 3,
+        cost: 3,
         tpp: "Energy Field",
         rank: 0,
-        proscons: ""
     }, {
         name: "Energy Form",
-        modifier: 6,
+        cost: 6,
         tpp: "Energy Field",
         rank: 0,
-        proscons: ""
     }, {
         name: "Capture",
-        modifier: 1,
+        cost: 1,
         tpp: "Ensnare",
         rank: 0,
-        proscons: ""
     }, {
         name: "Immobilize",
-        modifier: -2,
+        cost: -2,
         tpp: "Ensnare",
         rank: 0,
-        proscons: ""
     }, {
         name: "Spaceflight",
-        modifier: 1,
+        cost: 1,
         tpp: "Flight",
         rank: 0,
-        proscons: ""
     }, {
         name: "Gliding",
-        modifier: -1,
+        cost: -1,
         tpp: "Flight",
         rank: 0,
-        proscons: ""
     }, {
         name: "Levitation",
-        modifier: -2,
+        cost: -2,
         tpp: "Flight",
         rank: 0,
-        proscons: ""
     }, {
         name: "Wings",
-        modifier: -1,
+        cost: -1,
         tpp: "Flight",
         rank: 0,
-        proscons: ""
     }, {
         name: "Cure",
-        modifier: 2,
+        cost: 2,
         tpp: "Healing/Repair",
         rank: 0,
-        proscons: ""
     }, {
         name: "Slay",
-        modifier: -4,
+        cost: -4,
         tpp: "Life Drain",
         rank: 0,
-        proscons: ""
     }, {
         name: "Cables",
-        modifier: -1,
+        cost: -1,
         tpp: "Machine Control",
         rank: 0,
-        proscons: ""
     }, {
         name: "Interface",
-        modifier: -1,
+        cost: -1,
         tpp: "Machine Control",
         rank: 0,
-        proscons: ""
     }, {
         name: "Animal Control (all)",
-        modifier: -1,
+        cost: -1,
         tpp: "Mind Control",
         rank: 0,
-        proscons: ""
     }, {
         name: "Animal Control (large category)",
-        modifier: -2,
+        cost: -2,
         tpp: "Mind Control",
         rank: 0,
-        proscons: ""
     }, {
         name: "Animal Control (small category)",
-        modifier: -3,
+        cost: -3,
         tpp: "Mind Control",
         rank: 0,
-        proscons: ""
     }, {
         name: "Confusion",
-        modifier: -2,
+        cost: -2,
         tpp: "Mind Control",
         rank: 0,
-        proscons: ""
     }, {
         name: "Emotion Control (any)",
-        modifier: -1,
+        cost: -1,
         tpp: "Mind Control",
         rank: 0,
-        proscons: ""
     }, {
         name: "Emotion Control (specific)",
-        modifier: -2,
+        cost: -2,
         tpp: "Mind Control",
         rank: 0,
-        proscons: ""
     }, {
         name: "Hypnotism",
-        modifier: -2,
+        cost: -2,
         tpp: "Mind Control",
         rank: 0,
-        proscons: ""
     }, {
         name: "Pheremones",
-        modifier: -2,
+        cost: -2,
         tpp: "Mind Control",
         rank: 0,
-        proscons: ""
     }, {
         name: "Micro-Universe",
-        modifier: 1,
+        cost: 1,
         tpp: "Shrinking",
         rank: 0,
-        proscons: ""
     }, {
         name: "Proportional Strength",
-        modifier: -2,
+        cost: -2,
         tpp: "Shrinking",
         rank: 0,
-        proscons: ""
     }, {
         name: "Dense",
-        modifier: -2,
+        cost: -2,
         tpp: "Solid Form",
         rank: 0,
-        proscons: ""
     }, {
         name: "Fighting",
-        modifier: -1,
+        cost: -1,
         tpp: "Strike",
         rank: 0,
-        proscons: ""
     }, {
         name: "Slow",
-        modifier: -2,
+        cost: -2,
         tpp: "Stun",
         rank: 0,
-        proscons: ""
     }, {
         name: "Focused",
-        modifier: -2,
+        cost: -2,
         tpp: "Telekenisis",
         rank: 0,
-        proscons: ""
     }, {
         name: "Tendrils",
-        modifier: -2,
+        cost: -2,
         tpp: "Telekenisis",
         rank: 0,
-        proscons: ""
     }, {
         name: "Weak",
-        modifier: -4,
+        cost: -4,
         tpp: "Telekenisis",
         rank: 0,
-        proscons: ""
     }, {
         name: "Alter Memory",
-        modifier: 6,
+        cost: 6,
         tpp: "Telepathy",
         rank: 0,
-        proscons: ""
     }, {
         name: "Cloak Mind",
-        modifier: 1,
+        cost: 1,
         tpp: "Telepathy",
         rank: 0,
-        proscons: ""
     }, {
         name: "Dream Travel",
-        modifier: 1,
+        cost: 1,
         tpp: "Telepathy",
         rank: 0,
-        proscons: ""
     }, {
         name: "Sense Minds",
-        modifier: 2,
+        cost: 2,
         tpp: "Telepathy",
         rank: 0,
-        proscons: ""
     }, {
         name: "Empathy",
-        modifier: -2,
+        cost: -2,
         tpp: "Telepathy",
         rank: 0,
-        proscons: ""
     }, {
         name: "Blind Porting",
-        modifier: 2,
+        cost: 2,
         tpp: "Teleportation",
         rank: 0,
-        proscons: ""
     }, {
         name: "Combat Porting",
-        modifier: 2,
+        cost: 2,
         tpp: "Teleportation",
         rank: 0,
-        proscons: ""
     }, {
         name: "Gate",
-        modifier: 2,
+        cost: 2,
         tpp: "Time Travel",
         rank: 0,
-        proscons: ""
     }, {
         name: "Disturbance",
-        modifier: -1,
+        cost: -1,
         tpp: "Tunneling",
         rank: 0,
-        proscons: ""
     }, {
         name: "Adjustible (Normal)",
-        modifier: 1,
+        cost: 1,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Adjustible (Strong)",
-        modifier: 2,
+        cost: 2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Affect Inanimate",
-        modifier: 2,
+        cost: 2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Always On",
-        modifier: -1,
+        cost: -1,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Area/Burst (Fixed)",
-        modifier: 1,
+        cost: 1,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Area/Burst (Toggle)",
-        modifier: 2,
+        cost: 2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Automatic",
-        modifier: -1,
+        cost: -1,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Build Up",
-        modifier: -2,
+        cost: -2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Casting",
-        modifier: 2,
+        cost: 2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Charges (6 per Scene)",
-        modifier: -1,
+        cost: -1,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Charges (3 per Scene)",
-        modifier: -2,
+        cost: -2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Charges (1 per Scene)",
-        modifier: -3,
+        cost: -3,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Concentration",
-        modifier: -2,
+        cost: -2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Contact",
-        modifier: -2,
+        cost: -2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Contagious",
-        modifier: 2,
+        cost: 2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Delay",
-        modifier: -1,
+        cost: -1,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Demanding",
-        modifier: -2,
+        cost: -2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Ethereal",
-        modifier: 2,
+        cost: 2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Fading (Reset Scene)",
-        modifier: -1,
+        cost: -1,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Fading (Reset Daily)",
-        modifier: -2,
+        cost: -2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Imprecise",
-        modifier: -2,
+        cost: -2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Inhibited (Infrequent)",
-        modifier: -1,
+        cost: -1,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Inhibited (Frequent)",
-        modifier: -2,
+        cost: -2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Item",
-        modifier: -1,
+        cost: -1,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Limited (Minor)",
-        modifier: -1,
+        cost: -1,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Limited (Major)",
-        modifier: -2,
+        cost: -2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Mental",
-        modifier: 2,
+        cost: 2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Overload",
-        modifier: 1,
+        cost: 1,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Ranged",
-        modifier: 2,
+        cost: 2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Requirement (Easy)",
-        modifier: -1,
+        cost: -1,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Requirement (Hard)",
-        modifier: -2,
+        cost: -2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Ricochet",
-        modifier: 1,
+        cost: 1,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Selective",
-        modifier: 2,
+        cost: 2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Side Effect (Minor)",
-        modifier: -1,
+        cost: -1,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Side Effect (Major)",
-        modifier: -2,
+        cost: -2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Signature",
-        modifier: -1,
+        cost: -1,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Subtle",
-        modifier: 1,
+        cost: 1,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Trapping",
-        modifier: 2,
+        cost: 2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Underpowered",
-        modifier: -2,
+        cost: -2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Variant",
-        modifier: 2,
+        cost: 2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Visual Range",
-        modifier: 2,
+        cost: 2,
         tpp: "tpp",
         rank: 0,
-        proscons: ""
     }, {
         name: "Boss",
-        modifier: 2,
+        cost: 2,
         tpp: "Ally",
         rank: 0,
-        proscons: ""
     }, {
         name: "Summoning",
-        modifier: 2,
+        cost: 2,
         tpp: "Ally",
         rank: 0,
-        proscons: ""
     }, {
         name: "Xenomorphic",
-        modifier: 6,
+        cost: 6,
         tpp: "Animal Forms",
         rank: 0,
-        proscons: ""
     }, {
         name: "Supreme",
-        modifier: 2,
+        cost: 2,
         tpp: "Authority",
         rank: 0,
-        proscons: ""
     }, {
         name: "High Level",
-        modifier: 2,
+        cost: 2,
         tpp: "Contact",
         rank: 0,
-        proscons: ""
     }, {
         name: "Legion",
-        modifier: 12,
+        cost: 12,
         tpp: "Duplication",
         rank: 0,
-        proscons: ""
     }, {
         name: "Crazy",
-        modifier: 2,
+        cost: 2,
         tpp: "Fame",
         rank: 0,
-        proscons: ""
     }, {
         name: "Environmental",
-        modifier: 2,
+        cost: 2,
         tpp: "Immunity",
         rank: 0,
-        proscons: ""
     }, {
         name: "Make Invisible",
-        modifier: 2,
+        cost: 2,
         tpp: "Invisibility",
         rank: 0,
-        proscons: ""
     }, {
         name: "Doppleganger",
-        modifier: -1,
+        cost: -1,
         tpp: "Morph",
         rank: 0,
-        proscons: ""
     }, {
         name: "Clout",
-        modifier: 2,
+        cost: 2,
         tpp: "Patron",
         rank: 0,
-        proscons: ""
     }, {
         name: "Astral",
-        modifier: 2,
+        cost: 2,
         tpp: "Phasing",
         rank: 0,
-        proscons: ""
     }, {
         name: "Phase Object",
-        modifier: 2,
+        cost: 2,
         tpp: "Phasing",
         rank: 0,
-        proscons: ""
     }, {
         name: "Recording",
-        modifier: 1,
+        cost: 1,
         tpp: "Photographic Memory",
         rank: 0,
-        proscons: ""
     }, {
         name: "Weakness",
-        modifier: -1,
+        cost: -1,
         tpp: "Regeneration",
         rank: 0,
-        proscons: ""
     }, {
         name: "Waypoints",
-        modifier: -2,
+        cost: -2,
         tpp: "Time Travel",
         rank: 0,
-        proscons: ""
     }, {
         name: "Weak Form",
-        modifier: -2,
+        cost: -2,
         tpp: "Transformation",
         rank: 0,
-        proscons: ""
     }, {
         name: "Automaton",
-        modifier: 6,
+        cost: 6,
         tpp: "Unliving",
         rank: 0,
-        proscons: ""
     }, {
         name: "Wall-Running",
-        modifier: -1,
+        cost: -1,
         tpp: "Wall-Crawling",
         rank: 0,
-        proscons: ""
     }, {
         name: "Great",
-        modifier: 2,
+        cost: 2,
         tpp: "Wealth"
     }
 ];
