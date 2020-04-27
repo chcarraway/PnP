@@ -39,6 +39,43 @@ function weakAttribute(e) {
     }
 }
 
+function showPowerSource() {
+    var activeElement = document.activeElement;
+    //traits
+    if (activeElement.value >= 6) {
+        activeElement.parentNode.nextElementSibling.classList.remove('hide');
+    }
+    else {
+        activeElement.parentNode.nextElementSibling.classList.add('hide');
+    }
+    //powers
+    if (activeElement.value >= 1) {
+        activeElement.parentNode.nextElementSibling.classList.remove('hide');
+    }
+    else {
+        activeElement.parentNode.nextElementSibling.classList.add('hide');
+    }
+}
+
+function showProsCons() {
+    var rank = document.getElementsByClassName('rank');
+    console.log('test1')
+    for (i = 0; i < rank.length; i++) {
+        console.log(rank[i].id);
+        if (rank[i].classList.contains("trait") || rank[i].classList.contains("power")){
+            console.log(rank[i].id);
+            if (parseInt(rank[i].value) >= 1) {
+                console.log('test2')
+                rank[i].parentElement.nextElementSibling.nextElementSibling.classList.remove('hide');
+            }
+            else {
+                console.log('test3')
+                rank[i].parentElement.nextElementSibling.nextElementSibling.classList.add('hide');
+            }
+        }
+    }
+}
+
 function populateDropdown() {
     let dropdown = document.getElementById('gameTierSelect');
     dropdown.length = 0;
@@ -64,7 +101,7 @@ function populateForm() {
     for (let i = 0; i < trait.length; i++) {
         let noSpaceName = traits[i].name.replace(/\s+/g, '');
         traitContainer.innerHTML +=
-            '<div class="input-group">' +
+            '<div class="input-group mt-3">' +
             '<div class="input-group-prepend w186">' +
             '<span class="input-group-text w186">' + traits[i].name + '</span>' +
             '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span></div>' +
@@ -73,11 +110,18 @@ function populateForm() {
             '<span class="input-group-text hide" id="weak" data-toggle="tooltip" title="You\'re only allowed 3 weak attributes">Weak</span>' +
             '</div>' +
             '</div>' +
-            '<div class="input-group mb-3">' +
+            '<div class="input-group hide">' +
+            '<div class="input-group-prepend">' +
+            '<span class="input-group-text w-100">Power Source:</span></div>' +
+            '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
+            '<option></option>' +
+            '</select>' +
+            '</div>' +
+            '<div class="input-group hide">' +
             '<div class="input-group-prepend">' +
             '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
             '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
-            '<option></option>' +
+            '<option value="0"></option>' +
             '</select>' +
             '<div class="input-group-append">' +
             '<button class="btn btn-outline-secondary d-none d-sm-block" type="button" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
@@ -106,7 +150,7 @@ function populateForm() {
         if (powers[i].strong === true) {
 
             powerContainer.innerHTML +=
-                '<div class="input-group">' +
+                '<div class="input-group mt-3">' +
                 '<div class="input-group-prepend w186">' +
                 '<span class="input-group-text w186">' + powers[i].name + '</span> ' +
                 '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
@@ -116,11 +160,18 @@ function populateForm() {
                 '<span class="input-group-text" id="strong" data-toggle="tooltip" title="Strong attributes cost twice as much">Strong</span>' +
                 '</div>' +
                 '</div>' +
-                '<div class="input-group mb-3">' +
+                '<div class="input-group hide">' +
+                '<div class="input-group-prepend">' +
+                '<span class="input-group-text w-100">Power Source:</span></div>' +
+                '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
+                '<option></option>' +
+                '</select>' +
+                '</div>' +
+                '<div class="input-group hide">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
                 '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
-                '<option></option>' +
+                '<option value="0"></option>' +
                 '</select>' +
                 '<div class="input-group-append">' +
                 '<button class="btn btn-outline-secondary d-none d-sm-block" type="button" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
@@ -149,7 +200,7 @@ function populateForm() {
             }
         } else {
             powerContainer.innerHTML +=
-                '<div class="input-group">' +
+                '<div class="input-group mt-3">' +
                 '<div class="input-group-prepend w186">' +
                 '<span class="input-group-text w186">' + powers[i].name + '</span> ' +
                 '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
@@ -158,11 +209,18 @@ function populateForm() {
                 '<div class="input-group-append">' +
                 '</div>' +
                 '</div>' +
-                '<div class="input-group mb-3">' +
+                '<div class="input-group hide">' +
+                '<div class="input-group-prepend">' +
+                '<span class="input-group-text w-100">Power Source:</span></div>' +
+                '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
+                '<option></option>' +
+                '</select>' +
+                '</div>' +
+                '<div class="input-group hide">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
                 '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
-                '<option></option>' +
+                '<option value="0"></option>' +
                 '</select>' +
                 '<div class="input-group-append">' +
                 '<button class="btn btn-outline-secondary d-none d-sm-block" type="button" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
@@ -196,18 +254,18 @@ function populateForm() {
         let noSpaceName = perks[i].name.replace(/\s+/g, '');
         if (perks[i].multiple === true) {
             perkContainer.innerHTML +=
-                '<div class="input-group">' +
+                '<div class="input-group mt-3">' +
                 '<div class="input-group-prepend w186">' +
                 '<span class="input-group-text w186">' + perks[i].name + '*</span>' +
                 '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span></div>' +
                 '<input type="number" class="form-control perk rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
                 '<div class="input-group-append">' + '<span class="input-group-text cost" id="' + noSpaceName + 'Cost"> ' + perks[i].cost + '</span>' +
                 '</div></div>' +
-                '<div class="input-group mb-3">' +
+                '<div class="input-group hide">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
                 '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
-                '<option></option>' +
+                '<option value=0></option>' +
                 '</select>' +
                 '<div class="input-group-append">' +
                 '<button class="btn btn-outline-secondary d-none d-sm-block" type="button" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
@@ -230,18 +288,18 @@ function populateForm() {
             }
         } else {
             perkContainer.innerHTML +=
-                '<div class="input-group">' +
+                '<div class="input-group mt-3">' +
                 '<div class="input-group-prepend w186">' +
                 '<span class="input-group-text w186">' + perks[i].name + '</span>' +
                 '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span></div>' +
                 '<input type="number" class="form-control perk rank" id="' + noSpaceName + 'Value" value="0" min="0" max="1">' +
                 '<div class="input-group-append">' + '<span class="input-group-text cost" id="' + noSpaceName + 'Cost"> ' + perks[i].cost + '</span>' +
                 '</div></div>' +
-                '<div class="input-group mb-3">' +
+                '<div class="input-group hide">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
                 '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
-                '<option></option>' +
+                '<option value="0"></option>' +
                 '</select>' +
                 '<div class="input-group-append">' +
                 '<button class="btn btn-outline-secondary d-none d-sm-block" type="button" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
@@ -323,13 +381,22 @@ function setSpend() {
         let noSpaceName = traits[i].name.replace(/\s+/g, '');
         let currentRank = parseInt(selectTraits[i].value);
         traits[i].rank = currentRank - 2;
-        document.getElementById(noSpaceName + 'Spend').innerHTML = traits[i].rank;
+        let pcSelect = document.getElementById(noSpaceName + 'PCs');
+        let pcSpend = 0;
+        for (j = 0; j < pcSelect.length; j++) {
+            opt = pcSelect.options[j];
+            if (opt.selected === true) {
+                pcSpend += parseInt(opt.value);
+            }
+        }
+        document.getElementById(noSpaceName + 'Spend').innerHTML = traits[i].rank + pcSpend;
     }
 
     //loop for powers
     let selectPowers = document.querySelectorAll('.power');
     for (i = 0; i < selectPowers.length; i++) {
         let noSpaceName = powers[i].name.replace(/\s+/g, '');
+        let pcSelect = document.getElementById(noSpaceName + 'PCs');
         let currentRank = parseInt(selectPowers[i].value);
         if (powers[i].strong === true) {
             powers[i].rank = Math.trunc(currentRank * 2);
@@ -337,15 +404,30 @@ function setSpend() {
         else {
             powers[i].rank = currentRank;
         }
-        document.getElementById(noSpaceName + 'Spend').innerHTML = powers[i].rank;
+        let pcSpend = 0;
+        for (j = 0; j < pcSelect.length; j++) {
+            opt = pcSelect.options[j];
+            if (opt.selected === true) {
+                pcSpend += parseInt(opt.value);
+            }
+        }
+        document.getElementById(noSpaceName + 'Spend').innerHTML = powers[i].rank + pcSpend;
     }
     //loop for perks
     let selectperks = document.querySelectorAll('.perk');
     for (i = 0; i < selectperks.length; i++) {
         let noSpaceName = perks[i].name.replace(/\s+/g, '');
+        let pcSelect = document.getElementById(noSpaceName + 'PCs');
         let currentRank = parseInt(selectperks[i].value);
         perks[i].rank = currentRank;
-        document.getElementById(noSpaceName + 'Spend').innerHTML = perks[i].cost * perks[i].rank;
+        let pcSpend = 0;
+        for (j = 0; j < pcSelect.length; j++) {
+            opt = pcSelect.options[j];
+            if (opt.selected === true) {
+                pcSpend += parseInt(opt.value);
+            }
+        }
+        document.getElementById(noSpaceName + 'Spend').innerHTML = perks[i].cost * perks[i].rank + pcSpend;
     }
 }
 
@@ -357,6 +439,8 @@ form.addEventListener('change', weakAttribute);
 form.addEventListener('change', setSpend);
 form.addEventListener('change', tallyHD);
 form.addEventListener('change', advancement);
+form.addEventListener('change', showPowerSource);
+form.addEventListener('change', showProsCons);
 
 const body = document.querySelector('body');
 body.addEventListener('keyup', checkTabPress);
@@ -364,3 +448,4 @@ body.addEventListener('keyup', checkTabPress);
 populateForm();
 populateDropdown();
 tallyHD();
+showProsCons();

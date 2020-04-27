@@ -449,259 +449,342 @@ var perks = [
     {
         name: "Ally",
         cost: 2,
-        multiple: true
+        multiple: true,
+        rank: 0,
     }, {
         name: "Ambidexterity",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Animal Empathy",
-        cost: 2
+        cost: 2,
+        rank: 0
     }, {
         name: "Animal Forms",
-        cost: 6
+        cost: 6,
+        rank: 0
     }, {
         name: "Astral Projection",
-        cost: 6
+        cost: 6,
+        rank: 0
     }, {
         name: "Authority",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Blending",
-        cost: 2
+        cost: 2,
+        rank: 0
     }, {
         name: "Blind Fighting",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Communicator",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Contact",
         cost: 1,
-        multiple: true
+        multiple: true,
+        rank: 0
     }, {
         name: "Cosmic Awareness",
-        cost: 2
+        cost: 2,
+        rank: 0
     }, {
         name: "Dimensional Travel",
-        cost: 2
+        cost: 2,
+        rank: 0
     }, {
         name: "Duplication",
         cost: 6,
-        multiple: true
+        multiple: true,
+        rank: 0
     }, {
         name: "Enhanced Defense",
-        cost: 4
+        cost: 4,
+        rank: 0
     }, {
         name: "Extra Limbs",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Fame",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Gaseous Form",
-        cost: 3
+        cost: 3,
+        rank: 0
     }, {
         name: "Headquarters",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Hibernation",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Immortality",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Immunity (Specific)",
         cost: 1,
-        multiple: true
+        multiple: true,
+        rank: 0
     }, {
         name: "Immunity (Damage Type)",
         cost: 3,
-        multiple: true
+        multiple: true,
+        rank: 0
     }, {
         name: "Invisibility",
-        cost: 6
+        cost: 6,
+        rank: 0
     }, {
         name: "Knockdown",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Leadership",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Life Support",
         cost: 1,
-        multiple: true
+        multiple: true,
+        rank: 0
     }, {
         name: "Lightning Reflexes",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Liquid Form",
-        cost: 9
+        cost: 9,
+        rank: 0
     }, {
         name: "Luck",
-        cost: 2
+        cost: 2,
+        rank: 0
     }, {
         name: "Morph",
-        cost: 4
+        cost: 4,
+        rank: 0
     }, {
         name: "Patron",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Phasing",
-        cost: 4
+        cost: 4,
+        rank: 0
     }, {
         name: "Photographic Memory",
-        cost: 2
+        cost: 2,
+        rank: 0
     }, {
         name: "Power Mimicry (single)",
-        cost: 12
+        cost: 12,
+        rank: 0
     }, {
         name: "Power Mimicry (all)",
-        cost: 24
+        cost: 24,
+        rank: 0
     }, {
         name: "Power Theft (single)",
-        cost: 12
+        cost: 12,
+        rank: 0
     }, {
         name: "Power Theft (all)",
-        cost: 24
+        cost: 24,
+        rank: 0
     }, {
         name: "Precognition",
-        cost: 6
+        cost: 6,
+        rank: 0
     }, {
         name: "Psi-Screen",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Psychometry",
-        cost: 2
+        cost: 2,
+        rank: 0
     }, {
         name: "Quick Change",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Reach",
-        cost: 2
+        cost: 2,
+        rank: 0
     }, {
         name: "Regeneration (1/hour)",
-        cost: 3
+        cost: 3,
+        rank: 0
     }, {
         name: "Regeneration (1/minute)",
-        cost: 6
+        cost: 6,
+        rank: 0
     }, {
         name: "Regeneration (1/page)",
-        cost: 12
+        cost: 12,
+        rank: 0
     }, {
         name: "Relentless",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Scrying",
-        cost: 4
+        cost: 4,
+        rank: 0
     }, {
         name: "Separation",
-        cost: 2
+        cost: 2,
+        rank: 0
     }, {
         name: "Speak with Dead",
-        cost: 2
+        cost: 2,
+        rank: 0
     }, {
         name: "Special Vehicle",
         cost: 1,
-        multiple: true
+        multiple: true,
+        rank: 0
     }, {
         name: "Super Senses (Astral Sight)",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Super Senses (Attuned)",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Super Senses (Circular Vision)",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Super Senses (Danger Sense)",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Super Senses (Detection)",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Super Senses (Lie Detection)",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Super Senses (Microscopic Vision)",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Super Senses (Night Vision)",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Super Senses (Radar)",
-        cost: 2
+        cost: 2,
+        rank: 0
     }, {
         name: "Super Senses (Radio Hearing)",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Super Senses (Sonar)",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Super Senses (Telescopic Vision)",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Super Senses (Thermal Vision)",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Super Senses (Trace)",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Super Senses (Tracking Scent)",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Super Senses (True Sight)",
-        cost: 4
+        cost: 4,
+        rank: 0
     }, {
         name: "Super Senses (Ultra Hearing)",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Super Senses (Ultra Vision)",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Super Senses (X-Ray Vision)",
-        cost: 4
+        cost: 4,
+        rank: 0
     }, {
         name: "Super Translation",
-        cost: 3
+        cost: 3,
+        rank: 0
     }, {
         name: "Time Stop",
-        cost: 12
+        cost: 12,
+        rank: 0
     }, {
         name: "Time Travel",
-        cost: 4
+        cost: 4,
+        rank: 0
     }, {
         name: "Trackless",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Transformation",
-        cost: 4
+        cost: 4,
+        rank: 0
     }, {
         name: "Two-Dimensional",
-        cost: 2
+        cost: 2,
+        rank: 0
     }, {
         name: "Uncanny Defense",
-        cost: 2
+        cost: 2,
+        rank: 0
     }, {
         name: "Unkillable",
-        cost: 2
+        cost: 2,
+        rank: 0
     }, {
         name: "Unliving",
-        cost: 9
+        cost: 9,
+        rank: 0
     }, {
         name: "Vanish",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Wall-Crawling",
-        cost: 2
+        cost: 2,
+        rank: 0
     }, {
         name: "Warp Pocket",
-        cost: 1
+        cost: 1,
+        rank: 0
     }, {
         name: "Weakness Detection",
-        cost: 6
+        cost: 6,
+        rank: 0
     }, {
         name: "Wealth",
-        cost: 1
+        cost: 1,
+        rank: 0
     }
 ];
 var prosCons = [
