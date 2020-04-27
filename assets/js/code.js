@@ -77,7 +77,7 @@ function populateForm() {
     let powerContainer = document.getElementById('powerContainer');
     for (let i = 0; i < powers.length; i++) {
         let noSpaceName = powers[i].name.replace(/\s+/g, '');
-        if (powers[i].strong === 'TRUE') {
+        if (powers[i].strong === true) {
 
             powerContainer.innerHTML +=
                 '<div class="input-group mb-3">' +
@@ -193,7 +193,7 @@ function setSpend() {
     for (i = 0; i < selectPowers.length; i++) {
         let noSpaceName = powers[i].name.replace(/\s+/g, '');
         let currentRank = parseInt(selectPowers[i].value);
-        if (powers[i].strong === 'TRUE') {
+        if (powers[i].strong === true) {
             powers[i].rank = Math.trunc(currentRank * 2);
         }
         else {
