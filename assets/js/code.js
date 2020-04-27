@@ -76,14 +76,24 @@ function populateForm() {
             '<div class="input-group mb-3">' +
             '<div class="input-group-prepend">' +
             '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
-            '<select multiple class="custom-select" id="' + noSpaceName + 'PCs">' +
+            '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
+            '<option></option>' +
             '</select>' +
+            '<div class="input-group-append">' +
+            '<button class="btn btn-outline-secondary d-none d-sm-block" type="button" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
+            '</div>' +
             '</div>';
         for (let j = 0; j < prosCons.length; j++) {
             let dropdown = document.getElementById(noSpaceName + 'PCs');
-            if (prosCons[j].tpp == traits[i].name || prosCons[j].tpp == 'tpp') {
+            if (prosCons[j].tpp == traits[i].name) {
                 option = document.createElement('option');
-                option.text = prosCons[j].name;
+                option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
+                option.value = prosCons[j].cost;
+                dropdown.add(option);
+            }
+            if (prosCons[j].tpp == 'tpp') {
+                option = document.createElement('option');
+                option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
                 option.value = prosCons[j].cost;
                 dropdown.add(option);
             }
@@ -96,7 +106,7 @@ function populateForm() {
         if (powers[i].strong === true) {
 
             powerContainer.innerHTML +=
-                '<div class="input-group mb-3">' +
+                '<div class="input-group">' +
                 '<div class="input-group-prepend w186">' +
                 '<span class="input-group-text w186">' + powers[i].name + '</span> ' +
                 '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
@@ -105,10 +115,41 @@ function populateForm() {
                 '<div class="input-group-append">' +
                 '<span class="input-group-text" id="strong" data-toggle="tooltip" title="Strong attributes cost twice as much">Strong</span>' +
                 '</div>' +
+                '</div>' +
+                '<div class="input-group mb-3">' +
+                '<div class="input-group-prepend">' +
+                '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
+                '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
+                '<option></option>' +
+                '</select>' +
+                '<div class="input-group-append">' +
+                '<button class="btn btn-outline-secondary d-none d-sm-block" type="button" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
+                '</div>' +
                 '</div>';
+            for (let j = 0; j < prosCons.length; j++) {
+                let dropdown = document.getElementById(noSpaceName + 'PCs');
+                if (prosCons[j].tpp == powers[i].name) {
+                    option = document.createElement('option');
+                    option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
+                    option.value = prosCons[j].cost;
+                    dropdown.add(option);
+                }
+                if (prosCons[j].tpp == 'tp') {
+                    option = document.createElement('option');
+                    option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
+                    option.value = prosCons[j].cost;
+                    dropdown.add(option);
+                }
+                if (prosCons[j].tpp == 'tpp') {
+                    option = document.createElement('option');
+                    option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
+                    option.value = prosCons[j].cost;
+                    dropdown.add(option);
+                }
+            }
         } else {
             powerContainer.innerHTML +=
-                '<div class="input-group mb-3">' +
+                '<div class="input-group">' +
                 '<div class="input-group-prepend w186">' +
                 '<span class="input-group-text w186">' + powers[i].name + '</span> ' +
                 '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
@@ -116,7 +157,38 @@ function populateForm() {
                 '<input type="number" class="form-control power rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
                 '<div class="input-group-append">' +
                 '</div>' +
+                '</div>' +
+                '<div class="input-group mb-3">' +
+                '<div class="input-group-prepend">' +
+                '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
+                '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
+                '<option></option>' +
+                '</select>' +
+                '<div class="input-group-append">' +
+                '<button class="btn btn-outline-secondary d-none d-sm-block" type="button" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
+                '</div>' +
                 '</div>';
+            for (let j = 0; j < prosCons.length; j++) {
+                let dropdown = document.getElementById(noSpaceName + 'PCs');
+                if (prosCons[j].tpp == powers[i].name) {
+                    option = document.createElement('option');
+                    option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
+                    option.value = prosCons[j].cost;
+                    dropdown.add(option);
+                }
+                if (prosCons[j].tpp == 'tp') {
+                    option = document.createElement('option');
+                    option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
+                    option.value = prosCons[j].cost;
+                    dropdown.add(option);
+                }
+                if (prosCons[j].tpp == 'tpp') {
+                    option = document.createElement('option');
+                    option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
+                    option.value = prosCons[j].cost;
+                    dropdown.add(option);
+                }
+            }
         }
     }
     let perkContainer = document.getElementById('perkContainer');
@@ -124,35 +196,72 @@ function populateForm() {
         let noSpaceName = perks[i].name.replace(/\s+/g, '');
         if (perks[i].multiple === true) {
             perkContainer.innerHTML +=
-                '<div class="input-group mb-3">' +
+                '<div class="input-group">' +
                 '<div class="input-group-prepend w186">' +
                 '<span class="input-group-text w186">' + perks[i].name + '*</span>' +
                 '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span></div>' +
                 '<input type="number" class="form-control perk rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
-                '<div class="input-group-append">' + '<span class="input-group-text cost" id="' + noSpaceName + 'Cost"> ' + perks[i].cost + '</span>'
-            '</div></div>';
+                '<div class="input-group-append">' + '<span class="input-group-text cost" id="' + noSpaceName + 'Cost"> ' + perks[i].cost + '</span>' +
+                '</div></div>' +
+                '<div class="input-group mb-3">' +
+                '<div class="input-group-prepend">' +
+                '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
+                '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
+                '<option></option>' +
+                '</select>' +
+                '<div class="input-group-append">' +
+                '<button class="btn btn-outline-secondary d-none d-sm-block" type="button" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
+                '</div>' +
+                '</div>';
+            for (let j = 0; j < prosCons.length; j++) {
+                let dropdown = document.getElementById(noSpaceName + 'PCs');
+                if (prosCons[j].tpp == perks[i].name) {
+                    option = document.createElement('option');
+                    option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
+                    option.value = prosCons[j].cost;
+                    dropdown.add(option);
+                }
+                if (prosCons[j].tpp == 'tpp') {
+                    option = document.createElement('option');
+                    option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
+                    option.value = prosCons[j].cost;
+                    dropdown.add(option);
+                }
+            }
         } else {
             perkContainer.innerHTML +=
-                '<div class="input-group mb-3">' +
+                '<div class="input-group">' +
                 '<div class="input-group-prepend w186">' +
                 '<span class="input-group-text w186">' + perks[i].name + '</span>' +
                 '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span></div>' +
                 '<input type="number" class="form-control perk rank" id="' + noSpaceName + 'Value" value="0" min="0" max="1">' +
-                '<div class="input-group-append">' + '<span class="input-group-text cost" id="' + noSpaceName + 'Cost"> ' + perks[i].cost + '</span>'
-            '</div></div>';
-        }
-    }
-    let pcContainer = document.getElementById('pcContainer');
-    for (let i = 0; i < prosCons.length; i++) {
-        let noSpaceName = prosCons[i].name.replace(/\s+/g, '');
-        if (prosCons[i].tpp === "powers") {
-
-        }
-        if (prosCons[i].tpp === "tpp") {
-            //has dropdown for selection
-        }
-        else {
-
+                '<div class="input-group-append">' + '<span class="input-group-text cost" id="' + noSpaceName + 'Cost"> ' + perks[i].cost + '</span>' +
+                '</div></div>' +
+                '<div class="input-group mb-3">' +
+                '<div class="input-group-prepend">' +
+                '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
+                '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
+                '<option></option>' +
+                '</select>' +
+                '<div class="input-group-append">' +
+                '<button class="btn btn-outline-secondary d-none d-sm-block" type="button" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
+                '</div>' +
+                '</div>';
+            for (let j = 0; j < prosCons.length; j++) {
+                let dropdown = document.getElementById(noSpaceName + 'PCs');
+                if (prosCons[j].tpp == perks[i].name) {
+                    option = document.createElement('option');
+                    option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
+                    option.value = prosCons[j].cost;
+                    dropdown.add(option);
+                }
+                if (prosCons[j].tpp == 'tpp') {
+                    option = document.createElement('option');
+                    option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
+                    option.value = prosCons[j].cost;
+                    dropdown.add(option);
+                }
+            }
         }
     }
 }

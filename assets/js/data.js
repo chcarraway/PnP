@@ -600,7 +600,7 @@ var perks = [
         name: "Speak with Dead",
         cost: 2
     }, {
-        name: "special Vehicle",
+        name: "Special Vehicle",
         cost: 1,
         multiple: true
     }, {
@@ -1033,17 +1033,17 @@ var prosCons = [
     }, {
         name: "Adjustible (Normal)",
         cost: 1,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Adjustible (Strong)",
         cost: 2,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Affect Inanimate",
         cost: 2,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Always On",
@@ -1053,12 +1053,12 @@ var prosCons = [
     }, {
         name: "Area/Burst (Fixed)",
         cost: 1,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Area/Burst (Toggle)",
         cost: 2,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Automatic",
@@ -1068,7 +1068,7 @@ var prosCons = [
     }, {
         name: "Build Up",
         cost: -2,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Casting",
@@ -1093,12 +1093,12 @@ var prosCons = [
     }, {
         name: "Concentration",
         cost: -2,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Contact",
         cost: -2,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Contagious",
@@ -1108,87 +1108,87 @@ var prosCons = [
     }, {
         name: "Delay",
         cost: -1,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Demanding",
         cost: -2,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Ethereal",
         cost: 2,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Fading (Reset Scene)",
         cost: -1,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Fading (Reset Daily)",
         cost: -2,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Imprecise",
         cost: -2,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Inhibited (Infrequent)",
         cost: -1,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Inhibited (Frequent)",
         cost: -2,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Item",
         cost: -1,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Limited (Minor)",
         cost: -1,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Limited (Major)",
         cost: -2,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Mental",
         cost: 2,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Overload",
         cost: 1,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Ranged",
         cost: 2,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Requirement (Easy)",
         cost: -1,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Requirement (Hard)",
         cost: -2,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Ricochet",
         cost: 1,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Selective",
@@ -1198,17 +1198,17 @@ var prosCons = [
     }, {
         name: "Side Effect (Minor)",
         cost: -1,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Side Effect (Major)",
         cost: -2,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Signature",
         cost: -1,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Subtle",
@@ -1218,22 +1218,22 @@ var prosCons = [
     }, {
         name: "Trapping",
         cost: 2,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Underpowered",
         cost: -2,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Variant",
         cost: 2,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Visual Range",
         cost: 2,
-        tpp: "tpp",
+        tpp: "tp",
         rank: 0,
     }, {
         name: "Boss",
