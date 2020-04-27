@@ -1056,17 +1056,17 @@ var prosCons = [
     }, {
         name: "Focused",
         cost: -2,
-        tpp: "Telekenisis",
+        tpp: "Telekinesis",
         rank: 0,
     }, {
         name: "Tendrils",
         cost: -2,
-        tpp: "Telekenisis",
+        tpp: "Telekinesis",
         rank: 0,
     }, {
         name: "Weak",
         cost: -4,
-        tpp: "Telekenisis",
+        tpp: "Telekinesis",
         rank: 0,
     }, {
         name: "Alter Memory",

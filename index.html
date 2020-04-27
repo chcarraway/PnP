@@ -18,7 +18,7 @@
 
 <!--
 TODO
-make "Clear Selected" buttons work
+change flaws to multiple select
 build inventory
 save to local storage
 build character sheet
@@ -275,15 +275,47 @@ build character sheet
                             <div id="inventoryCollapse" class="collapse" data-parent="#accordion">
                                 <div class="card-body">
                                     <div class="font-italic text-center pb-3">
-                                        <span>inventory</span>
+                                        <span>Select your equipment from the below lists.</span>
                                     </div>
                                     <div id="inventoryContainer">
-                                        <!-- populateForm() runs here -->
+                                        <div class="input-group mt-3">
+                                            <div class="input-group w-100">
+                                                <span class="input-group-text w-100">Weapons</span>
+                                            </div>
+                                            <select multiple class="custom-select weapons" id="weapons">
+                                                <option value = ""></option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group mt-3">
+                                            <div class="input-group w-100">
+                                                <span class="input-group-text w-100">Armor</span>
+                                            </div>
+                                            <select class="custom-select armor" id="armor">
+                                                <option value = ""></option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group mt-3">
+                                            <div class="input-group w-100">
+                                                <span class="input-group-text w-100">Shield</span>
+                                            </div>
+                                            <select class="custom-select shields" id="shields">
+                                                <option value = ""></option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group mt-3">
+                                            <div class="input-group w-100">
+                                                <span class="input-group-text w-100">Equipment</span>
+                                            </div>
+                                            <select multiple class="custom-select equipment" id="equipment">
+                                                <option value = ""></option>
+                                            </select>
+                                        </div>
                                     </div>
+                                    <!-- populateForm() runs here -->
                                 </div>
                             </div>
-                            <!-- end Accordion -->
                         </div>
+                        <!-- end Accordion -->
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary my-3" onClick="document.form.submit()">Save

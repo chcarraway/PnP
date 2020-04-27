@@ -81,7 +81,8 @@ function clearProsCons() {
     tallyHD();
 }
 
-function populateDropdown() {
+function populateDropdowns() {
+    //game tier
     let dropdown = document.getElementById('gameTierSelect');
     dropdown.length = 0;
 
@@ -95,6 +96,53 @@ function populateDropdown() {
     for (let i = 0; i < levels.length; i++) {
         option = document.createElement('option');
         option.text = powerLevels[levels[i]].name;
+        option.value = i;
+        dropdown.add(option);
+    }
+
+    //power sources
+    let dropdowns = document.getElementsByClassName('powersource');
+    for (let i = 0; i < dropdowns.length; i++) {
+        for (let j = 0; j < powerSources.length; j++) {
+            option = document.createElement('option');
+            option.text = powerSources[j].name;
+            option.value = j;
+            dropdowns[i].add(option);
+        }
+    }
+
+    //weapons
+    dropdown = document.getElementById('weapons');
+    for (let i = 0; i < weapons.length; i++) {
+        option = document.createElement('option');
+        option.text = weapons[i].name;
+        option.value = i;
+        dropdown.add(option);
+    }
+
+    //armor
+    dropdown = document.getElementById('armor');
+    for (let i = 0; i < armors.length; i++) {
+        option = document.createElement('option');
+        option.text = armors[i].name;
+        option.value = i;
+        dropdown.add(option);
+    }
+    
+    //shields
+    dropdown = document.getElementById('shields');
+    for (let i = 0; i < shields.length; i++) {
+        option = document.createElement('option');
+        option.text = shields[i].name;
+        option.value = i;
+        dropdown.add(option);
+    }
+
+    //equipment
+    dropdown = document.getElementById('equipment');
+    for (let i = 0; i < equipment.length; i++) {
+        option = document.createElement('option');
+        option.text = equipment[i].name;
         option.value = i;
         dropdown.add(option);
     }
@@ -150,33 +198,6 @@ function populateForm() {
             '<button class="btn btn-outline-secondary d-none d-sm-block"type="button" onclick="clearProsCons();" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
             '</div>' +
             '</div>';
-        /* 
-                    '<div class="input-group mt-3">' +
-                    '<div class="input-group-prepend w186">' +
-                    '<span class="input-group-text w186">' + traits[i].name + '</span>' +
-                    '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span></div>' +
-                    '<input type="number" class="form-control trait rank" id="' + noSpaceName + 'Value" value="2" min="1">' +
-                    '<div class="input-group-append">' +
-                    '<span class="input-group-text hide" id="weak" data-toggle="tooltip" title="You\'re only allowed 3 weak attributes">Weak</span>' +
-                    '</div>' +
-                    '</div>' +
-                    '<div class="input-group hide">' +
-                    '<div class="input-group-prepend">' +
-                    '<span class="input-group-text w-100">Power Source:</span></div>' +
-                    '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
-                    '<option></option>' +
-                    '</select>' +
-                    '</div>' +
-                    '<div class="input-group hide">' +
-                    '<div class="input-group-prepend">' +
-                    '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
-                    '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
-                    '<option value="0"></option>' +
-                    '</select>' +
-                    '<div class="input-group-append">' +
-                    '<button class="btn btn-outline-secondary d-none d-sm-block" type="button" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
-                    '</div>' +
-                    '</div>'; */
         for (let j = 0; j < prosCons.length; j++) {
             let dropdown = document.getElementById(noSpaceName + 'PCs');
             if (prosCons[j].tpp == traits[i].name) {
@@ -199,43 +220,15 @@ function populateForm() {
         if (powers[i].strong === true) {
 
             powerContainer.innerHTML +=
-            '<div class="input-group mt-3">' +
-            '<div class="input-group w-100">' +
-            '<span class="input-group-text w-100">' + powers[i].name + '</span>' +
-            '</div></div>' +
-            '<div class="input-group">' +
-            '<div class="input-group-prepend">' +
-            '<span class="input-group-text">Points spent:</span>' +
-            '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
-            '<span class="input-group-text">Rank:</span>' +
-            '</div>' +
-            '<input type="number" class="form-control power rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
-            '<div class="input-group-append">' +
-            '<span class="input-group-text" id="strong" data-toggle="tooltip" title="Strong attributes cost twice as much">Strong</span>' +
-            '</div>' +
-            '</div>' +
-            '<div class="input-group hide">' +
-            '<div class="input-group-prepend">' +
-            '<span class="input-group-text w-100">Power Source:</span></div>' +
-            '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
-            '<option></option>' +
-            '</select>' +
-            '</div>' +
-            '<div class="input-group hide">' +
-            '<div class="input-group-prepend">' +
-            '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
-            '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
-            '<option value="0"></option>' +
-            '</select>' +
-            '<div class="input-group-append">' +
-            '<button class="btn btn-outline-secondary d-none d-sm-block"type="button" onclick="clearProsCons();" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
-            '</div>' +
-            '</div>';
-
-                /* '<div class="input-group mt-3">' +
-                '<div class="input-group-prepend w186">' +
-                '<span class="input-group-text w186">' + powers[i].name + '</span> ' +
+                '<div class="input-group mt-3">' +
+                '<div class="input-group w-100">' +
+                '<span class="input-group-text w-100">' + powers[i].name + '</span>' +
+                '</div></div>' +
+                '<div class="input-group">' +
+                '<div class="input-group-prepend">' +
+                '<span class="input-group-text">Points spent:</span>' +
                 '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
+                '<span class="input-group-text">Rank:</span>' +
                 '</div>' +
                 '<input type="number" class="form-control power rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
                 '<div class="input-group-append">' +
@@ -256,9 +249,9 @@ function populateForm() {
                 '<option value="0"></option>' +
                 '</select>' +
                 '<div class="input-group-append">' +
-                '<button class="btn btn-outline-secondary d-none d-sm-block" type="button" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
+                '<button class="btn btn-outline-secondary d-none d-sm-block"type="button" onclick="clearProsCons();" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
                 '</div>' +
-                '</div>'; */
+                '</div>';
             for (let j = 0; j < prosCons.length; j++) {
                 let dropdown = document.getElementById(noSpaceName + 'PCs');
                 if (prosCons[j].tpp == powers[i].name) {
@@ -282,45 +275,17 @@ function populateForm() {
             }
         } else {
             powerContainer.innerHTML +=
-
-            '<div class="input-group mt-3">' +
-            '<div class="input-group w-100">' +
-            '<span class="input-group-text w-100">' + powers[i].name + '</span>' +
-            '</div></div>' +
-            '<div class="input-group">' +
-            '<div class="input-group-prepend">' +
-            '<span class="input-group-text">Points spent:</span>' +
-            '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
-            '<span class="input-group-text">Rank:</span>' +
-            '</div>' +
-            '<input type="number" class="form-control power rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
-            '</div>' +
-            '<div class="input-group hide">' +
-            '<div class="input-group-prepend">' +
-            '<span class="input-group-text w-100">Power Source:</span></div>' +
-            '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
-            '<option></option>' +
-            '</select>' +
-            '</div>' +
-            '<div class="input-group hide">' +
-            '<div class="input-group-prepend">' +
-            '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
-            '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
-            '<option value="0"></option>' +
-            '</select>' +
-            '<div class="input-group-append">' +
-            '<button class="btn btn-outline-secondary d-none d-sm-block"type="button" onclick="clearProsCons();" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
-            '</div>' +
-            '</div>';
-
-                /* '<div class="input-group mt-3">' +
-                '<div class="input-group-prepend w186">' +
-                '<span class="input-group-text w186">' + powers[i].name + '</span> ' +
+                '<div class="input-group mt-3">' +
+                '<div class="input-group w-100">' +
+                '<span class="input-group-text w-100">' + powers[i].name + '</span>' +
+                '</div></div>' +
+                '<div class="input-group">' +
+                '<div class="input-group-prepend">' +
+                '<span class="input-group-text">Points spent:</span>' +
                 '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
+                '<span class="input-group-text">Rank:</span>' +
                 '</div>' +
                 '<input type="number" class="form-control power rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
-                '<div class="input-group-append">' +
-                '</div>' +
                 '</div>' +
                 '<div class="input-group hide">' +
                 '<div class="input-group-prepend">' +
@@ -336,9 +301,9 @@ function populateForm() {
                 '<option value="0"></option>' +
                 '</select>' +
                 '<div class="input-group-append">' +
-                '<button class="btn btn-outline-secondary d-none d-sm-block" type="button" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
+                '<button class="btn btn-outline-secondary d-none d-sm-block"type="button" onclick="clearProsCons();" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
                 '</div>' +
-                '</div>'; */
+                '</div>';
             for (let j = 0; j < prosCons.length; j++) {
                 let dropdown = document.getElementById(noSpaceName + 'PCs');
                 if (prosCons[j].tpp == powers[i].name) {
@@ -367,44 +332,18 @@ function populateForm() {
         let noSpaceName = perks[i].name.replace(/\s+/g, '');
         if (perks[i].multiple === true) {
             perkContainer.innerHTML +=
-
-            '<div class="input-group mt-3">' +
-            '<div class="input-group w-100">' +
-            '<span class="input-group-text w-100">' + perks[i].name + '</span>' +
-            '</div></div>' +
-            '<div class="input-group">' +
-            '<div class="input-group-prepend">' +
-            '<span class="input-group-text">Points spent:</span>' +
-            '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
-            '<span class="input-group-text">Rank:</span>' +
-            '</div>' +
-            '<input type="number" class="form-control perk rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
-            '</div>' +
-            '<div class="input-group hide">' +
-            '<div class="input-group-prepend">' +
-            '<span class="input-group-text w-100">Power Source:</span></div>' +
-            '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
-            '<option></option>' +
-            '</select>' +
-            '</div>' +
-            '<div class="input-group hide">' +
-            '<div class="input-group-prepend">' +
-            '<span class="input-group-text hide w-100">Pros/Cons:</span></div>' +
-            '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
-            '<option value="0"></option>' +
-            '</select>' +
-            '<div class="input-group-append">' +
-            '<button class="btn btn-outline-secondary d-none d-sm-block"type="button" onclick="clearProsCons();" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
-            '</div>' +
-            '</div>';
-
-            /*  '<div class="input-group mt-3">' +
-                '<div class="input-group-prepend w186">' +
-                '<span class="input-group-text w186">' + perks[i].name + '*</span>' +
-                '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span></div>' +
-                '<input type="number" class="form-control perk rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
-                '<div class="input-group-append">' + '<span class="input-group-text cost" id="' + noSpaceName + 'Cost"> ' + perks[i].cost + '</span>' +
+                '<div class="input-group mt-3">' +
+                '<div class="input-group w-100">' +
+                '<span class="input-group-text w-100">' + perks[i].name + '</span>' +
                 '</div></div>' +
+                '<div class="input-group">' +
+                '<div class="input-group-prepend">' +
+                '<span class="input-group-text">Points spent:</span>' +
+                '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
+                '<span class="input-group-text">Rank:</span>' +
+                '</div>' +
+                '<input type="number" class="form-control perk rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
+                '</div>' +
                 '<div class="input-group hide">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Power Source:</span></div>' +
@@ -414,14 +353,14 @@ function populateForm() {
                 '</div>' +
                 '<div class="input-group hide">' +
                 '<div class="input-group-prepend">' +
-                '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
+                '<span class="input-group-text hide w-100">Pros/Cons:</span></div>' +
                 '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
-                '<option value=0></option>' +
+                '<option value="0"></option>' +
                 '</select>' +
                 '<div class="input-group-append">' +
-                '<button class="btn btn-outline-secondary d-none d-sm-block" type="button" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
+                '<button class="btn btn-outline-secondary d-none d-sm-block"type="button" onclick="clearProsCons();" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
                 '</div>' +
-                '</div>'; */
+                '</div>';
             for (let j = 0; j < prosCons.length; j++) {
                 let dropdown = document.getElementById(noSpaceName + 'PCs');
                 if (prosCons[j].tpp == perks[i].name) {
@@ -439,44 +378,18 @@ function populateForm() {
             }
         } else {
             perkContainer.innerHTML +=
-
-            '<div class="input-group mt-3">' +
-            '<div class="input-group w-100">' +
-            '<span class="input-group-text w-100">' + perks[i].name + '</span>' +
-            '</div></div>' +
-            '<div class="input-group">' +
-            '<div class="input-group-prepend">' +
-            '<span class="input-group-text">Points spent:</span>' +
-            '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
-            '<span class="input-group-text">Rank:</span>' +
-            '</div>' +
-            '<input type="number" class="form-control perk rank" id="' + noSpaceName + 'Value" value="0" min="0" max="1">' +
-            '</div>' +
-            '<div class="input-group hide">' +
-            '<div class="input-group-prepend">' +
-            '<span class="input-group-text w-100">Power Source:</span></div>' +
-            '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
-            '<option></option>' +
-            '</select>' +
-            '</div>' +
-            '<div class="input-group hide">' +
-            '<div class="input-group-prepend">' +
-            '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
-            '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
-            '<option value="0"></option>' +
-            '</select>' +
-            '<div class="input-group-append">' +
-            '<button class="btn btn-outline-secondary d-none d-sm-block"type="button" onclick="clearProsCons();" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
-            '</div>' +
-            '</div>';
-
-                /* '<div class="input-group mt-3">' +
-                '<div class="input-group-prepend w186">' +
-                '<span class="input-group-text w186">' + perks[i].name + '</span>' +
-                '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span></div>' +
-                '<input type="number" class="form-control perk rank" id="' + noSpaceName + 'Value" value="0" min="0" max="1">' +
-                '<div class="input-group-append">' + '<span class="input-group-text cost" id="' + noSpaceName + 'Cost"> ' + perks[i].cost + '</span>' +
+                '<div class="input-group mt-3">' +
+                '<div class="input-group w-100">' +
+                '<span class="input-group-text w-100">' + perks[i].name + '</span>' +
                 '</div></div>' +
+                '<div class="input-group">' +
+                '<div class="input-group-prepend">' +
+                '<span class="input-group-text">Points spent:</span>' +
+                '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
+                '<span class="input-group-text">Rank:</span>' +
+                '</div>' +
+                '<input type="number" class="form-control perk rank" id="' + noSpaceName + 'Value" value="0" min="0" max="1">' +
+                '</div>' +
                 '<div class="input-group hide">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Power Source:</span></div>' +
@@ -491,9 +404,9 @@ function populateForm() {
                 '<option value="0"></option>' +
                 '</select>' +
                 '<div class="input-group-append">' +
-                '<button class="btn btn-outline-secondary d-none d-sm-block" type="button" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
+                '<button class="btn btn-outline-secondary d-none d-sm-block"type="button" onclick="clearProsCons();" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
                 '</div>' +
-                '</div>'; */
+                '</div>';
             for (let j = 0; j < prosCons.length; j++) {
                 let dropdown = document.getElementById(noSpaceName + 'PCs');
                 if (prosCons[j].tpp == perks[i].name) {
@@ -635,7 +548,7 @@ const body = document.querySelector('body');
 body.addEventListener('keyup', checkTabPress);
 
 populateForm();
-populateDropdown();
+populateDropdowns();
 tallyHD();
 showProsCons();
 populatePowerSource();

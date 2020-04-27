@@ -1,4 +1,4 @@
-var fluff = [
+var character = [
     {
         "PlayerName": {},
         "Name": {},
@@ -11,688 +11,672 @@ var fluff = [
         "Details": {},
         "Connections": {},
         "Origin": {},
-        "Flaws": {}
-    }
-]
-var items = [
-    {
+        "Flaws": {},
         "Weapons": {},
         "Armors": {},
         "Shields": {},
         "Equipment": {},
-        "Resolve": {}
-    }
-]
-var traits = [
-    {
+        "Resolve": {},
         "Academics": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Athletics": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Charm": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Command": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Medical": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Might": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Perception": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Professional": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Riding": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Science": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Stealth": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Streetwise": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Survival": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Technology": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Thievery": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Toughness": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Vehicles": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Willpower": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
-        }
-    }
-]
-var powers = [
-    {
+        },
         "Absorption": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Animate Images": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Animate Objects": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Armor": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Banish": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Blast": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Boost": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Constructs": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Darkness": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Dazzle": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Deflection": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Dispel": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Drain": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Energy Field": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Ensnare": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Flight": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Force Field": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Growth": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Healing/Repair": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Illusions": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Images": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Leaping": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Life Drain": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Machine Control": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Matter Chameleon": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Mind Blast": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Mind Control": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Nullification": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Omni Power": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Plasticity": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Port Other": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Possession": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Power Slide": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Running": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Shrinking": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Solid Form": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Special Attack": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Strike": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Stun": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Super Speed": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Swimming": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Swing Line": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Telekinesis": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Telepathy": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Teleportation": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Transform Other": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Transmutation": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
         },
         "Tunneling": {
-            "hd": "",
+            "rank": "",
             "powersource": "",
             "pros/cons": ""
-        }
-    }
-]
-var perks = [
-    {
+        },
         "Ally": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Ambidexterity": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": ""
         },
         "Animal Empathy": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Animal Forms": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Astral Projection": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Authority": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Blending": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Blind Fighting": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Communicator": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Contact": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Cosmic Awareness": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Dimensional Travel": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Duplication": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Enhanced Defense": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Extra Limbs": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Fame": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Gaseous Form": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Headquarters": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Hibernation": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Immortality": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Immunity (Specific)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Immunity (Damage Type)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Invisibility": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Knockdown": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Leadership": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Life Support": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Lightning Reflexes": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Liquid Form": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Luck": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Morph": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Patron": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Phasing": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Photographic Memory": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Power Mimicry (single)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Power Mimicry (all)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Power Theft (single)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Power Theft (all)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Precognition": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Psi-Screen": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Psychometry": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Quick Change": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Reach": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Regeneration (1/hour)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Regeneration (1/minute)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Regeneration (1/page)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Relentless": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Scrying": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Separation": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Speak with Dead": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Special Vehicle": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Super Senses (Astral Sight)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Super Senses (Attuned)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Super Senses (Circular Vision)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Super Senses (Danger Sense)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Super Senses (Detection)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Super Senses (Lie Detection)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Super Senses (Microscopic Vision)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Super Senses (Night Vision)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Super Senses (Radar)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Super Senses (Radio Hearing)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Super Senses (Sonar)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Super Senses (Telescopic Vision)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Super Senses (Thermal Vision)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Super Senses (Trace)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Super Senses (Tracking Scent)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Super Senses (True Sight)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Super Senses (Ultra Hearing)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Super Senses (Ultra Vision)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Super Senses (X-Ray Vision)": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Super Translation": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Time Stop": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Time Travel": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Trackless": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Transformation": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Two-Dimensional": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Uncanny Defense": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Unkillable": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Unliving": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Vanish": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Wall-Crawling": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Warp Pocket": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Weakness Detection": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         },
         "Wealth": {
-            "count": 0,
+            "rank": 0,
             "pros/cons": "",
         }
     }
