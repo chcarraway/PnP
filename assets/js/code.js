@@ -105,7 +105,7 @@ function heroDice() {
             ranks[i].innerHTML = powerLevels[levels[x]].maxRank;
         }
 
-        heroDicePool = powerLevels[levels[x]].hd + 36;
+        heroDicePool = powerLevels[levels[x]].hd;
         hdRemaining = powerLevels[levels[x]].hd;
 
         let selectInputs = document.querySelectorAll('.trait, .power');
@@ -124,18 +124,11 @@ function advancement() {
 
 function tallyHD() {
     hdSpend = 0;
-    // count HD spent on Traits
-    let selectTraits = document.querySelectorAll('.trait');
-    for (let i = 0; i < selectTraits.length; i++) {
-        hdSpend = hdSpend + parseInt(selectTraits[i].value);
+    // count HD spent
+    let selectSpend = document.querySelectorAll('.spend');
+    for (let i = 0; i < selectSpend.length; i++) {
+        hdSpend += parseInt(selectSpend[i].innerText);
     }
-    //...powers...
-    let selectPowers = document.querySelectorAll('.power');
-    for (let i = 0; i < selectPowers.length; i++) {
-        hdSpend = hdSpend + parseInt(selectPowers[i].value);
-    }
-    //...perks...
-    //...pros/cons...
     hdRemaining = heroDicePool - hdSpend + ad;
     // update HD remaining in the header
     document.getElementById('hdRemaining').innerHTML = hdRemaining
@@ -171,12 +164,13 @@ tier.addEventListener('change', heroDice);
 
 const form = document.getElementById('form');
 form.addEventListener('change', weakAttribute);
+form.addEventListener('change', setSpend);
 form.addEventListener('change', tallyHD);
 form.addEventListener('change', advancement);
-form.addEventListener('change', setSpend);
 
 const body = document.querySelector('body');
 body.addEventListener('keyup', checkTabPress);
 
 populateForm();
 populateDropdown();
+tallyHD();
