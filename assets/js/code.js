@@ -80,7 +80,7 @@ function populateForm() {
         '</div>' +
         '<input type="number" class="form-control power rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
         '<div class="input-group-append">' +
-        '<span class="input-group-text" id="strong">Strong</span>' +
+        '<span class="input-group-text" id="strong" data-toggle="tooltip" title="Strong attributes cost twice as much">Strong</span>' +
         '</div>' +
         '</div>';
         }else{
