@@ -49,335 +49,400 @@ var traits = [
     {
         name: "Academics",
         start: 2,
-        weak: "FALSE",
-        rank: 0
+        weak: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Athletics",
         start: 2,
-        weak: "FALSE",
-        rank: 0
+        weak: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Charm",
         start: 2,
-        weak: "FALSE",
-        rank: 0
+        weak: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Command",
         start: 2,
-        weak: "FALSE",
-        rank: 0
+        weak: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Medical",
         start: 2,
-        weak: "FALSE",
-        rank: 0
+        weak: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Might",
         start: 2,
-        weak: "FALSE",
-        rank: 0
+        weak: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Perception",
         start: 2,
-        weak: "FALSE",
-        rank: 0
+        weak: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Professional",
         start: 2,
-        weak: "FALSE",
-        rank: 0
+        weak: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Riding",
         start: 2,
-        weak: "FALSE",
-        rank: 0
+        weak: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Science",
         start: 2,
-        weak: "FALSE",
-        rank: 0
+        weak: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Stealth",
         start: 2,
-        weak: "FALSE",
-        rank: 0
+        weak: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Streetwise",
         start: 2,
-        weak: "FALSE",
-        rank: 0
+        weak: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Survival",
         start: 2,
-        weak: "FALSE",
-        rank: 0
+        weak: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Technology",
         start: 2,
-        weak: "FALSE",
-        rank: 0
+        weak: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Thievery",
         start: 2,
-        weak: "FALSE",
-        rank: 0
+        weak: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Toughness",
         start: 2,
-        weak: "FALSE",
-        rank: 0
+        weak: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Vehicles",
         start: 2,
-        weak: "FALSE",
-        rank: 0
+        weak: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Willpower",
         start: 2,
-        weak: "FALSE"
+        weak: false
     }
 ];
 var powers = [
     {
         name: "Absorption",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Animate Images",
         start: 0,
-        strong: "TRUE",
-        rank: 0
+        strong: true,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Animate Objects",
         start: 0,
-        strong: "TRUE",
-        rank: 0
+        strong: true,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Armor",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Banish",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Blast",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Boost",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Constructs",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Darkness",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Dazzle",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Deflection",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Dispel",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Drain",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Energy Field",
         start: 0,
-        strong: "TRUE",
-        rank: 0
+        strong: true,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Ensnare",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Flight",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Force Field",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Growth",
         start: 0,
-        strong: "TRUE",
-        rank: 0
+        strong: true,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Healing/Repair",
         start: 0,
-        strong: "TRUE",
-        rank: 0
+        strong: true,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Illusions",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Images",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Leaping",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Life Drain",
         start: 0,
-        strong: "TRUE",
-        rank: 0
+        strong: true,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Machine Control",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Matter Chameleon",
         start: 0,
-        strong: "TRUE",
-        rank: 0
+        strong: true,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Mind Blast",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Mind Control",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Nullification",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Omni Power",
         start: 0,
-        strong: "TRUE",
-        rank: 0
+        strong: true,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Plasticity",
         start: 0,
-        strong: "TRUE",
-        rank: 0
+        strong: true,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Port Other",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Possession",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Power Slide",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Running",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Shrinking",
         start: 0,
-        strong: "TRUE",
-        rank: 0
+        strong: true,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Solid Form",
         start: 0,
-        strong: "TRUE",
-        rank: 0
+        strong: true,
+        rank: 0,
+        proscons: ""
     }, {
-        name: "Special Attack",
+        name: "special Attack",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Strike",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Stun",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Super Speed",
         start: 0,
-        strong: "TRUE",
-        rank: 0
+        strong: true,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Swimming",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Swing Line",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Telekinesis",
         start: 0,
-        strong: "TRUE",
-        rank: 0
+        strong: true,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Telepathy",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Teleportation",
         start: 0,
-        strong: "TRUE",
-        rank: 0
+        strong: true,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Transform Other",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Transmutation",
         start: 0,
-        strong: "TRUE",
-        rank: 0
+        strong: true,
+        rank: 0,
+        proscons: ""
     }, {
         name: "Tunneling",
         start: 0,
-        strong: "FALSE",
-        rank: 0
+        strong: false,
+        rank: 0,
+        proscons: ""
     }
 ];
 var perks = [
@@ -535,7 +600,7 @@ var perks = [
         name: "Speak with Dead",
         cost: 2
     }, {
-        name: "Special Vehicle",
+        name: "special Vehicle",
         cost: 1,
         multiple: true
     }, {
@@ -642,633 +707,758 @@ var perks = [
 var prosCons = [
     {
         name: "Languages",
-        Modifier: 1,
-        TPP: "Academics",
-        rank: 0
+        modifier: 1,
+        tpp: "Academics",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Martial Arts",
-        Modifier: 1,
-        TPP: "Athletics",
-        rank: 0
+        modifier: 1,
+        tpp: "Athletics",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Weaponry",
-        Modifier: 1,
-        TPP: "Athletics",
-        rank: 0
+        modifier: 1,
+        tpp: "Athletics",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Disguise",
-        Modifier: 1,
-        TPP: "Charm",
-        rank: 0
+        modifier: 1,
+        tpp: "Charm",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Gambling",
-        Modifier: 1,
-        TPP: "Charm",
-        rank: 0
+        modifier: 1,
+        tpp: "Charm",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Ventriloquism",
-        Modifier: 1,
-        TPP: "Charm",
-        rank: 0
+        modifier: 1,
+        tpp: "Charm",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Shockwave",
-        Modifier: 2,
-        TPP: "Might",
-        rank: 0
+        modifier: 2,
+        tpp: "Might",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Tremor",
-        Modifier: 2,
-        TPP: "Might",
-        rank: 0
+        modifier: 2,
+        tpp: "Might",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Acute Sense (Touch)",
-        Modifier: 1,
-        TPP: "Perception",
-        rank: 0
+        modifier: 1,
+        tpp: "Perception",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Acute Sense (Sight)",
-        Modifier: 1,
-        TPP: "Perception",
-        rank: 0
+        modifier: 1,
+        tpp: "Perception",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Acute Sense (Hearing)",
-        Modifier: 1,
-        TPP: "Perception",
-        rank: 0
+        modifier: 1,
+        tpp: "Perception",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Acute Sense (Smell)",
-        Modifier: 1,
-        TPP: "Perception",
-        rank: 0
+        modifier: 1,
+        tpp: "Perception",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Acute Sense (Taste)",
-        Modifier: 1,
-        TPP: "Perception",
-        rank: 0
+        modifier: 1,
+        tpp: "Perception",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Investigation",
-        Modifier: 1,
-        TPP: "Perception",
-        rank: 0
+        modifier: 1,
+        tpp: "Perception",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Experienced",
-        Modifier: 1,
-        TPP: "Professional",
-        rank: 0
+        modifier: 1,
+        tpp: "Professional",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Aircraft",
-        Modifier: 1,
-        TPP: "Vehicles",
-        rank: 0
+        modifier: 1,
+        tpp: "Vehicles",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Spacecraft",
-        Modifier: 1,
-        TPP: "Vehicles",
-        rank: 0
+        modifier: 1,
+        tpp: "Vehicles",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Watercraft",
-        Modifier: 1,
-        TPP: "Vehicles",
-        rank: 0
+        modifier: 1,
+        tpp: "Vehicles",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Siphon",
-        Modifier: 1,
-        TPP: "Absorption",
-        rank: 0
+        modifier: 1,
+        tpp: "Absorption",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Impenetrable",
-        Modifier: "x2",
-        TPP: "Armor",
-        rank: 0
+        modifier: "x2",
+        tpp: "Armor",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Psychic",
-        Modifier: 0,
-        TPP: "Force Field",
-        rank: 0
+        modifier: 0,
+        tpp: "Force Field",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Active",
-        Modifier: -1,
-        TPP: "Armor",
-        rank: 0
+        modifier: -1,
+        tpp: "Armor",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Blocking",
-        Modifier: 2,
-        TPP: "Strike",
-        rank: 0
+        modifier: 2,
+        tpp: "Strike",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Penetrating",
-        Modifier: "x2",
-        TPP: "Strike",
-        rank: 0
+        modifier: "x2",
+        tpp: "Strike",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Marksmanship (Guns)",
-        Modifier: -1,
-        TPP: "Blast",
-        rank: 0
+        modifier: -1,
+        tpp: "Blast",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Marksmanship (Bows)",
-        Modifier: -1,
-        TPP: "Blast",
-        rank: 0
+        modifier: -1,
+        tpp: "Blast",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Absolute",
-        Modifier: 2,
-        TPP: "Darkness",
-        rank: 0
+        modifier: 2,
+        tpp: "Darkness",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Deafening",
-        Modifier: -1,
-        TPP: "Dazzle",
-        rank: 0
+        modifier: -1,
+        tpp: "Dazzle",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Defensive",
-        Modifier: 3,
-        TPP: "Energy Field",
-        rank: 0
+        modifier: 3,
+        tpp: "Energy Field",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Energy Form",
-        Modifier: 6,
-        TPP: "Energy Field",
-        rank: 0
+        modifier: 6,
+        tpp: "Energy Field",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Capture",
-        Modifier: 1,
-        TPP: "Ensnare",
-        rank: 0
+        modifier: 1,
+        tpp: "Ensnare",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Immobilize",
-        Modifier: -2,
-        TPP: "Ensnare",
-        rank: 0
+        modifier: -2,
+        tpp: "Ensnare",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Spaceflight",
-        Modifier: 1,
-        TPP: "Flight",
-        rank: 0
+        modifier: 1,
+        tpp: "Flight",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Gliding",
-        Modifier: -1,
-        TPP: "Flight",
-        rank: 0
+        modifier: -1,
+        tpp: "Flight",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Levitation",
-        Modifier: -2,
-        TPP: "Flight",
-        rank: 0
+        modifier: -2,
+        tpp: "Flight",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Wings",
-        Modifier: -1,
-        TPP: "Flight",
-        rank: 0
+        modifier: -1,
+        tpp: "Flight",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Cure",
-        Modifier: 2,
-        TPP: "Healing/Repair",
-        rank: 0
+        modifier: 2,
+        tpp: "Healing/Repair",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Slay",
-        Modifier: -4,
-        TPP: "Life Drain",
-        rank: 0
+        modifier: -4,
+        tpp: "Life Drain",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Cables",
-        Modifier: -1,
-        TPP: "Machine Control",
-        rank: 0
+        modifier: -1,
+        tpp: "Machine Control",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Interface",
-        Modifier: -1,
-        TPP: "Machine Control",
-        rank: 0
+        modifier: -1,
+        tpp: "Machine Control",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Animal Control (all)",
-        Modifier: -1,
-        TPP: "Mind Control",
-        rank: 0
+        modifier: -1,
+        tpp: "Mind Control",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Animal Control (large category)",
-        Modifier: -2,
-        TPP: "Mind Control",
-        rank: 0
+        modifier: -2,
+        tpp: "Mind Control",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Animal Control (small category)",
-        Modifier: -3,
-        TPP: "Mind Control",
-        rank: 0
+        modifier: -3,
+        tpp: "Mind Control",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Confusion",
-        Modifier: -2,
-        TPP: "Mind Control",
-        rank: 0
+        modifier: -2,
+        tpp: "Mind Control",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Emotion Control (any)",
-        Modifier: -1,
-        TPP: "Mind Control",
-        rank: 0
+        modifier: -1,
+        tpp: "Mind Control",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Emotion Control (specific)",
-        Modifier: -2,
-        TPP: "Mind Control",
-        rank: 0
+        modifier: -2,
+        tpp: "Mind Control",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Hypnotism",
-        Modifier: -2,
-        TPP: "Mind Control",
-        rank: 0
+        modifier: -2,
+        tpp: "Mind Control",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Pheremones",
-        Modifier: -2,
-        TPP: "Mind Control",
-        rank: 0
+        modifier: -2,
+        tpp: "Mind Control",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Micro-Universe",
-        Modifier: 1,
-        TPP: "Shrinking",
-        rank: 0
+        modifier: 1,
+        tpp: "Shrinking",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Proportional Strength",
-        Modifier: -2,
-        TPP: "Shrinking",
-        rank: 0
+        modifier: -2,
+        tpp: "Shrinking",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Dense",
-        Modifier: -2,
-        TPP: "Solid Form",
-        rank: 0
+        modifier: -2,
+        tpp: "Solid Form",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Fighting",
-        Modifier: -1,
-        TPP: "Strike",
-        rank: 0
+        modifier: -1,
+        tpp: "Strike",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Slow",
-        Modifier: -2,
-        TPP: "Stun",
-        rank: 0
+        modifier: -2,
+        tpp: "Stun",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Focused",
-        Modifier: -2,
-        TPP: "Telekenisis",
-        rank: 0
+        modifier: -2,
+        tpp: "Telekenisis",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Tendrils",
-        Modifier: -2,
-        TPP: "Telekenisis",
-        rank: 0
+        modifier: -2,
+        tpp: "Telekenisis",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Weak",
-        Modifier: -4,
-        TPP: "Telekenisis",
-        rank: 0
+        modifier: -4,
+        tpp: "Telekenisis",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Alter Memory",
-        Modifier: 6,
-        TPP: "Telepathy",
-        rank: 0
+        modifier: 6,
+        tpp: "Telepathy",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Cloak Mind",
-        Modifier: 1,
-        TPP: "Telepathy",
-        rank: 0
+        modifier: 1,
+        tpp: "Telepathy",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Dream Travel",
-        Modifier: 1,
-        TPP: "Telepathy",
-        rank: 0
+        modifier: 1,
+        tpp: "Telepathy",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Sense Minds",
-        Modifier: 2,
-        TPP: "Telepathy",
-        rank: 0
+        modifier: 2,
+        tpp: "Telepathy",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Empathy",
-        Modifier: -2,
-        TPP: "Telepathy",
-        rank: 0
+        modifier: -2,
+        tpp: "Telepathy",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Blind Porting",
-        Modifier: 2,
-        TPP: "Teleportation",
-        rank: 0
+        modifier: 2,
+        tpp: "Teleportation",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Combat Porting",
-        Modifier: 2,
-        TPP: "Teleportation",
-        rank: 0
+        modifier: 2,
+        tpp: "Teleportation",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Gate",
-        Modifier: 2,
-        TPP: "Time Travel",
-        rank: 0
+        modifier: 2,
+        tpp: "Time Travel",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Disturbance",
-        Modifier: -1,
-        TPP: "Tunneling",
-        rank: 0
+        modifier: -1,
+        tpp: "Tunneling",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Adjustible (Normal)",
-        Modifier: 1,
-        TPP: "TPP",
-        rank: 0
+        modifier: 1,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Adjustible (Strong)",
-        Modifier: 2,
-        TPP: "TPP",
-        rank: 0
+        modifier: 2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Affect Inanimate",
-        Modifier: 2,
-        TPP: "TPP",
-        rank: 0
+        modifier: 2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Always On",
-        Modifier: -1,
-        TPP: "TPP",
-        rank: 0
+        modifier: -1,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Area/Burst (Fixed)",
-        Modifier: 1,
-        TPP: "TPP",
-        rank: 0
+        modifier: 1,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Area/Burst (Toggle)",
-        Modifier: 2,
-        TPP: "TPP",
-        rank: 0
+        modifier: 2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Automatic",
-        Modifier: -1,
-        TPP: "TPP",
-        rank: 0
+        modifier: -1,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Build Up",
-        Modifier: -2,
-        TPP: "TPP",
-        rank: 0
+        modifier: -2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Casting",
-        Modifier: 2,
-        TPP: "TPP",
-        rank: 0
+        modifier: 2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Charges (6 per Scene)",
-        Modifier: -1,
-        TPP: "TPP",
-        rank: 0
+        modifier: -1,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Charges (3 per Scene)",
-        Modifier: -2,
-        TPP: "TPP",
-        rank: 0
+        modifier: -2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Charges (1 per Scene)",
-        Modifier: -3,
-        TPP: "TPP",
-        rank: 0
+        modifier: -3,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Concentration",
-        Modifier: -2,
-        TPP: "TPP",
-        rank: 0
+        modifier: -2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Contact",
-        Modifier: -2,
-        TPP: "TPP",
-        rank: 0
+        modifier: -2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Contagious",
-        Modifier: 2,
-        TPP: "TPP",
-        rank: 0
+        modifier: 2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Delay",
-        Modifier: -1,
-        TPP: "TPP",
-        rank: 0
+        modifier: -1,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Demanding",
-        Modifier: -2,
-        TPP: "TPP",
-        rank: 0
+        modifier: -2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Ethereal",
-        Modifier: 2,
-        TPP: "TPP",
-        rank: 0
+        modifier: 2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Fading (Reset Scene)",
-        Modifier: -1,
-        TPP: "TPP",
-        rank: 0
+        modifier: -1,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Fading (Reset Daily)",
-        Modifier: -2,
-        TPP: "TPP",
-        rank: 0
+        modifier: -2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Imprecise",
-        Modifier: -2,
-        TPP: "TPP",
-        rank: 0
+        modifier: -2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Inhibited (Infrequent)",
-        Modifier: -1,
-        TPP: "TPP",
-        rank: 0
+        modifier: -1,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Inhibited (Frequent)",
-        Modifier: -2,
-        TPP: "TPP",
-        rank: 0
+        modifier: -2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Item",
-        Modifier: -1,
-        TPP: "TPP",
-        rank: 0
+        modifier: -1,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Limited (Minor)",
-        Modifier: -1,
-        TPP: "TPP",
-        rank: 0
+        modifier: -1,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Limited (Major)",
-        Modifier: -2,
-        TPP: "TPP",
-        rank: 0
+        modifier: -2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Mental",
-        Modifier: 2,
-        TPP: "TPP",
-        rank: 0
+        modifier: 2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Overload",
-        Modifier: 1,
-        TPP: "TPP",
-        rank: 0
+        modifier: 1,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Ranged",
-        Modifier: 2,
-        TPP: "TPP",
-        rank: 0
+        modifier: 2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Requirement (Easy)",
-        Modifier: -1,
-        TPP: "TPP",
-        rank: 0
+        modifier: -1,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Requirement (Hard)",
-        Modifier: -2,
-        TPP: "TPP",
-        rank: 0
+        modifier: -2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Ricochet",
-        Modifier: 1,
-        TPP: "TPP",
-        rank: 0
+        modifier: 1,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Selective",
-        Modifier: 2,
-        TPP: "TPP",
-        rank: 0
+        modifier: 2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Side Effect (Minor)",
-        Modifier: -1,
-        TPP: "TPP",
-        rank: 0
+        modifier: -1,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Side Effect (Major)",
-        Modifier: -2,
-        TPP: "TPP",
-        rank: 0
+        modifier: -2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Signature",
-        Modifier: -1,
-        TPP: "TPP",
-        rank: 0
+        modifier: -1,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Subtle",
-        Modifier: 1,
-        TPP: "TPP",
-        rank: 0
+        modifier: 1,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Trapping",
-        Modifier: 2,
-        TPP: "TPP",
-        rank: 0
+        modifier: 2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Underpowered",
-        Modifier: -2,
-        TPP: "TPP",
-        rank: 0
+        modifier: -2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Variant",
-        Modifier: 2,
-        TPP: "TPP",
-        rank: 0
+        modifier: 2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Visual Range",
-        Modifier: 2,
-        TPP: "TPP",
-        rank: 0
+        modifier: 2,
+        tpp: "tpp",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Boss",
-        Modifier: 2,
-        TPP: "Ally",
-        rank: 0
+        modifier: 2,
+        tpp: "Ally",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Summoning",
-        Modifier: 2,
-        TPP: "Ally",
-        rank: 0
+        modifier: 2,
+        tpp: "Ally",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Xenomorphic",
-        Modifier: 6,
-        TPP: "Animal Forms",
-        rank: 0
+        modifier: 6,
+        tpp: "Animal Forms",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Supreme",
-        Modifier: 2,
-        TPP: "Authority",
-        rank: 0
+        modifier: 2,
+        tpp: "Authority",
+        rank: 0,
+        proscons: ""
     }, {
         name: "High Level",
-        Modifier: 2,
-        TPP: "Contact",
-        rank: 0
+        modifier: 2,
+        tpp: "Contact",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Legion",
-        Modifier: 12,
-        TPP: "Duplication",
-        rank: 0
+        modifier: 12,
+        tpp: "Duplication",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Crazy",
-        Modifier: 2,
-        TPP: "Fame",
-        rank: 0
+        modifier: 2,
+        tpp: "Fame",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Environmental",
-        Modifier: 2,
-        TPP: "Immunity",
-        rank: 0
+        modifier: 2,
+        tpp: "Immunity",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Make Invisible",
-        Modifier: 2,
-        TPP: "Invisibility",
-        rank: 0
+        modifier: 2,
+        tpp: "Invisibility",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Doppleganger",
-        Modifier: -1,
-        TPP: "Morph",
-        rank: 0
+        modifier: -1,
+        tpp: "Morph",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Clout",
-        Modifier: 2,
-        TPP: "Patron",
-        rank: 0
+        modifier: 2,
+        tpp: "Patron",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Astral",
-        Modifier: 2,
-        TPP: "Phasing",
-        rank: 0
+        modifier: 2,
+        tpp: "Phasing",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Phase Object",
-        Modifier: 2,
-        TPP: "Phasing",
-        rank: 0
+        modifier: 2,
+        tpp: "Phasing",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Recording",
-        Modifier: 1,
-        TPP: "Photographic Memory",
-        rank: 0
+        modifier: 1,
+        tpp: "Photographic Memory",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Weakness",
-        Modifier: -1,
-        TPP: "Regeneration",
-        rank: 0
+        modifier: -1,
+        tpp: "Regeneration",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Waypoints",
-        Modifier: -2,
-        TPP: "Time Travel",
-        rank: 0
+        modifier: -2,
+        tpp: "Time Travel",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Weak Form",
-        Modifier: -2,
-        TPP: "Transformation",
-        rank: 0
+        modifier: -2,
+        tpp: "Transformation",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Automaton",
-        Modifier: 6,
-        TPP: "Unliving",
-        rank: 0
+        modifier: 6,
+        tpp: "Unliving",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Wall-Running",
-        Modifier: -1,
-        TPP: "Wall-Crawling",
-        rank: 0
+        modifier: -1,
+        tpp: "Wall-Crawling",
+        rank: 0,
+        proscons: ""
     }, {
         name: "Great",
-        Modifier: 2,
-        TPP: "Wealth"
+        modifier: 2,
+        tpp: "Wealth"
     }
 ];
 var armors = [
@@ -1276,64 +1466,72 @@ var armors = [
         name: "Leather",
         Category: "Ancient",
         Defense: 1,
-        Special: "",
-        Impenetrable: "FALSE",
+        acquired: false,
+        special: "",
+        Impenetrable: false,
         Passive: 1,
         Active: 1
     }, {
         name: "Mail",
         Category: "Ancient",
         Defense: 2,
-        Special: "",
-        Impenetrable: "FALSE",
+        acquired: false,
+        special: "",
+        Impenetrable: false,
         Passive: 2,
         Active: 2
     }, {
         name: "Plate",
         Category: "Sci-Fi",
         Defense: 4,
-        Special: "",
-        Impenetrable: "FALSE",
+        acquired: false,
+        special: "",
+        Impenetrable: false,
         Passive: 4,
         Active: 4
     }, {
         name: "Biker Leather",
         Category: "Modern",
         Defense: 1,
-        Special: "",
-        Impenetrable: "FALSE",
+        acquired: false,
+        special: "",
+        Impenetrable: false,
         Passive: 1,
         Active: 1
     }, {
         name: "Bulletproof Cloth",
         Category: "Modern",
         Defense: 2,
-        Special: "Limited (only vs. firearms)",
-        Impenetrable: "FALSE",
+        acquired: false,
+        special: "Limited (only vs. firearms)",
+        Impenetrable: false,
         Passive: 2,
         Active: 2
     }, {
         name: "Military/Riot Gear",
         Category: "Modern",
         Defense: 3,
-        Special: "",
-        Impenetrable: "FALSE",
+        acquired: false,
+        special: "",
+        Impenetrable: false,
         Passive: 3,
         Active: 3
     }, {
         name: "Padding",
         Category: "Sci-Fi",
         Defense: 2,
-        Special: "",
-        Impenetrable: "FALSE",
+        acquired: false,
+        special: "",
+        Impenetrable: false,
         Passive: 2,
         Active: 2
     }, {
         name: "Powered",
         Category: "Sci-Fi",
         Defense: 6,
-        Special: "Impenetrable",
-        Impenetrable: "TRUE",
+        acquired: false,
+        special: "Impenetrable",
+        Impenetrable: true,
         Passive: 6,
         Active: 6
     }
@@ -1343,16 +1541,18 @@ var shields = [
         name: "Ancient Shield",
         Category: "Ancient",
         Defense: 1,
-        Special: "Active Only",
-        Impenetrable: "FALSE",
+        acquired: false,
+        special: "Active Only",
+        Impenetrable: false,
         Passive: 0,
         Active: 1
     }, {
         name: "Sci-Fi Shield",
         Category: "Sci-Fi",
         Defense: 1,
-        Special: "Active Only, Impenetrable",
-        Impenetrable: "TRUE",
+        acquired: false,
+        special: "Active Only, Impenetrable",
+        Impenetrable: true,
         Passive: 0,
         Active: 1
     }
@@ -1361,193 +1561,225 @@ var weapons = [
     {
         name: "Bow/Crossbow",
         Damage: 3,
-        Special: "Ranged",
-        isRanged: "TRUE",
-        rank: 0
+        acquired: false,
+        special: "Ranged",
+        isRanged: true
     }, {
         name: "Energy Grenade",
         Damage: 4,
-        Special: "Area, Ranged",
-        isRanged: "TRUE",
-        rank: 0
+        acquired: false,
+        special: "Area, Ranged",
+        isRanged: true
     }, {
         name: "Energy Pistol",
         Damage: 4,
-        Special: "Ranged",
-        isRanged: "TRUE",
-        rank: 0
+        acquired: false,
+        special: "Ranged",
+        isRanged: true
     }, {
         name: "Energy Rifle",
         Damage: 5,
-        Special: "Ranged",
-        isRanged: "TRUE",
-        rank: 0
+        acquired: false,
+        special: "Ranged",
+        isRanged: true
     }, {
         name: "Energy Rifle, Assault",
         Damage: 5,
-        Special: "Area, Ranged",
-        isRanged: "TRUE",
-        rank: 0
+        acquired: false,
+        special: "Area, Ranged",
+        isRanged: true
     }, {
         name: "Energy Rifle, Heavy",
         Damage: 6,
-        Special: "Area, Ranged",
-        isRanged: "TRUE",
-        rank: 0
+        acquired: false,
+        special: "Area, Ranged",
+        isRanged: true
     }, {
         name: "Grenade, Explosive",
         Damage: 3,
-        Special: "Area, Ranged",
-        isRanged: "TRUE",
-        rank: 0
+        acquired: false,
+        special: "Area, Ranged",
+        isRanged: true
     }, {
         name: "Grenade, Flash-Bang",
         Damage: 0,
-        Special: "Area, Dazzle 6d, Ranged",
-        isRanged: "TRUE",
-        rank: 0
+        acquired: false,
+        special: "Area, Dazzle 6d, Ranged",
+        isRanged: true
     }, {
         name: "Heavy Machinegun",
         Damage: 5,
-        Special: "Area, Ranged",
-        isRanged: "TRUE",
-        rank: 0
+        acquired: false,
+        special: "Area, Ranged",
+        isRanged: true
     }, {
         name: "Heavy Rocket Launcher",
         Damage: 6,
-        Special: "Area, Ranged",
-        isRanged: "TRUE",
-        rank: 0
+        acquired: false,
+        special: "Area, Ranged",
+        isRanged: true
     }, {
         name: "Melee, Blunt",
         Damage: 2,
-        Special: "",
-        isRanged: "FALSE",
-        rank: 0
+        acquired: false,
+        special: "",
+        isRanged: false
     }, {
         name: "Melee, Edged/Exotic",
         Damage: 3,
-        Special: "",
-        isRanged: "FALSE",
-        rank: 0
+        acquired: false,
+        special: "",
+        isRanged: false
     }, {
         name: "Melee, Energy",
         Damage: 3,
-        Special: "Penetrating",
-        isRanged: "FALSE",
-        rank: 0
+        acquired: false,
+        special: "Penetrating",
+        isRanged: false
     }, {
         name: "Pistol",
         Damage: 3,
-        Special: "Ranged",
-        isRanged: "TRUE",
-        rank: 0
+        acquired: false,
+        special: "Ranged",
+        isRanged: true
     }, {
         name: "Rifle, Assault",
         Damage: 4,
-        Special: "Area, Ranged",
-        isRanged: "TRUE",
-        rank: 0
+        acquired: false,
+        special: "Area, Ranged",
+        isRanged: true
     }, {
         name: "Rifle, Sniper",
         Damage: 4,
-        Special: "Ranged, Visual Range",
-        isRanged: "TRUE",
-        rank: 0
+        acquired: false,
+        special: "Ranged, Visual Range",
+        isRanged: true
     }, {
         name: "Shotgun",
         Damage: 4,
-        Special: "Ranged, Limited (short range)",
-        isRanged: "TRUE",
-        rank: 0
+        acquired: false,
+        special: "Ranged, Limited (short range)",
+        isRanged: true
     }, {
         name: "Submachine Gun",
         Damage: 3,
-        Special: "Area, Ranged",
-        isRanged: "TRUE",
-        rank: 0
+        acquired: false,
+        special: "Area, Ranged",
+        isRanged: true
     }, {
         name: "Thrown, Blunt",
         Damage: 1,
-        Special: "Ranged",
-        isRanged: "TRUE",
-        rank: 0
+        acquired: false,
+        special: "Ranged",
+        isRanged: true
     }, {
         name: "Thrown, Edged/Exotic",
         Damage: 2,
-        Special: "Ranged",
-        isRanged: "TRUE",
-        rank: 0
+        acquired: false,
+        special: "Ranged",
+        isRanged: true
     }, {
         name: "Thrown, Sling",
         Damage: 2,
-        Special: "Ranged",
-        isRanged: "TRUE"
+        acquired: false,
+        special: "Ranged",
+        isRanged: true
     }
 ];
 var equipment = [
     {
         name: "Binoculars",
+        acquired: false
     }, {
         name: "Bug detector",
+        acquired: false
     }, {
         name: "Caltrops",
+        acquired: false
     }, {
         name: "Camera",
+        acquired: false
     }, {
         name: "Cellphone",
+        acquired: false
     }, {
         name: "Climbing Claws",
+        acquired: false
     }, {
         name: "Climbing Gear",
+        acquired: false
     }, {
         name: "Computer",
+        acquired: false
     }, {
         name: "Communicator",
+        acquired: false
     }, {
         name: "Crowbar",
+        acquired: false
     }, {
         name: "Explosives",
+        acquired: false
     }, {
         name: "Flashlight",
+        acquired: false
     }, {
         name: "Gas Mask",
+        acquired: false
     }, {
         name: "Geiger Counter",
+        acquired: false
     }, {
         name: "Handcuffs",
+        acquired: false
     }, {
         name: "Lantern",
+        acquired: false
     }, {
         name: "Light Stick",
+        acquired: false
     }, {
         name: "Lockpick Gun",
+        acquired: false
     }, {
         name: "Night Vision Goggles",
+        acquired: false
     }, {
         name: "Parabolic Microphone",
+        acquired: false
     }, {
         name: "Parachute",
+        acquired: false
     }, {
         name: "Radio",
+        acquired: false
     }, {
         name: "Rappelling Gear",
+        acquired: false
     }, {
         name: "Scuba Gear",
+        acquired: false
     }, {
         name: "Scope",
+        acquired: false
     }, {
         name: "Silencer",
+        acquired: false
     }, {
         name: "Space Suit",
+        acquired: false
     }, {
         name: "Telescope",
+        acquired: false
     }, {
         name: "Tracer Bug",
+        acquired: false
     }, {
         name: "Transmitter",
+        acquired: false
     }, {
         name: "Wiretap",
+        acquired: false
     }
 ];
 var flaws = [
