@@ -70,7 +70,21 @@ function populateForm() {
     let powerContainer = document.getElementById('powerContainer');
     for (let i = 0; i < powers.length; i++) {
         let noSpaceName = powers[i].name.replace(/\s+/g, '');
+        if (powers[i].strong === 'TRUE'){
+            
         powerContainer.innerHTML +=
+        '<div class="input-group mb-3">' +
+        '<div class="input-group-prepend w186">' +
+        '<span class="input-group-text w186">' + powers[i].name + '</span> ' +
+        '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
+        '</div>' +
+        '<input type="number" class="form-control power rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
+        '<div class="input-group-append">' +
+        '<span class="input-group-text" id="strong">Strong</span>' +
+        '</div>' +
+        '</div>';
+        }else{
+            powerContainer.innerHTML +=
             '<div class="input-group mb-3">' +
             '<div class="input-group-prepend w186">' +
             '<span class="input-group-text w186">' + powers[i].name + '</span> ' +
@@ -78,9 +92,9 @@ function populateForm() {
             '</div>' +
             '<input type="number" class="form-control power rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
             '<div class="input-group-append">' +
-            '<span class="input-group-text hide" id="strong">Strong</span>' +
             '</div>' +
             '</div>';
+        }
     }
 }
 
