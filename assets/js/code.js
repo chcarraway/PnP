@@ -65,13 +65,9 @@ function showProsCons() {
     var rank = document.getElementsByClassName('rank');
     for (i = 0; i < rank.length; i++) {
         if (parseInt(rank[i].value) >= 1) {
-            console.log(rank[i].id);
-            console.log(rank[i].parentElement.nextElementSibling.nextElementSibling)
             rank[i].parentElement.nextElementSibling.nextElementSibling.classList.remove('hide');
         }
         else {
-            console.log(rank[i].id);
-            console.log(rank[i].parentElement.nextElementSibling.nextElementSibling);
             rank[i].parentElement.nextElementSibling.nextElementSibling.classList.add('hide');
         }
     }
