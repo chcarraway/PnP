@@ -64,7 +64,7 @@ function populateForm() {
     for (let i = 0; i < trait.length; i++) {
         let noSpaceName = traits[i].name.replace(/\s+/g, '');
         traitContainer.innerHTML +=
-            '<div class="input-group mb-3">' +
+            '<div class="input-group">' +
             '<div class="input-group-prepend w186">' +
             '<span class="input-group-text w186">' + traits[i].name + '</span>' +
             '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span></div>' +
@@ -72,8 +72,24 @@ function populateForm() {
             '<div class="input-group-append">' +
             '<span class="input-group-text hide" id="weak" data-toggle="tooltip" title="You\'re only allowed 3 weak attributes">Weak</span>' +
             '</div>' +
+            '</div>' +
+            '<div class="input-group mb-3">' +
+            '<div class="input-group-prepend">' +
+            '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
+            '<select multiple class="custom-select" id="' + noSpaceName + 'PCs">' +
+            '</select>' +
             '</div>';
+        for (let j = 0; j < prosCons.length; j++) {
+            let dropdown = document.getElementById(noSpaceName + 'PCs');
+            if (prosCons[j].tpp == traits[i].name || prosCons[j].tpp == 'tpp') {
+                option = document.createElement('option');
+                option.text = prosCons[j].name;
+                option.value = prosCons[j].cost;
+                dropdown.add(option);
+            }
+        }
     }
+
     let powerContainer = document.getElementById('powerContainer');
     for (let i = 0; i < powers.length; i++) {
         let noSpaceName = powers[i].name.replace(/\s+/g, '');
@@ -124,6 +140,19 @@ function populateForm() {
                 '<input type="number" class="form-control perk rank" id="' + noSpaceName + 'Value" value="0" min="0" max="1">' +
                 '<div class="input-group-append">' + '<span class="input-group-text cost" id="' + noSpaceName + 'Cost"> ' + perks[i].cost + '</span>'
             '</div></div>';
+        }
+    }
+    let pcContainer = document.getElementById('pcContainer');
+    for (let i = 0; i < prosCons.length; i++) {
+        let noSpaceName = prosCons[i].name.replace(/\s+/g, '');
+        if (prosCons[i].tpp === "powers") {
+
+        }
+        if (prosCons[i].tpp === "tpp") {
+            //has dropdown for selection
+        }
+        else {
+
         }
     }
 }
