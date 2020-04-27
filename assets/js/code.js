@@ -4,7 +4,8 @@ var trait = Object.keys(traits);
 var heroDicePool = 0;
 var hdSpend = 0;
 var hdRemaining = 0;
-var ad = 0
+var ad = 0;
+var weakCount = 0;
 
 function checkTabPress(e) {
     "use strict";
@@ -26,9 +27,15 @@ function weakAttribute(e) {
     var activeElement = document.activeElement;
     if (activeElement.classList.contains('trait') && activeElement.classList.contains('rank') && activeElement.value === '1') {
         activeElement.nextElementSibling.firstElementChild.classList.remove('hide');
+        weakCount++;
     }
     if (activeElement.classList.contains('trait') && activeElement.classList.contains('rank') && activeElement.value > '1') {
         activeElement.nextElementSibling.firstElementChild.classList.add('hide');
+        weakCount--;
+    }
+
+    if (weakCount > 3){
+        $('#errorModal').modal('show');
     }
 }
 
