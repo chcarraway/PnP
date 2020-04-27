@@ -110,7 +110,7 @@ function populateForm() {
             perkContainer.innerHTML +=
                 '<div class="input-group mb-3">' +
                 '<div class="input-group-prepend w186">' +
-                '<span class="input-group-text w186">' + perks[i].name + '</span>' +
+                '<span class="input-group-text w186">' + perks[i].name + '*</span>' +
                 '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span></div>' +
                 '<input type="number" class="form-control perk rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
                 '<div class="input-group-append">' + '<span class="input-group-text cost" id="' + noSpaceName + 'Cost"> ' + perks[i].cost + '</span>'

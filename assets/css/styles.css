@@ -13,3 +13,6 @@ body {
 .error {
     background-color: red;
 }
+.cost {
+    min-width: 46px;
+}
