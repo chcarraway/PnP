@@ -49,71 +49,88 @@ var traits = [
     {
         name: "Academics",
         start: 2,
-        weak: "FALSE"
+        weak: "FALSE",
+        rank: 0
     }, {
         name: "Athletics",
         start: 2,
-        weak: "FALSE"
+        weak: "FALSE",
+        rank: 0
     }, {
         name: "Charm",
         start: 2,
-        weak: "FALSE"
+        weak: "FALSE",
+        rank: 0
     }, {
         name: "Command",
         start: 2,
-        weak: "FALSE"
+        weak: "FALSE",
+        rank: 0
     }, {
         name: "Medical",
         start: 2,
-        weak: "FALSE"
+        weak: "FALSE",
+        rank: 0
     }, {
         name: "Might",
         start: 2,
-        weak: "FALSE"
+        weak: "FALSE",
+        rank: 0
     }, {
         name: "Perception",
         start: 2,
-        weak: "FALSE"
+        weak: "FALSE",
+        rank: 0
     }, {
         name: "Professional",
         start: 2,
-        weak: "FALSE"
+        weak: "FALSE",
+        rank: 0
     }, {
         name: "Riding",
         start: 2,
-        weak: "FALSE"
+        weak: "FALSE",
+        rank: 0
     }, {
         name: "Science",
         start: 2,
-        weak: "FALSE"
+        weak: "FALSE",
+        rank: 0
     }, {
         name: "Stealth",
         start: 2,
-        weak: "FALSE"
+        weak: "FALSE",
+        rank: 0
     }, {
         name: "Streetwise",
         start: 2,
-        weak: "FALSE"
+        weak: "FALSE",
+        rank: 0
     }, {
         name: "Survival",
         start: 2,
-        weak: "FALSE"
+        weak: "FALSE",
+        rank: 0
     }, {
         name: "Technology",
         start: 2,
-        weak: "FALSE"
+        weak: "FALSE",
+        rank: 0
     }, {
         name: "Thievery",
         start: 2,
-        weak: "FALSE"
+        weak: "FALSE",
+        rank: 0
     }, {
         name: "Toughness",
         start: 2,
-        weak: "FALSE"
+        weak: "FALSE",
+        rank: 0
     }, {
         name: "Vehicles",
         start: 2,
-        weak: "FALSE"
+        weak: "FALSE",
+        rank: 0
     }, {
         name: "Willpower",
         start: 2,
@@ -124,195 +141,243 @@ var powers = [
     {
         name: "Absorption",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Animate Images",
         start: 0,
-        strong: "TRUE"
+        strong: "TRUE",
+        rank: 0
     }, {
         name: "Animate Objects",
         start: 0,
-        strong: "TRUE"
+        strong: "TRUE",
+        rank: 0
     }, {
         name: "Armor",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Banish",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Blast",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Boost",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Constructs",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Darkness",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Dazzle",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Deflection",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Dispel",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Drain",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Energy Field",
         start: 0,
-        strong: "TRUE"
+        strong: "TRUE",
+        rank: 0
     }, {
         name: "Ensnare",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Flight",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Force Field",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Growth",
         start: 0,
-        strong: "TRUE"
+        strong: "TRUE",
+        rank: 0
     }, {
         name: "Healing/Repair",
         start: 0,
-        strong: "TRUE"
+        strong: "TRUE",
+        rank: 0
     }, {
         name: "Illusions",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Images",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Leaping",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Life Drain",
         start: 0,
-        strong: "TRUE"
+        strong: "TRUE",
+        rank: 0
     }, {
         name: "Machine Control",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Matter Chameleon",
         start: 0,
-        strong: "TRUE"
+        strong: "TRUE",
+        rank: 0
     }, {
         name: "Mind Blast",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Mind Control",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Nullification",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Omni Power",
         start: 0,
-        strong: "TRUE"
+        strong: "TRUE",
+        rank: 0
     }, {
         name: "Plasticity",
         start: 0,
-        strong: "TRUE"
+        strong: "TRUE",
+        rank: 0
     }, {
         name: "Port Other",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Possession",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Power Slide",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Running",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Shrinking",
         start: 0,
-        strong: "TRUE"
+        strong: "TRUE",
+        rank: 0
     }, {
         name: "Solid Form",
         start: 0,
-        strong: "TRUE"
+        strong: "TRUE",
+        rank: 0
     }, {
         name: "Special Attack",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Strike",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Stun",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Super Speed",
         start: 0,
-        strong: "TRUE"
+        strong: "TRUE",
+        rank: 0
     }, {
         name: "Swimming",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Swing Line",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Telekinesis",
         start: 0,
-        strong: "TRUE"
+        strong: "TRUE",
+        rank: 0
     }, {
         name: "Telepathy",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Teleportation",
         start: 0,
-        strong: "TRUE"
+        strong: "TRUE",
+        rank: 0
     }, {
         name: "Transform Other",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }, {
         name: "Transmutation",
         start: 0,
-        strong: "TRUE"
+        strong: "TRUE",
+        rank: 0
     }, {
         name: "Tunneling",
         start: 0,
-        strong: "FALSE"
+        strong: "FALSE",
+        rank: 0
     }
 ];
 var perks = [
@@ -571,503 +636,628 @@ var prosCons = [
     {
         name: "Languages",
         Modifier: 1,
-        TPP: "Academics"
+        TPP: "Academics",
+        rank: 0
     }, {
         name: "Martial Arts",
         Modifier: 1,
-        TPP: "Athletics"
+        TPP: "Athletics",
+        rank: 0
     }, {
         name: "Weaponry",
         Modifier: 1,
-        TPP: "Athletics"
+        TPP: "Athletics",
+        rank: 0
     }, {
         name: "Disguise",
         Modifier: 1,
-        TPP: "Charm"
+        TPP: "Charm",
+        rank: 0
     }, {
         name: "Gambling",
         Modifier: 1,
-        TPP: "Charm"
+        TPP: "Charm",
+        rank: 0
     }, {
         name: "Ventriloquism",
         Modifier: 1,
-        TPP: "Charm"
+        TPP: "Charm",
+        rank: 0
     }, {
         name: "Shockwave",
         Modifier: 2,
-        TPP: "Might"
+        TPP: "Might",
+        rank: 0
     }, {
         name: "Tremor",
         Modifier: 2,
-        TPP: "Might"
+        TPP: "Might",
+        rank: 0
     }, {
         name: "Acute Sense (Touch)",
         Modifier: 1,
-        TPP: "Perception"
+        TPP: "Perception",
+        rank: 0
     }, {
         name: "Acute Sense (Sight)",
         Modifier: 1,
-        TPP: "Perception"
+        TPP: "Perception",
+        rank: 0
     }, {
         name: "Acute Sense (Hearing)",
         Modifier: 1,
-        TPP: "Perception"
+        TPP: "Perception",
+        rank: 0
     }, {
         name: "Acute Sense (Smell)",
         Modifier: 1,
-        TPP: "Perception"
+        TPP: "Perception",
+        rank: 0
     }, {
         name: "Acute Sense (Taste)",
         Modifier: 1,
-        TPP: "Perception"
+        TPP: "Perception",
+        rank: 0
     }, {
         name: "Investigation",
         Modifier: 1,
-        TPP: "Perception"
+        TPP: "Perception",
+        rank: 0
     }, {
         name: "Experienced",
         Modifier: 1,
-        TPP: "Professional"
+        TPP: "Professional",
+        rank: 0
     }, {
         name: "Aircraft",
         Modifier: 1,
-        TPP: "Vehicles"
+        TPP: "Vehicles",
+        rank: 0
     }, {
         name: "Spacecraft",
         Modifier: 1,
-        TPP: "Vehicles"
+        TPP: "Vehicles",
+        rank: 0
     }, {
         name: "Watercraft",
         Modifier: 1,
-        TPP: "Vehicles"
+        TPP: "Vehicles",
+        rank: 0
     }, {
         name: "Siphon",
         Modifier: 1,
-        TPP: "Absorption"
+        TPP: "Absorption",
+        rank: 0
     }, {
         name: "Impenetrable",
         Modifier: "x2",
-        TPP: "Armor"
+        TPP: "Armor",
+        rank: 0
     }, {
         name: "Psychic",
         Modifier: 0,
-        TPP: "Force Field"
+        TPP: "Force Field",
+        rank: 0
     }, {
         name: "Active",
         Modifier: -1,
-        TPP: "Armor"
+        TPP: "Armor",
+        rank: 0
     }, {
         name: "Blocking",
         Modifier: 2,
-        TPP: "Strike"
+        TPP: "Strike",
+        rank: 0
     }, {
         name: "Penetrating",
         Modifier: "x2",
-        TPP: "Strike"
+        TPP: "Strike",
+        rank: 0
     }, {
         name: "Marksmanship (Guns)",
         Modifier: -1,
-        TPP: "Blast"
+        TPP: "Blast",
+        rank: 0
     }, {
         name: "Marksmanship (Bows)",
         Modifier: -1,
-        TPP: "Blast"
+        TPP: "Blast",
+        rank: 0
     }, {
         name: "Absolute",
         Modifier: 2,
-        TPP: "Darkness"
+        TPP: "Darkness",
+        rank: 0
     }, {
         name: "Deafening",
         Modifier: -1,
-        TPP: "Dazzle"
+        TPP: "Dazzle",
+        rank: 0
     }, {
         name: "Defensive",
         Modifier: 3,
-        TPP: "Energy Field"
+        TPP: "Energy Field",
+        rank: 0
     }, {
         name: "Energy Form",
         Modifier: 6,
-        TPP: "Energy Field"
+        TPP: "Energy Field",
+        rank: 0
     }, {
         name: "Capture",
         Modifier: 1,
-        TPP: "Ensnare"
+        TPP: "Ensnare",
+        rank: 0
     }, {
         name: "Immobilize",
         Modifier: -2,
-        TPP: "Ensnare"
+        TPP: "Ensnare",
+        rank: 0
     }, {
         name: "Spaceflight",
         Modifier: 1,
-        TPP: "Flight"
+        TPP: "Flight",
+        rank: 0
     }, {
         name: "Gliding",
         Modifier: -1,
-        TPP: "Flight"
+        TPP: "Flight",
+        rank: 0
     }, {
         name: "Levitation",
         Modifier: -2,
-        TPP: "Flight"
+        TPP: "Flight",
+        rank: 0
     }, {
         name: "Wings",
         Modifier: -1,
-        TPP: "Flight"
+        TPP: "Flight",
+        rank: 0
     }, {
         name: "Cure",
         Modifier: 2,
-        TPP: "Healing/Repair"
+        TPP: "Healing/Repair",
+        rank: 0
     }, {
         name: "Slay",
         Modifier: -4,
-        TPP: "Life Drain"
+        TPP: "Life Drain",
+        rank: 0
     }, {
         name: "Cables",
         Modifier: -1,
-        TPP: "Machine Control"
+        TPP: "Machine Control",
+        rank: 0
     }, {
         name: "Interface",
         Modifier: -1,
-        TPP: "Machine Control"
+        TPP: "Machine Control",
+        rank: 0
     }, {
         name: "Animal Control (all)",
         Modifier: -1,
-        TPP: "Mind Control"
+        TPP: "Mind Control",
+        rank: 0
     }, {
         name: "Animal Control (large category)",
         Modifier: -2,
-        TPP: "Mind Control"
+        TPP: "Mind Control",
+        rank: 0
     }, {
         name: "Animal Control (small category)",
         Modifier: -3,
-        TPP: "Mind Control"
+        TPP: "Mind Control",
+        rank: 0
     }, {
         name: "Confusion",
         Modifier: -2,
-        TPP: "Mind Control"
+        TPP: "Mind Control",
+        rank: 0
     }, {
         name: "Emotion Control (any)",
         Modifier: -1,
-        TPP: "Mind Control"
+        TPP: "Mind Control",
+        rank: 0
     }, {
         name: "Emotion Control (specific)",
         Modifier: -2,
-        TPP: "Mind Control"
+        TPP: "Mind Control",
+        rank: 0
     }, {
         name: "Hypnotism",
         Modifier: -2,
-        TPP: "Mind Control"
+        TPP: "Mind Control",
+        rank: 0
     }, {
         name: "Pheremones",
         Modifier: -2,
-        TPP: "Mind Control"
+        TPP: "Mind Control",
+        rank: 0
     }, {
         name: "Micro-Universe",
         Modifier: 1,
-        TPP: "Shrinking"
+        TPP: "Shrinking",
+        rank: 0
     }, {
         name: "Proportional Strength",
         Modifier: -2,
-        TPP: "Shrinking"
+        TPP: "Shrinking",
+        rank: 0
     }, {
         name: "Dense",
         Modifier: -2,
-        TPP: "Solid Form"
+        TPP: "Solid Form",
+        rank: 0
     }, {
         name: "Fighting",
         Modifier: -1,
-        TPP: "Strike"
+        TPP: "Strike",
+        rank: 0
     }, {
         name: "Slow",
         Modifier: -2,
-        TPP: "Stun"
+        TPP: "Stun",
+        rank: 0
     }, {
         name: "Focused",
         Modifier: -2,
-        TPP: "Telekenisis"
+        TPP: "Telekenisis",
+        rank: 0
     }, {
         name: "Tendrils",
         Modifier: -2,
-        TPP: "Telekenisis"
+        TPP: "Telekenisis",
+        rank: 0
     }, {
         name: "Weak",
         Modifier: -4,
-        TPP: "Telekenisis"
+        TPP: "Telekenisis",
+        rank: 0
     }, {
         name: "Alter Memory",
         Modifier: 6,
-        TPP: "Telepathy"
+        TPP: "Telepathy",
+        rank: 0
     }, {
         name: "Cloak Mind",
         Modifier: 1,
-        TPP: "Telepathy"
+        TPP: "Telepathy",
+        rank: 0
     }, {
         name: "Dream Travel",
         Modifier: 1,
-        TPP: "Telepathy"
+        TPP: "Telepathy",
+        rank: 0
     }, {
         name: "Sense Minds",
         Modifier: 2,
-        TPP: "Telepathy"
+        TPP: "Telepathy",
+        rank: 0
     }, {
         name: "Empathy",
         Modifier: -2,
-        TPP: "Telepathy"
+        TPP: "Telepathy",
+        rank: 0
     }, {
         name: "Blind Porting",
         Modifier: 2,
-        TPP: "Teleportation"
+        TPP: "Teleportation",
+        rank: 0
     }, {
         name: "Combat Porting",
         Modifier: 2,
-        TPP: "Teleportation"
+        TPP: "Teleportation",
+        rank: 0
     }, {
         name: "Gate",
         Modifier: 2,
-        TPP: "Time Travel"
+        TPP: "Time Travel",
+        rank: 0
     }, {
         name: "Disturbance",
         Modifier: -1,
-        TPP: "Tunneling"
+        TPP: "Tunneling",
+        rank: 0
     }, {
         name: "Adjustible (Normal)",
         Modifier: 1,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Adjustible (Strong)",
         Modifier: 2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Affect Inanimate",
         Modifier: 2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Always On",
         Modifier: -1,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Area/Burst (Fixed)",
         Modifier: 1,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Area/Burst (Toggle)",
         Modifier: 2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Automatic",
         Modifier: -1,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Build Up",
         Modifier: -2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Casting",
         Modifier: 2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Charges (6 per Scene)",
         Modifier: -1,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Charges (3 per Scene)",
         Modifier: -2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Charges (1 per Scene)",
         Modifier: -3,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Concentration",
         Modifier: -2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Contact",
         Modifier: -2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Contagious",
         Modifier: 2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Delay",
         Modifier: -1,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Demanding",
         Modifier: -2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Ethereal",
         Modifier: 2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Fading (Reset Scene)",
         Modifier: -1,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Fading (Reset Daily)",
         Modifier: -2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Imprecise",
         Modifier: -2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Inhibited (Infrequent)",
         Modifier: -1,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Inhibited (Frequent)",
         Modifier: -2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Item",
         Modifier: -1,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Limited (Minor)",
         Modifier: -1,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Limited (Major)",
         Modifier: -2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Mental",
         Modifier: 2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Overload",
         Modifier: 1,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Ranged",
         Modifier: 2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Requirement (Easy)",
         Modifier: -1,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Requirement (Hard)",
         Modifier: -2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Ricochet",
         Modifier: 1,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Selective",
         Modifier: 2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Side Effect (Minor)",
         Modifier: -1,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Side Effect (Major)",
         Modifier: -2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Signature",
         Modifier: -1,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Subtle",
         Modifier: 1,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Trapping",
         Modifier: 2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Underpowered",
         Modifier: -2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Variant",
         Modifier: 2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Visual Range",
         Modifier: 2,
-        TPP: "TPP"
+        TPP: "TPP",
+        rank: 0
     }, {
         name: "Boss",
         Modifier: 2,
-        TPP: "Ally"
+        TPP: "Ally",
+        rank: 0
     }, {
         name: "Summoning",
         Modifier: 2,
-        TPP: "Ally"
+        TPP: "Ally",
+        rank: 0
     }, {
         name: "Xenomorphic",
         Modifier: 6,
-        TPP: "Animal Forms"
+        TPP: "Animal Forms",
+        rank: 0
     }, {
         name: "Supreme",
         Modifier: 2,
-        TPP: "Authority"
+        TPP: "Authority",
+        rank: 0
     }, {
         name: "High Level",
         Modifier: 2,
-        TPP: "Contact"
+        TPP: "Contact",
+        rank: 0
     }, {
         name: "Legion",
         Modifier: 12,
-        TPP: "Duplication"
+        TPP: "Duplication",
+        rank: 0
     }, {
         name: "Crazy",
         Modifier: 2,
-        TPP: "Fame"
+        TPP: "Fame",
+        rank: 0
     }, {
         name: "Environmental",
         Modifier: 2,
-        TPP: "Immunity"
+        TPP: "Immunity",
+        rank: 0
     }, {
         name: "Make Invisible",
         Modifier: 2,
-        TPP: "Invisibility"
+        TPP: "Invisibility",
+        rank: 0
     }, {
         name: "Doppleganger",
         Modifier: -1,
-        TPP: "Morph"
+        TPP: "Morph",
+        rank: 0
     }, {
         name: "Clout",
         Modifier: 2,
-        TPP: "Patron"
+        TPP: "Patron",
+        rank: 0
     }, {
         name: "Astral",
         Modifier: 2,
-        TPP: "Phasing"
+        TPP: "Phasing",
+        rank: 0
     }, {
         name: "Phase Object",
         Modifier: 2,
-        TPP: "Phasing"
+        TPP: "Phasing",
+        rank: 0
     }, {
         name: "Recording",
         Modifier: 1,
-        TPP: "Photographic Memory"
+        TPP: "Photographic Memory",
+        rank: 0
     }, {
         name: "Weakness",
         Modifier: -1,
-        TPP: "Regeneration"
+        TPP: "Regeneration",
+        rank: 0
     }, {
         name: "Waypoints",
         Modifier: -2,
-        TPP: "Time Travel"
+        TPP: "Time Travel",
+        rank: 0
     }, {
         name: "Weak Form",
         Modifier: -2,
-        TPP: "Transformation"
+        TPP: "Transformation",
+        rank: 0
     }, {
         name: "Automaton",
         Modifier: 6,
-        TPP: "Unliving"
+        TPP: "Unliving",
+        rank: 0
     }, {
         name: "Wall-Running",
         Modifier: -1,
-        TPP: "Wall-Crawling"
+        TPP: "Wall-Crawling",
+        rank: 0
     }, {
         name: "Great",
         Modifier: 2,
@@ -1165,102 +1355,122 @@ var weapons = [
         name: "Bow/Crossbow",
         Damage: 3,
         Special: "Ranged",
-        isRanged: "TRUE"
+        isRanged: "TRUE",
+        rank: 0
     }, {
         name: "Energy Grenade",
         Damage: 4,
         Special: "Area, Ranged",
-        isRanged: "TRUE"
+        isRanged: "TRUE",
+        rank: 0
     }, {
         name: "Energy Pistol",
         Damage: 4,
         Special: "Ranged",
-        isRanged: "TRUE"
+        isRanged: "TRUE",
+        rank: 0
     }, {
         name: "Energy Rifle",
         Damage: 5,
         Special: "Ranged",
-        isRanged: "TRUE"
+        isRanged: "TRUE",
+        rank: 0
     }, {
         name: "Energy Rifle, Assault",
         Damage: 5,
         Special: "Area, Ranged",
-        isRanged: "TRUE"
+        isRanged: "TRUE",
+        rank: 0
     }, {
         name: "Energy Rifle, Heavy",
         Damage: 6,
         Special: "Area, Ranged",
-        isRanged: "TRUE"
+        isRanged: "TRUE",
+        rank: 0
     }, {
         name: "Grenade, Explosive",
         Damage: 3,
         Special: "Area, Ranged",
-        isRanged: "TRUE"
+        isRanged: "TRUE",
+        rank: 0
     }, {
         name: "Grenade, Flash-Bang",
         Damage: 0,
         Special: "Area, Dazzle 6d, Ranged",
-        isRanged: "TRUE"
+        isRanged: "TRUE",
+        rank: 0
     }, {
         name: "Heavy Machinegun",
         Damage: 5,
         Special: "Area, Ranged",
-        isRanged: "TRUE"
+        isRanged: "TRUE",
+        rank: 0
     }, {
         name: "Heavy Rocket Launcher",
         Damage: 6,
         Special: "Area, Ranged",
-        isRanged: "TRUE"
+        isRanged: "TRUE",
+        rank: 0
     }, {
         name: "Melee, Blunt",
         Damage: 2,
         Special: "",
-        isRanged: "FALSE"
+        isRanged: "FALSE",
+        rank: 0
     }, {
         name: "Melee, Edged/Exotic",
         Damage: 3,
         Special: "",
-        isRanged: "FALSE"
+        isRanged: "FALSE",
+        rank: 0
     }, {
         name: "Melee, Energy",
         Damage: 3,
         Special: "Penetrating",
-        isRanged: "FALSE"
+        isRanged: "FALSE",
+        rank: 0
     }, {
         name: "Pistol",
         Damage: 3,
         Special: "Ranged",
-        isRanged: "TRUE"
+        isRanged: "TRUE",
+        rank: 0
     }, {
         name: "Rifle, Assault",
         Damage: 4,
         Special: "Area, Ranged",
-        isRanged: "TRUE"
+        isRanged: "TRUE",
+        rank: 0
     }, {
         name: "Rifle, Sniper",
         Damage: 4,
         Special: "Ranged, Visual Range",
-        isRanged: "TRUE"
+        isRanged: "TRUE",
+        rank: 0
     }, {
         name: "Shotgun",
         Damage: 4,
         Special: "Ranged, Limited (short range)",
-        isRanged: "TRUE"
+        isRanged: "TRUE",
+        rank: 0
     }, {
         name: "Submachine Gun",
         Damage: 3,
         Special: "Area, Ranged",
-        isRanged: "TRUE"
+        isRanged: "TRUE",
+        rank: 0
     }, {
         name: "Thrown, Blunt",
         Damage: 1,
         Special: "Ranged",
-        isRanged: "TRUE"
+        isRanged: "TRUE",
+        rank: 0
     }, {
         name: "Thrown, Edged/Exotic",
         Damage: 2,
         Special: "Ranged",
-        isRanged: "TRUE"
+        isRanged: "TRUE",
+        rank: 0
     }, {
         name: "Thrown, Sling",
         Damage: 2,

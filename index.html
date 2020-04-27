@@ -18,12 +18,13 @@
 
 <body>
     <div class="page-content">
-        <!-- Header -->
+        <!-- Fake Header -->
         <div class="jumbotron">
             <h1>Prowlers & Paragons</h1>
             <h2>Character Builder</h2>
             <span>HD Remaining:</span>
         </div>
+        <!-- Real Header -->
         <div class="jumbotron jumbotron-fluid text-center fixed-top">
             <h1>Prowlers & Paragons</h1>
             <h2>Character Builder</h2>
@@ -63,7 +64,7 @@
                             <div class="card">
                                 <!-- FLUFF -->
                                 <div class="card-header" id="fluffHeading" data-toggle="collapse"
-                                data-target="#fluffCollapse">
+                                    data-target="#fluffCollapse">
                                     <button class="btn btn-link" type="button" data-toggle="collapse"
                                         data-target="#fluffCollapse">
                                         <h3 class="font-italic mb-0">Character Details</h3>
@@ -152,7 +153,7 @@
                                 </div>
                                 <!-- GAMERULES -->
                                 <div class="card-header" id="gameRulesHeading" data-toggle="collapse"
-                                data-target="#gameRulesCollapse">
+                                    data-target="#gameRulesCollapse">
                                     <button class="btn btn-link" type="button" data-toggle="collapse"
                                         data-target="#gameRulesCollapse">
                                         <h3 class="font-italic mb-0">Game Rules</h3>
@@ -177,19 +178,20 @@
                                             </div>
                                             <div class="input-group-append">
                                                 <span class="input-group-text w-100">Max Rank:&nbsp;<span
-                                                        id="gameTierMax"></span></span>
+                                                        id="gameTierMax" class="maxRank"></span></span>
                                             </div>
                                         </div>
                                         <div class="input-group mb-3">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text w-100">Advancement Dice</span></div>
-                                            <input type="number" class="form-control" id="advancement" value="0" min="0">
+                                            <input type="number" class="form-control" id="advancement" value="0"
+                                                min="0">
                                         </div>
                                     </div>
                                 </div>
                                 <!-- TRAITS -->
                                 <div class="card-header" id="traitsHeading" data-toggle="collapse"
-                                data-target="#traitsCollapse">
+                                    data-target="#traitsCollapse">
                                     <button class="btn btn-link" type="button" data-toggle="collapse"
                                         data-target="#traitsCollapse">
                                         <h3 class="font-italic mb-0">Traits</h3>
@@ -199,7 +201,7 @@
                                     <div class="card-body">
                                         <div class="font-italic text-center pb-3">
                                             <span>Spend your hero dice here. Traits start at 2, and can be increased to
-                                                <span id="maxRank">10</span>.</span>
+                                                <span class="maxRank">10</span>.</span>
                                         </div>
                                         <div id="traitContainer">
                                             <!-- populateForm() runs here -->
@@ -208,18 +210,26 @@
                                 </div>
                                 <!-- POWERS -->
                                 <div class="card-header" id="powersHeading" data-toggle="collapse"
-                                data-target="#powersCollapse">
+                                    data-target="#powersCollapse">
                                     <button class="btn btn-link" type="button" data-toggle="collapse"
                                         data-target="#powersCollapse">
                                         <h3 class="font-italic mb-0">Powers</h3>
                                     </button>
                                 </div>
-                                <div id="powerContainer">
-                                    <!-- populateForm() runs here -->
+                                <div id="powersCollapse" class="collapse" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <div class="font-italic text-center pb-3">
+                                            <span>Spend your hero dice here. Powers start at 0, and can be increased to
+                                                <span class="maxRank">10</span>.</span>
+                                        </div>
+                                        <div id="powerContainer">
+                                            <!-- populateForm() runs here -->
+                                        </div>
+                                    </div>
                                 </div>
                                 <!-- PERKS -->
                                 <div class="card-header" id="perksHeading" data-toggle="collapse"
-                                data-target="#perksCollapse">
+                                    data-target="#perksCollapse">
                                     <button class="btn btn-link" type="button" data-toggle="collapse"
                                         data-target="#perksCollapse">
                                         <h3 class="font-italic mb-0">Perks</h3>
@@ -230,14 +240,14 @@
                                 </div>
                                 <!-- INVENTORY -->
                                 <div class="card-header" id="inventoryHeading" data-toggle="collapse"
-                                data-target="#inventoryCollapse">
+                                    data-target="#inventoryCollapse">
                                     <button class="btn btn-link" type="button" data-toggle="collapse"
                                         data-target="#inventoryCollapse">
                                         <h3 class="font-italic mb-0">Inventory</h3>
                                     </button>
                                 </div>
                                 <div id="inventoryContainer">
-                                <!-- populateForm() runs here -->
+                                    <!-- populateForm() runs here -->
                                 </div>
                                 <!-- end Accordion -->
                             </div>
