@@ -59,17 +59,12 @@ function showPowerSource() {
 
 function showProsCons() {
     var rank = document.getElementsByClassName('rank');
-    console.log('test1')
     for (i = 0; i < rank.length; i++) {
-        console.log(rank[i].id);
         if (rank[i].classList.contains("trait") || rank[i].classList.contains("power")){
-            console.log(rank[i].id);
             if (parseInt(rank[i].value) >= 1) {
-                console.log('test2')
                 rank[i].parentElement.nextElementSibling.nextElementSibling.classList.remove('hide');
             }
             else {
-                console.log('test3')
                 rank[i].parentElement.nextElementSibling.nextElementSibling.classList.add('hide');
             }
         }
