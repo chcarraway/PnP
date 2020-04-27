@@ -372,7 +372,7 @@ var powers = [
         rank: 0,
         proscons: ""
     }, {
-        name: "special Attack",
+        name: "Special Attack",
         start: 0,
         strong: false,
         rank: 0,

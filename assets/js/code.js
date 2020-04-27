@@ -40,33 +40,39 @@ function weakAttribute(e) {
 }
 
 function showPowerSource() {
-    var activeElement = document.activeElement;
-    //traits
-    if (activeElement.value >= 6) {
-        activeElement.parentNode.nextElementSibling.classList.remove('hide');
-    }
-    else {
-        activeElement.parentNode.nextElementSibling.classList.add('hide');
-    }
-    //powers
-    if (activeElement.value >= 1) {
-        activeElement.parentNode.nextElementSibling.classList.remove('hide');
-    }
-    else {
-        activeElement.parentNode.nextElementSibling.classList.add('hide');
+    var rank = document.getElementsByClassName('rank');
+    for (i = 0; i < rank.length; i++) {
+        if (rank[i].classList.contains('trait')) {
+            if (parseInt(rank[i].value) >= 6) {
+                rank[i].parentNode.nextElementSibling.classList.remove('hide');
+            }
+            else {
+                rank[i].parentNode.nextElementSibling.classList.add('hide');
+            }
+        }
+        if (rank[i].classList.contains('power') || rank[i].classList.contains('perk')){
+            if (parseInt(rank[i].value) >= 1) {
+                rank[i].parentNode.nextElementSibling.classList.remove('hide');
+            }
+            else {
+                rank[i].parentNode.nextElementSibling.classList.add('hide');
+            }
+        }
     }
 }
 
 function showProsCons() {
     var rank = document.getElementsByClassName('rank');
     for (i = 0; i < rank.length; i++) {
-        if (rank[i].classList.contains("trait") || rank[i].classList.contains("power")){
-            if (parseInt(rank[i].value) >= 1) {
-                rank[i].parentElement.nextElementSibling.nextElementSibling.classList.remove('hide');
-            }
-            else {
-                rank[i].parentElement.nextElementSibling.nextElementSibling.classList.add('hide');
-            }
+        if (parseInt(rank[i].value) >= 1) {
+            console.log(rank[i].id);
+            console.log(rank[i].parentElement.nextElementSibling.nextElementSibling)
+            rank[i].parentElement.nextElementSibling.nextElementSibling.classList.remove('hide');
+        }
+        else {
+            console.log(rank[i].id);
+            console.log(rank[i].parentElement.nextElementSibling.nextElementSibling);
+            rank[i].parentElement.nextElementSibling.nextElementSibling.classList.add('hide');
         }
     }
 }
@@ -82,12 +88,24 @@ function populateDropdown() {
     dropdown.add(defaultOption);
     dropdown.selectedIndex = 0;
 
-
     for (let i = 0; i < levels.length; i++) {
         option = document.createElement('option');
         option.text = powerLevels[levels[i]].name;
         option.value = i;
         dropdown.add(option);
+    }
+}
+
+function populatePowerSource() {
+    let psDropdowns = document.getElementsByClassName('powersource');
+
+    for (let i = 0; i < psDropdowns.length; i++) {
+        for (let j = 0; j < powerSources.length; j++) {
+            option = document.createElement('option');
+            option.text = powerSources[j].name;
+            option.value = j;
+            psDropdowns[i].add(option);
+        }
     }
 }
 
@@ -258,6 +276,13 @@ function populateForm() {
                 '</div></div>' +
                 '<div class="input-group hide">' +
                 '<div class="input-group-prepend">' +
+                '<span class="input-group-text w-100">Power Source:</span></div>' +
+                '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
+                '<option></option>' +
+                '</select>' +
+                '</div>' +
+                '<div class="input-group hide">' +
+                '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
                 '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
                 '<option value=0></option>' +
@@ -290,6 +315,13 @@ function populateForm() {
                 '<input type="number" class="form-control perk rank" id="' + noSpaceName + 'Value" value="0" min="0" max="1">' +
                 '<div class="input-group-append">' + '<span class="input-group-text cost" id="' + noSpaceName + 'Cost"> ' + perks[i].cost + '</span>' +
                 '</div></div>' +
+                '<div class="input-group hide">' +
+                '<div class="input-group-prepend">' +
+                '<span class="input-group-text w-100">Power Source:</span></div>' +
+                '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
+                '<option></option>' +
+                '</select>' +
+                '</div>' +
                 '<div class="input-group hide">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
@@ -444,3 +476,4 @@ populateForm();
 populateDropdown();
 tallyHD();
 showProsCons();
+populatePowerSource();
