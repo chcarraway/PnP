@@ -63,7 +63,7 @@ function populateForm() {
             '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span></div>' +
             '<input type="number" class="form-control trait rank" id="' + noSpaceName + 'Value" value="2" min="1">' +
             '<div class="input-group-append">' +
-            '<span class="input-group-text hide" id="weak">Weak</span>' +
+            '<span class="input-group-text hide" id="weak" data-toggle="tooltip" title="You\'re only allowed 3 weak attributes">Weak</span>' +
             '</div>' +
             '</div>';
     }
