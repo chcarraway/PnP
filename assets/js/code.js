@@ -156,23 +156,10 @@ function populateDropdowns() {
     }
 }
 
-function populatePowerSource() {
-    let psDropdowns = document.getElementsByClassName('powersource');
-
-    for (let i = 0; i < psDropdowns.length; i++) {
-        for (let j = 0; j < powerSources.length; j++) {
-            option = document.createElement('option');
-            option.text = powerSources[j].name;
-            option.value = j;
-            psDropdowns[i].add(option);
-        }
-    }
-}
-
 function populateForm() {
     let traitContainer = document.getElementById('traitContainer');
     for (let i = 0; i < trait.length; i++) {
-        let noSpaceName = traits[i].name.replace(/[^\w\s]/gi, '');
+        let noSpaceName = traits[i].name.replace(/\s/g, '');
         traitContainer.innerHTML +=
             '<div class="input-group mt-3">' +
             '<div class="input-group w-100">' +
@@ -217,7 +204,7 @@ function populateForm() {
     }
     let powerContainer = document.getElementById('powerContainer');
     for (let i = 0; i < powers.length; i++) {
-        let noSpaceName = powers[i].name.replace(/[^\w\s]/gi, '');
+        let noSpaceName = powers[i].name.replace(/\s/g, '');
         if (powers[i].strong === true) {
 
             powerContainer.innerHTML +=
@@ -315,7 +302,7 @@ function populateForm() {
     }
     let perkContainer = document.getElementById('perkContainer');
     for (let i = 0; i < perks.length; i++) {
-        let noSpaceName = perks[i].name.replace(/[^\w\s]/gi, '');
+        let noSpaceName = perks[i].name.replace(/\s/g, '');
         if (perks[i].multiple === true) {
             perkContainer.innerHTML +=
                 '<div class="input-group mt-3">' +
@@ -450,7 +437,7 @@ function setSpend() {
     //loop for traits
     let selectTraits = document.querySelectorAll('.trait');
     for (i = 0; i < selectTraits.length; i++) {
-        let noSpaceName = traits[i].name.replace(/[^\w\s]/gi, '');
+        let noSpaceName = traits[i].name.replace(/\s/g, '');
         let currentRank = parseInt(selectTraits[i].value);
         traits[i].rank = currentRank - 2;
         let pcSelect = document.getElementById(noSpaceName + 'PCs');
@@ -467,7 +454,7 @@ function setSpend() {
     //loop for powers
     let selectPowers = document.querySelectorAll('.power');
     for (i = 0; i < selectPowers.length; i++) {
-        let noSpaceName = powers[i].name.replace(/[^\w\s]/gi, '');
+        let noSpaceName = powers[i].name.replace(/\s/g, '');
         let pcSelect = document.getElementById(noSpaceName + 'PCs');
         let currentRank = parseInt(selectPowers[i].value);
         if (powers[i].strong === true) {
@@ -488,7 +475,7 @@ function setSpend() {
     //loop for perks
     let selectperks = document.querySelectorAll('.perk');
     for (i = 0; i < selectperks.length; i++) {
-        let noSpaceName = perks[i].name.replace(/[^\w\s]/gi, '');
+        let noSpaceName = perks[i].name.replace(/\s/g, '');
         let pcSelect = document.getElementById(noSpaceName + 'PCs');
         let currentRank = parseInt(selectperks[i].value);
         perks[i].rank = currentRank;
@@ -521,7 +508,6 @@ populateForm();
 populateDropdowns();
 tallyHD();
 showProsCons();
-populatePowerSource();
 
 $(document).ready(function() {
     $('#flaws').multiselect({

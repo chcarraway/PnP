@@ -1,5 +1,3 @@
-var items = document.getElementsByClassName('storeMe'); //elements that we care about
-
 form.addEventListener('submit', submitForm);
 function submitForm(event) {
 
@@ -9,24 +7,24 @@ function submitForm(event) {
 }
 
 function submitFormNext() {
-    //store player-set values
-    var character = [];
-    for (let i = 0; i < items.length; i++) {
-        if (items[i].tagName === 'SELECT'){
-            //console.log($('#flaws option:selected').map(function(a, item){return item.value;}))
-            character[i] = {
-                name: items[i].id,
-                value: $('#' + items[i].id +' option:selected').map(function(a, item){return item.value;}),
-                //value: document.querySelectorAll('#' + items[i].id + " option:selected").map(function(a, item){return item.value;}),
+    var saveData = {};
+    document.querySelectorAll("input, select").forEach((item, i) => {
+        if (item.id != "") {
+            var name = item.id;
+            if (item.tagName == 'INPUT') {
+                saveData[name] = item.value;
+                //console.log(item.id + " : " + item.value)
+            } else {
+                var options = [];
+                item.querySelectorAll("option:checked").forEach((item, j) => {
+                    if (item.label != "") {
+                        options.push(item.label)
+                    }
+                })
+                saveData[name] = options;
+                //console.log(item.id + " : " + options);
             }
         }
-        else {
-            character[i] = {
-                name: items[i].id,
-                value: items[i].value
-            };
-        }
-    }
-    console.log(JSON.stringify(character));
-    //localStorage.setItem(itemKey, itemValue);
+    })
+    window.localStorage.setItem(saveData.playerName, JSON.stringify(saveData));
 }
