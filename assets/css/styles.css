@@ -16,6 +16,9 @@ body {
 .cost {
     min-width: 46px;
 }
+ul {
+    width: 100%;
+}
 /* input {
     height: 100%;
 } */

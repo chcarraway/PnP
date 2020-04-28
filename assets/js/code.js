@@ -193,19 +193,11 @@ function populateForm() {
             '<div class="input-group-prepend">' +
             '<span class="input-group-text w-100">Power Source:</span></div>' +
             '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
-            '<option></option>' +
             '</select>' +
             '</div>' +
-            '<div class="input-group hide">' +
-            '<div class="input-group-prepend">' +
-            '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
-            '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
-            '<option value="0"></option>' +
-            '</select>' +
-            '<div class="input-group-append">' +
-            '<button class="btn btn-outline-secondary d-none d-sm-block"type="button" onclick="clearProsCons();" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
-            '</div>' +
-            '</div>';
+            '<select multiple class="custom-select pcs hide" id="' + noSpaceName + 'PCs">' +
+            '</select>';
+
         for (let j = 0; j < prosCons.length; j++) {
             let dropdown = document.getElementById(noSpaceName + 'PCs');
             if (prosCons[j].tpp == traits[i].name) {
@@ -247,19 +239,10 @@ function populateForm() {
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Power Source:</span></div>' +
                 '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
-                '<option></option>' +
                 '</select>' +
                 '</div>' +
-                '<div class="input-group hide">' +
-                '<div class="input-group-prepend">' +
-                '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
-                '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
-                '<option value="0"></option>' +
-                '</select>' +
-                '<div class="input-group-append">' +
-                '<button class="btn btn-outline-secondary d-none d-sm-block"type="button" onclick="clearProsCons();" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
-                '</div>' +
-                '</div>';
+                '<select multiple class="custom-select pcs hide" id="' + noSpaceName + 'PCs">' +
+                '</select>';
             for (let j = 0; j < prosCons.length; j++) {
                 let dropdown = document.getElementById(noSpaceName + 'PCs');
                 if (prosCons[j].tpp == powers[i].name) {
@@ -299,19 +282,11 @@ function populateForm() {
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Power Source:</span></div>' +
                 '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
-                '<option></option>' +
                 '</select>' +
                 '</div>' +
-                '<div class="input-group hide">' +
-                '<div class="input-group-prepend">' +
-                '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
-                '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
-                '<option value="0"></option>' +
-                '</select>' +
-                '<div class="input-group-append">' +
-                '<button class="btn btn-outline-secondary d-none d-sm-block"type="button" onclick="clearProsCons();" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
-                '</div>' +
-                '</div>';
+                '<select multiple class="custom-select pcs hide" id="' + noSpaceName + 'PCs">' +
+                '</select>';
+
             for (let j = 0; j < prosCons.length; j++) {
                 let dropdown = document.getElementById(noSpaceName + 'PCs');
                 if (prosCons[j].tpp == powers[i].name) {
@@ -356,19 +331,10 @@ function populateForm() {
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Power Source:</span></div>' +
                 '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
-                '<option></option>' +
                 '</select>' +
                 '</div>' +
-                '<div class="input-group hide">' +
-                '<div class="input-group-prepend">' +
-                '<span class="input-group-text hide w-100">Pros/Cons:</span></div>' +
-                '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
-                '<option value="0"></option>' +
-                '</select>' +
-                '<div class="input-group-append">' +
-                '<button class="btn btn-outline-secondary d-none d-sm-block"type="button" onclick="clearProsCons();" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
-                '</div>' +
-                '</div>';
+                '<select multiple class="custom-select pcs hide" id="' + noSpaceName + 'PCs">' +
+                '</select>';
             for (let j = 0; j < prosCons.length; j++) {
                 let dropdown = document.getElementById(noSpaceName + 'PCs');
                 if (prosCons[j].tpp == perks[i].name) {
@@ -402,19 +368,10 @@ function populateForm() {
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Power Source:</span></div>' +
                 '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
-                '<option></option>' +
                 '</select>' +
                 '</div>' +
-                '<div class="input-group hide">' +
-                '<div class="input-group-prepend">' +
-                '<span class="input-group-text w-100">Pros/Cons:</span></div>' +
-                '<select multiple class="custom-select pcs" id="' + noSpaceName + 'PCs">' +
-                '<option value="0"></option>' +
-                '</select>' +
-                '<div class="input-group-append">' +
-                '<button class="btn btn-outline-secondary d-none d-sm-block"type="button" onclick="clearProsCons();" id="' + noSpaceName + 'ClearSelected">Clear Selected</button>' +
-                '</div>' +
-                '</div>';
+                '<select multiple class="custom-select pcs hide" id="' + noSpaceName + 'PCs">' +
+                '</select>';
             for (let j = 0; j < prosCons.length; j++) {
                 let dropdown = document.getElementById(noSpaceName + 'PCs');
                 if (prosCons[j].tpp == perks[i].name) {
@@ -577,5 +534,29 @@ $(document).ready(function() {
         buttonClass: 'form-control w-100',
         numberDisplayed: 3,
         nSelectedText: ' - Too many options selected!'
+    });
+});
+$(document).ready(function() {
+    let pcs = document.getElementsByClassName('pcs');
+    $(pcs).multiselect({
+        buttonWidth: '100%',
+        maxHeight: 200,
+        buttonClass: 'form-control w-100',
+        nonSelectedText: 'Pros/Cons'
+    });
+});
+$(document).ready(function() {
+    let pcs = document.getElementById('weapons');
+    $(pcs).multiselect({
+        buttonWidth: '100%',
+        maxHeight: 200,
+        buttonClass: 'form-control w-100',
+    });
+});$(document).ready(function() {
+    let pcs = document.getElementById('equipment');
+    $(pcs).multiselect({
+        buttonWidth: '100%',
+        maxHeight: 200,
+        buttonClass: 'form-control w-100',
     });
 });
