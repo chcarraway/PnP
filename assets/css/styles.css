@@ -1,5 +1,5 @@
 body {
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Comfortaa';
 }
 .w186 {
     min-width: 186px;
@@ -9,9 +9,6 @@ body {
 }
 .hide {
     display: none;
-}
-.error {
-    background-color: red;
 }
 .cost {
     min-width: 46px;
