@@ -171,7 +171,7 @@ function populateForm() {
             '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
             '<span class="input-group-text">Rank:</span>' +
             '</div>' +
-            '<input type="number" class="form-control trait rank storeMe" id="' + noSpaceName + 'Value" value="2" min="1">' +
+            '<input type="number" class="form-control trait rank" id="' + noSpaceName + 'Value" value="2" min="1">' +
             '<div class="input-group-append">' +
             '<span class="input-group-text hide" id="weak" data-toggle="tooltip" title="You\re only allowed 3 weak attributes">Weak</span>' +
             '</div>' +
@@ -179,11 +179,11 @@ function populateForm() {
             '<div class="input-group hide">' +
             '<div class="input-group-prepend">' +
             '<span class="input-group-text w-100">Power Source:</span></div>' +
-            '<select class="custom-select powersource storeMe" id="' + noSpaceName + 'PowerSource">' +
+            '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
             '<option></option>' +
             '</select>' +
             '</div>' +
-            '<select multiple class="custom-select pcs storeMe hide" id="' + noSpaceName + 'PCs">' +
+            '<select multiple class="custom-select pcs hide" id="' + noSpaceName + 'PCs">' +
             '</select>';
 
         for (let j = 0; j < prosCons.length; j++) {
@@ -218,7 +218,7 @@ function populateForm() {
                 '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
                 '<span class="input-group-text">Rank:</span>' +
                 '</div>' +
-                '<input type="number" class="form-control power rank storeMe" id="' + noSpaceName + 'Value" value="0" min="0">' +
+                '<input type="number" class="form-control power rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
                 '<div class="input-group-append">' +
                 '<span class="input-group-text" id="strong" data-toggle="tooltip" title="Strong attributes cost twice as much">Strong</span>' +
                 '</div>' +
@@ -226,11 +226,11 @@ function populateForm() {
                 '<div class="input-group hide">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Power Source:</span></div>' +
-                '<select class="custom-select powersource storeMe" id="' + noSpaceName + 'PowerSource">' +
+                '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
                 '<option></option>' +
                 '</select>' +
                 '</div>' +
-                '<select multiple class="custom-select pcs storeMe hide" id="' + noSpaceName + 'PCs">' +
+                '<select multiple class="custom-select pcs hide" id="' + noSpaceName + 'PCs">' +
                 '</select>';
             for (let j = 0; j < prosCons.length; j++) {
                 let dropdown = document.getElementById(noSpaceName + 'PCs');
@@ -265,18 +265,17 @@ function populateForm() {
                 '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
                 '<span class="input-group-text">Rank:</span>' +
                 '</div>' +
-                '<input type="number" class="form-control power rank storeMe" id="' + noSpaceName + 'Value" value="0" min="0">' +
+                '<input type="number" class="form-control power rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
                 '</div>' +
                 '<div class="input-group hide">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Power Source:</span></div>' +
-                '<select class="custom-select powersource storeMe" id="' + noSpaceName + 'PowerSource">' +
+                '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
                 '<option></option>' +
                 '</select>' +
                 '</div>' +
-                '<select multiple class="custom-select pcs storeMe hide" id="' + noSpaceName + 'PCs">' +
+                '<select multiple class="custom-select pcs hide" id="' + noSpaceName + 'PCs">' +
                 '</select>';
-
             for (let j = 0; j < prosCons.length; j++) {
                 let dropdown = document.getElementById(noSpaceName + 'PCs');
                 if (prosCons[j].tpp == powers[i].name) {
@@ -298,6 +297,7 @@ function populateForm() {
                     dropdown.add(option);
                 }
             }
+
         }
     }
     let perkContainer = document.getElementById('perkContainer');
@@ -315,16 +315,16 @@ function populateForm() {
                 '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
                 '<span class="input-group-text">Rank:</span>' +
                 '</div>' +
-                '<input type="number" class="form-control perk rank storeMe" id="' + noSpaceName + 'Value" value="0" min="0">' +
+                '<input type="number" class="form-control perk rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
                 '</div>' +
                 '<div class="input-group hide">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Power Source:</span></div>' +
-                '<select class="custom-select powersource storeMe" id="' + noSpaceName + 'PowerSource">' +
+                '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
                 '<option></option>' +
                 '</select>' +
                 '</div>' +
-                '<select multiple class="custom-select pcs storeMe hide" id="' + noSpaceName + 'PCs">' +
+                '<select multiple class="custom-select pcs hide" id="' + noSpaceName + 'PCs">' +
                 '</select>';
             for (let j = 0; j < prosCons.length; j++) {
                 let dropdown = document.getElementById(noSpaceName + 'PCs');
@@ -353,16 +353,16 @@ function populateForm() {
                 '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
                 '<span class="input-group-text">Rank:</span>' +
                 '</div>' +
-                '<input type="number" class="form-control perk rank storeMe" id="' + noSpaceName + 'Value" value="0" min="0" max="1">' +
+                '<input type="number" class="form-control perk rank" id="' + noSpaceName + 'Value" value="0" min="0" max="1">' +
                 '</div>' +
                 '<div class="input-group hide">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Power Source:</span></div>' +
-                '<select class="custom-select powersource storeMe" id="' + noSpaceName + 'PowerSource">' +
+                '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
                 '<option></option>' +
                 '</select>' +
                 '</div>' +
-                '<select multiple class="custom-select pcs storeMe hide" id="' + noSpaceName + 'PCs">' +
+                '<select multiple class="custom-select pcs hide" id="' + noSpaceName + 'PCs">' +
                 '</select>';
             for (let j = 0; j < prosCons.length; j++) {
                 let dropdown = document.getElementById(noSpaceName + 'PCs');
@@ -509,7 +509,7 @@ populateDropdowns();
 tallyHD();
 showProsCons();
 
-$(document).ready(function() {
+$(document).ready(function () {
     $('#flaws').multiselect({
         buttonWidth: '100%',
         maxHeight: 200,
@@ -518,7 +518,7 @@ $(document).ready(function() {
         nSelectedText: ' - Too many options selected!'
     });
 });
-$(document).ready(function() {
+$(document).ready(function () {
     let pcs = document.getElementsByClassName('pcs');
     $(pcs).multiselect({
         buttonWidth: '100%',
@@ -527,14 +527,14 @@ $(document).ready(function() {
         nonSelectedText: 'Pros/Cons'
     });
 });
-$(document).ready(function() {
+$(document).ready(function () {
     let pcs = document.getElementById('weapons');
     $(pcs).multiselect({
         buttonWidth: '100%',
         maxHeight: 200,
         buttonClass: 'form-control w-100',
     });
-});$(document).ready(function() {
+}); $(document).ready(function () {
     let pcs = document.getElementById('equipment');
     $(pcs).multiselect({
         buttonWidth: '100%',

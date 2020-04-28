@@ -26,5 +26,10 @@ function submitFormNext() {
             }
         }
     })
-    window.localStorage.setItem(saveData.playerName, JSON.stringify(saveData));
+    localStorage.setItem('SaveData_' + saveData.characterName, JSON.stringify(saveData));
+    //submitFormNextAgain();
+}
+
+function submitFormNextAgain(){
+    //navigate to character sheet
 }
