@@ -75,11 +75,12 @@ build character sheet
             </div>
         </div>
     </div>
+    <div class="alert"></div>
     <!-- Form -->
     <div class="container">
         <div class="row">
             <div class="col">
-                <form id="form" class="form-inline" action="" onSubmit="return false">
+                <form id="builderForm" class="form-inline">
                     <!-- start Accordion -->
                     <div class="accordion w-100" id="accordion" style="overflow:visible;">
                         <div class="card">
@@ -100,62 +101,62 @@ build character sheet
                                     </div>
                                     <div class="form-group mb-3">
                                         <span class="input-group-text w-100">Player Name</span>
-                                        <input type="text" class="form-control w-100" id="playerName"
+                                        <input type="text" class="form-control w-100 storeMe" id="playerName"
                                             placeholder="Your real name.">
                                     </div>
                                     <div class="form-group mb-3">
                                         <span class="input-group-text w-100">Character Name</span>
-                                        <input type="text" class="form-control w-100" id="characterName"
+                                        <input type="text" class="form-control w-100 storeMe" id="characterName"
                                             placeholder="Your hero name.">
                                     </div>
                                     <div class="form-group mb-3">
                                         <span class="input-group-text w-100">Alias</span>
-                                        <input type="text" class="form-control w-100" id="alias"
+                                        <input type="text" class="form-control w-100 storeMe" id="alias"
                                             placeholder="Your civillian name.">
                                     </div>
                                     <div class="form-group mb-3">
                                         <span class="input-group-text w-100">Hero Group</span>
-                                        <input type="text" class="form-control w-100" id="heroGroup"
+                                        <input type="text" class="form-control w-100 storeMe" id="heroGroup"
                                             placeholder="Are you a member of a crime-fighting organization?">
                                     </div>
                                     <div class="form-group mb-3">
                                         <span class="input-group-text w-100">Motivation</span>
-                                        <input type="text" class="form-control w-100" id="motivation"
+                                        <input type="text" class="form-control w-100 storeMe" id="motivation"
                                             placeholder="What makes you do the things you do?">
                                     </div>
                                     <div class="form-group mb-3">
                                         <span class="input-group-text w-100">Quote</span>
-                                        <input type="text" class="form-control w-100" id="quote"
+                                        <input type="text" class="form-control w-100 storeMe" id="quote"
                                             placeholder="Catchphrase?">
                                     </div>
                                     <div class="form-group mb-3">
                                         <span class="input-group-text w-100">Hero Description</span>
-                                        <input type="text" class="form-control w-100" id="heroDescription"
+                                        <input type="text" class="form-control w-100 storeMe" id="heroDescription"
                                             placeholder="What does your hero look like suited up?">
                                     </div>
                                     <div class="form-group mb-3">
                                         <span class="input-group-text w-100">Civilian Description</span>
-                                        <input type="text" class="form-control w-100" id="civilianDescription"
+                                        <input type="text" class="form-control w-100 storeMe" id="civilianDescription"
                                             placeholder="How do you dress for your day job?">
                                     </div>
                                     <div class="form-group mb-3">
                                         <span class="input-group-text w-100">Details</span>
-                                        <input type="text" class="form-control w-100" id="details"
+                                        <input type="text" class="form-control w-100 storeMe" id="details"
                                             placeholder="Powers? Technique? That goes here.">
                                     </div>
                                     <div class="form-group mb-3">
                                         <span class="input-group-text w-100">Connections</span>
-                                        <input type="text" class="form-control w-100" id="connections"
-                                            placeholder="Got friends in low places? Enemies up high? List 'em.'">
+                                        <input type="text" class="form-control w-100 storeMe" id="connections"
+                                            placeholder="Got friends in low places? Enemies up high? List 'em.">
                                     </div>
                                     <div class="form-group mb-3">
                                         <span class="input-group-text w-100">Origin</span>
-                                        <input type="text" class="form-control w-100" id="origin"
+                                        <input type="text" class="form-control w-100 storeMe" id="origin"
                                             placeholder="Tragic/epic/boring backstory goes here.">
                                     </div>
                                     <span class="input-group-text w-100">Flaws</span>
                                     <div>
-                                        <select multiple class="custom-select flaws" id="flaws">
+                                        <select multiple class="custom-select flaws storeMe" name="flaws[]" id="flaws">
                                         </select>
                                     </div>
                                 </div>
@@ -263,29 +264,26 @@ build character sheet
                                     </div>
                                     <div id="inventoryContainer">
                                         <span class="input-group-text w-100">Weapons</span>
-                                        <select multiple class="custom-select weapons w-100" id="weapons">
+                                        <select multiple class="custom-select weapons w-100 storeMe" id="weapons">
                                         </select>
-
                                         <div class="input-group mt-3">
                                             <div class="input-group w-100">
                                                 <span class="input-group-text w-100">Armor</span>
                                             </div>
-                                            <select class="custom-select armor" id="armor">
+                                            <select class="custom-select armor storeMe" id="armor">
                                                 <option value=""></option>
                                             </select>
                                         </div>
-
                                         <div class="input-group my-3">
                                             <div class="input-group w-100">
                                                 <span class="input-group-text w-100">Shield</span>
                                             </div>
-                                            <select class="custom-select shields" id="shields">
+                                            <select class="custom-select shields storeMe" id="shields">
                                                 <option value=""></option>
                                             </select>
                                         </div>
-
                                         <span class="input-group-text w-100">Equipment</span>
-                                        <select multiple class="custom-select equipment" id="equipment">
+                                        <select multiple class="custom-select equipment storeMe" id="equipment">
                                         </select>
                                     </div>
                                 </div>
@@ -293,27 +291,13 @@ build character sheet
                         </div>
                     </div>
                     <div class="text-center w-100">
-                        <button type="submit" class="btn btn-primary my-3" onClick="document.form.submit()">Save
+                        <button type="submit" class="btn btn-primary my-3">Save
                             and continue to Character Sheet</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -334,6 +318,7 @@ build character sheet
     <!-- Custom Scripts -->
     <script src="assets/js/data.js"></script>
     <script src="assets/js/code.js"></script>
+    <script src="assets/js/storage.js"></script>
 </body>
 
 </html>

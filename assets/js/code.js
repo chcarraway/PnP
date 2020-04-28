@@ -172,7 +172,7 @@ function populatePowerSource() {
 function populateForm() {
     let traitContainer = document.getElementById('traitContainer');
     for (let i = 0; i < trait.length; i++) {
-        let noSpaceName = traits[i].name.replace(/\s+/g, '');
+        let noSpaceName = traits[i].name.replace(/[^\w\s]/gi, '');
         traitContainer.innerHTML +=
             '<div class="input-group mt-3">' +
             '<div class="input-group w-100">' +
@@ -184,7 +184,7 @@ function populateForm() {
             '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
             '<span class="input-group-text">Rank:</span>' +
             '</div>' +
-            '<input type="number" class="form-control trait rank" id="' + noSpaceName + 'Value" value="2" min="1">' +
+            '<input type="number" class="form-control trait rank storeMe" id="' + noSpaceName + 'Value" value="2" min="1">' +
             '<div class="input-group-append">' +
             '<span class="input-group-text hide" id="weak" data-toggle="tooltip" title="You\re only allowed 3 weak attributes">Weak</span>' +
             '</div>' +
@@ -192,10 +192,11 @@ function populateForm() {
             '<div class="input-group hide">' +
             '<div class="input-group-prepend">' +
             '<span class="input-group-text w-100">Power Source:</span></div>' +
-            '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
+            '<select class="custom-select powersource storeMe" id="' + noSpaceName + 'PowerSource">' +
+            '<option></option>' +
             '</select>' +
             '</div>' +
-            '<select multiple class="custom-select pcs hide" id="' + noSpaceName + 'PCs">' +
+            '<select multiple class="custom-select pcs storeMe hide" id="' + noSpaceName + 'PCs">' +
             '</select>';
 
         for (let j = 0; j < prosCons.length; j++) {
@@ -216,7 +217,7 @@ function populateForm() {
     }
     let powerContainer = document.getElementById('powerContainer');
     for (let i = 0; i < powers.length; i++) {
-        let noSpaceName = powers[i].name.replace(/\s+/g, '');
+        let noSpaceName = powers[i].name.replace(/[^\w\s]/gi, '');
         if (powers[i].strong === true) {
 
             powerContainer.innerHTML +=
@@ -230,7 +231,7 @@ function populateForm() {
                 '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
                 '<span class="input-group-text">Rank:</span>' +
                 '</div>' +
-                '<input type="number" class="form-control power rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
+                '<input type="number" class="form-control power rank storeMe" id="' + noSpaceName + 'Value" value="0" min="0">' +
                 '<div class="input-group-append">' +
                 '<span class="input-group-text" id="strong" data-toggle="tooltip" title="Strong attributes cost twice as much">Strong</span>' +
                 '</div>' +
@@ -238,10 +239,11 @@ function populateForm() {
                 '<div class="input-group hide">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Power Source:</span></div>' +
-                '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
+                '<select class="custom-select powersource storeMe" id="' + noSpaceName + 'PowerSource">' +
+                '<option></option>' +
                 '</select>' +
                 '</div>' +
-                '<select multiple class="custom-select pcs hide" id="' + noSpaceName + 'PCs">' +
+                '<select multiple class="custom-select pcs storeMe hide" id="' + noSpaceName + 'PCs">' +
                 '</select>';
             for (let j = 0; j < prosCons.length; j++) {
                 let dropdown = document.getElementById(noSpaceName + 'PCs');
@@ -276,15 +278,16 @@ function populateForm() {
                 '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
                 '<span class="input-group-text">Rank:</span>' +
                 '</div>' +
-                '<input type="number" class="form-control power rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
+                '<input type="number" class="form-control power rank storeMe" id="' + noSpaceName + 'Value" value="0" min="0">' +
                 '</div>' +
                 '<div class="input-group hide">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Power Source:</span></div>' +
-                '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
+                '<select class="custom-select powersource storeMe" id="' + noSpaceName + 'PowerSource">' +
+                '<option></option>' +
                 '</select>' +
                 '</div>' +
-                '<select multiple class="custom-select pcs hide" id="' + noSpaceName + 'PCs">' +
+                '<select multiple class="custom-select pcs storeMe hide" id="' + noSpaceName + 'PCs">' +
                 '</select>';
 
             for (let j = 0; j < prosCons.length; j++) {
@@ -312,7 +315,7 @@ function populateForm() {
     }
     let perkContainer = document.getElementById('perkContainer');
     for (let i = 0; i < perks.length; i++) {
-        let noSpaceName = perks[i].name.replace(/\s+/g, '');
+        let noSpaceName = perks[i].name.replace(/[^\w\s]/gi, '');
         if (perks[i].multiple === true) {
             perkContainer.innerHTML +=
                 '<div class="input-group mt-3">' +
@@ -325,15 +328,16 @@ function populateForm() {
                 '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
                 '<span class="input-group-text">Rank:</span>' +
                 '</div>' +
-                '<input type="number" class="form-control perk rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
+                '<input type="number" class="form-control perk rank storeMe" id="' + noSpaceName + 'Value" value="0" min="0">' +
                 '</div>' +
                 '<div class="input-group hide">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Power Source:</span></div>' +
-                '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
+                '<select class="custom-select powersource storeMe" id="' + noSpaceName + 'PowerSource">' +
+                '<option></option>' +
                 '</select>' +
                 '</div>' +
-                '<select multiple class="custom-select pcs hide" id="' + noSpaceName + 'PCs">' +
+                '<select multiple class="custom-select pcs storeMe hide" id="' + noSpaceName + 'PCs">' +
                 '</select>';
             for (let j = 0; j < prosCons.length; j++) {
                 let dropdown = document.getElementById(noSpaceName + 'PCs');
@@ -362,15 +366,16 @@ function populateForm() {
                 '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
                 '<span class="input-group-text">Rank:</span>' +
                 '</div>' +
-                '<input type="number" class="form-control perk rank" id="' + noSpaceName + 'Value" value="0" min="0" max="1">' +
+                '<input type="number" class="form-control perk rank storeMe" id="' + noSpaceName + 'Value" value="0" min="0" max="1">' +
                 '</div>' +
                 '<div class="input-group hide">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Power Source:</span></div>' +
-                '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
+                '<select class="custom-select powersource storeMe" id="' + noSpaceName + 'PowerSource">' +
+                '<option></option>' +
                 '</select>' +
                 '</div>' +
-                '<select multiple class="custom-select pcs hide" id="' + noSpaceName + 'PCs">' +
+                '<select multiple class="custom-select pcs storeMe hide" id="' + noSpaceName + 'PCs">' +
                 '</select>';
             for (let j = 0; j < prosCons.length; j++) {
                 let dropdown = document.getElementById(noSpaceName + 'PCs');
@@ -445,7 +450,7 @@ function setSpend() {
     //loop for traits
     let selectTraits = document.querySelectorAll('.trait');
     for (i = 0; i < selectTraits.length; i++) {
-        let noSpaceName = traits[i].name.replace(/\s+/g, '');
+        let noSpaceName = traits[i].name.replace(/[^\w\s]/gi, '');
         let currentRank = parseInt(selectTraits[i].value);
         traits[i].rank = currentRank - 2;
         let pcSelect = document.getElementById(noSpaceName + 'PCs');
@@ -462,7 +467,7 @@ function setSpend() {
     //loop for powers
     let selectPowers = document.querySelectorAll('.power');
     for (i = 0; i < selectPowers.length; i++) {
-        let noSpaceName = powers[i].name.replace(/\s+/g, '');
+        let noSpaceName = powers[i].name.replace(/[^\w\s]/gi, '');
         let pcSelect = document.getElementById(noSpaceName + 'PCs');
         let currentRank = parseInt(selectPowers[i].value);
         if (powers[i].strong === true) {
@@ -483,7 +488,7 @@ function setSpend() {
     //loop for perks
     let selectperks = document.querySelectorAll('.perk');
     for (i = 0; i < selectperks.length; i++) {
-        let noSpaceName = perks[i].name.replace(/\s+/g, '');
+        let noSpaceName = perks[i].name.replace(/[^\w\s]/gi, '');
         let pcSelect = document.getElementById(noSpaceName + 'PCs');
         let currentRank = parseInt(selectperks[i].value);
         perks[i].rank = currentRank;
@@ -498,19 +503,10 @@ function setSpend() {
     }
 }
 
-function limitFlaws() {
-
-}
-
-
-function saveCharacter() {
-
-}
-
 const tier = document.getElementById('gameTierSelect');
 tier.addEventListener('change', heroDice);
 
-const form = document.getElementById('form');
+const form = document.getElementById('builderForm');
 form.addEventListener('change', weakAttribute);
 form.addEventListener('change', setSpend);
 form.addEventListener('change', tallyHD);
