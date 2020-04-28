@@ -82,9 +82,17 @@ function clearProsCons() {
 }
 
 function populateDropdowns() {
+    //flaws
+    let dropdown = document.getElementById('flaws');
+    for (let i = 0; i < flaws.length; i++) {
+        option = document.createElement('option');
+        option.text = flaws[i].name;
+        option.value = i;
+        dropdown.add(option);
+    }
+
     //game tier
-    let dropdown = document.getElementById('gameTierSelect');
-    dropdown.length = 0;
+    dropdown = document.getElementById('gameTierSelect');
 
     let defaultOption = document.createElement('option');
     defaultOption.text = 'Choose Game Tier';
@@ -128,7 +136,7 @@ function populateDropdowns() {
         option.value = i;
         dropdown.add(option);
     }
-    
+
     //shields
     dropdown = document.getElementById('shields');
     for (let i = 0; i < shields.length; i++) {
@@ -533,6 +541,15 @@ function setSpend() {
     }
 }
 
+function limitFlaws() {
+
+}
+
+
+function saveCharacter() {
+
+}
+
 const tier = document.getElementById('gameTierSelect');
 tier.addEventListener('change', heroDice);
 
@@ -552,3 +569,13 @@ populateDropdowns();
 tallyHD();
 showProsCons();
 populatePowerSource();
+
+$(document).ready(function() {
+    $('#flaws').multiselect({
+        buttonWidth: '100%',
+        maxHeight: 200,
+        buttonClass: 'form-control w-100',
+        numberDisplayed: 3,
+        nSelectedText: ' - Too many options selected!'
+    });
+});

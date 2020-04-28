@@ -18,7 +18,7 @@
 
 <!--
 TODO
-change flaws to multiple select
+fix other multiple selects
 build inventory
 save to local storage
 build character sheet
@@ -79,9 +79,9 @@ build character sheet
     <div class="container">
         <div class="row">
             <div class="col">
-                <form id="form" action="" onSubmit="return false">
+                <form id="form" class="form-inline" action="" onSubmit="return false">
                     <!-- start Accordion -->
-                    <div class="accordion" id="accordion">
+                    <div class="accordion w-100" id="accordion" style="overflow:visible;">
                         <div class="card">
                             <!-- FLUFF -->
                             <div class="card-header" id="fluffHeading" data-toggle="collapse"
@@ -99,75 +99,97 @@ build character sheet
                                             class="font-italic">
                                     </div>
                                     <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
+                                        <div class="input-group">
                                             <span class="input-group-text w-100">Player Name</span></div>
-                                        <input type="text" class="form-control" id="playerName"
-                                            placeholder="Your real name.">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="playerName"
+                                                placeholder="Your real name.">
+                                        </div>
                                     </div>
                                     <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
+                                        <div class="input-group">
                                             <span class="input-group-text w-100">Character Name</span></div>
-                                        <input type="text" class="form-control" id="characterName"
-                                            placeholder="Your hero name.">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="characterName"
+                                                placeholder="Your hero name.">
+                                        </div>
                                     </div>
                                     <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
+                                        <div class="input-group">
                                             <span class="input-group-text w-100">Alias</span></div>
-                                        <input type="text" class="form-control" id="alias"
-                                            placeholder="Your civillian name.">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="alias"
+                                                placeholder="Your civillian name.">
+                                        </div>
                                     </div>
                                     <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
+                                        <div class="input-group">
                                             <span class="input-group-text w-100">Hero Group</span></div>
-                                        <input type="text" class="form-control" id="heroGroup"
-                                            placeholder="Are you a member of a crime-fighting organization?">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="heroGroup"
+                                                placeholder="Are you a member of a crime-fighting organization?">
+                                        </div>
                                     </div>
                                     <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
+                                        <div class="input-group">
                                             <span class="input-group-text w-100">Motivation</span></div>
-                                        <input type="text" class="form-control" id="motivation"
-                                            placeholder="What makes you do the things you do?">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="motivation"
+                                                placeholder="What makes you do the things you do?">
+                                        </div>
                                     </div>
                                     <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
+                                        <div class="input-group">
                                             <span class="input-group-text w-100">Quote</span></div>
-                                        <input type="text" class="form-control" id="quote" placeholder="Catchphrase?">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="quote"
+                                                placeholder="Catchphrase?">
+                                        </div>
                                     </div>
                                     <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
+                                        <div class="input-group">
                                             <span class="input-group-text w-100">Hero Description</span></div>
-                                        <input type="text" class="form-control" id="heroDescription"
-                                            placeholder="What does your hero look like suited up?">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="heroDescription"
+                                                placeholder="What does your hero look like suited up?">
+                                        </div>
                                     </div>
                                     <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
+                                        <div class="input-group">
                                             <span class="input-group-text w-100">Civilian Description</span></div>
-                                        <input type="text" class="form-control" id="civilianDescription"
-                                            placeholder="How do you dress for your day job?">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="civilianDescription"
+                                                placeholder="How do you dress for your day job?">
+                                        </div>
                                     </div>
                                     <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
+                                        <div class="input-group">
                                             <span class="input-group-text w-100">Details</span></div>
-                                        <input type="text" class="form-control" id="details"
-                                            placeholder="Powers? Technique? That goes here.">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="details"
+                                                placeholder="Powers? Technique? That goes here.">
+                                        </div>
                                     </div>
                                     <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
+                                        <div class="input-group">
                                             <span class="input-group-text w-100">Connections</span></div>
-                                        <input type="text" class="form-control" id="connections"
-                                            placeholder="Got friends in low places? Enemies up high? List 'em.'">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="connections"
+                                                placeholder="Got friends in low places? Enemies up high? List 'em.'">
+                                        </div>
                                     </div>
                                     <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
+                                        <div class="input-group">
                                             <span class="input-group-text w-100">Origin</span></div>
-                                        <input type="text" class="form-control" id="origin"
-                                            placeholder="Tragic/epic/boring backstory goes here.">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="origin"
+                                                placeholder="Tragic/epic/boring backstory goes here.">
+                                        </div>
                                     </div>
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text w-100">Flaws</span></div>
-                                        <input type="text" class="form-control last-input" id="flaws"
-                                            placeholder="(Page 58) Got a crippling donut addiction? Talk about it here.">
+                                        <span class="input-group-text w-100">Flaws</span>
+                                    <div>
+                                        <select multiple class="custom-select flaws" id="flaws">
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -187,24 +209,19 @@ build character sheet
                                             maximum rank for traits and powers. Advancement Dice is 3 per level
                                             above the first.</h6 class="font-italic">
                                     </div>
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text w-100">Game Tier</span></div>
-                                        <select class="custom-select" id="gameTierSelect">
+                                    <div class="form-group">
+                                        <span class="input-group-text w-50">Hero Dice:&nbsp;<span
+                                                id="gameTierHD"></span></span>
+                                        <span class="input-group-text w-50">Max Rank:&nbsp;<span id="gameTierMax"
+                                                class="maxRank"></span></span>
+                                        <span class="input-group-text w-25">Game Tier</span>
+                                        <select class="custom-select w-75" id="gameTierSelect">
                                         </select>
-                                        <div class="input-group-append">
-                                            <span class="input-group-text w-100">Hero Dice:&nbsp;<span
-                                                    id="gameTierHD"></span></span>
-                                        </div>
-                                        <div class="input-group-append">
-                                            <span class="input-group-text w-100">Max Rank:&nbsp;<span id="gameTierMax"
-                                                    class="maxRank"></span></span>
-                                        </div>
                                     </div>
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text w-100">Advancement Dice</span></div>
-                                        <input type="number" class="form-control" id="advancement" value="0" min="0">
+                                    <div class="form-group">
+                                        <span class="input-group-text w-50">Advancement Dice</span>
+                                        <input type="number" class="form-control w-50" id="advancement" value="0"
+                                            min="0">
                                     </div>
                                 </div>
                             </div>
@@ -283,7 +300,7 @@ build character sheet
                                                 <span class="input-group-text w-100">Weapons</span>
                                             </div>
                                             <select multiple class="custom-select weapons" id="weapons">
-                                                <option value = ""></option>
+                                                <option value=""></option>
                                             </select>
                                         </div>
                                         <div class="input-group mt-3">
@@ -291,7 +308,7 @@ build character sheet
                                                 <span class="input-group-text w-100">Armor</span>
                                             </div>
                                             <select class="custom-select armor" id="armor">
-                                                <option value = ""></option>
+                                                <option value=""></option>
                                             </select>
                                         </div>
                                         <div class="input-group mt-3">
@@ -299,7 +316,7 @@ build character sheet
                                                 <span class="input-group-text w-100">Shield</span>
                                             </div>
                                             <select class="custom-select shields" id="shields">
-                                                <option value = ""></option>
+                                                <option value=""></option>
                                             </select>
                                         </div>
                                         <div class="input-group mt-3">
@@ -307,7 +324,7 @@ build character sheet
                                                 <span class="input-group-text w-100">Equipment</span>
                                             </div>
                                             <select multiple class="custom-select equipment" id="equipment">
-                                                <option value = ""></option>
+                                                <option value=""></option>
                                             </select>
                                         </div>
                                     </div>
@@ -315,11 +332,11 @@ build character sheet
                                 </div>
                             </div>
                         </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary my-3" onClick="document.form.submit()">Save
+                                and continue to Character Sheet</button>
+                        </div>
                         <!-- end Accordion -->
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-primary my-3" onClick="document.form.submit()">Save
-                            and continue to Character Sheet</button>
                     </div>
                 </form>
             </div>
@@ -353,6 +370,9 @@ build character sheet
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <!-- Boostrap-Multiselect CSS and JS: -->
+    <script type="text/javascript" src="assets/js/bootstrap-multiselect.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap-multiselect.css" type="text/css" />
     <!-- Custom Scripts -->
     <script src="assets/js/data.js"></script>
     <script src="assets/js/code.js"></script>
