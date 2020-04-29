@@ -489,6 +489,7 @@ populateForm();
 populateDropdowns();
 tallyHD();
 showProsCons();
+showPowerSource();
 
 $(document).ready(function () {
     $('#flaws').multiselect({
