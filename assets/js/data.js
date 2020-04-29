@@ -1281,17 +1281,17 @@ var prosCons = [
     }, {
         name: "Side Effect (Minor)",
         cost: -1,
-        tpp: "tp",
+        tpp: "tpp",
         rank: 0,
     }, {
         name: "Side Effect (Major)",
         cost: -2,
-        tpp: "tp",
+        tpp: "tpp",
         rank: 0,
     }, {
         name: "Signature",
         cost: -1,
-        tpp: "tp",
+        tpp: "tpp",
         rank: 0,
     }, {
         name: "Subtle",

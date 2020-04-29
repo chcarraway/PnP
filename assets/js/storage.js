@@ -27,9 +27,10 @@ function submitFormNext() {
         }
     })
     localStorage.setItem('SaveData_' + saveData.characterName, JSON.stringify(saveData));
-    //submitFormNextAgain();
+    submitFormNextAgain();
 }
 
 function submitFormNextAgain(){
+    location.replace('sheet.html')
     //navigate to character sheet
 }

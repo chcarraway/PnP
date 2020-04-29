@@ -1,6 +1,6 @@
 
-var levels = Object.keys(powerLevels);
-var trait = Object.keys(traits);
+//var levels = Object.keys(powerLevels);
+//var trait = Object.keys(traits);
 var heroDicePool = 0;
 var hdSpend = 0;
 var hdRemaining = 0;
@@ -22,34 +22,42 @@ function checkTabPress(e) {
     }
 }
 
-function weakAttribute(e) {
-    e = e || event;
-    var activeElement = document.activeElement;
-    if (activeElement.classList.contains('trait') && activeElement.classList.contains('rank') && activeElement.value === '1') {
-        activeElement.nextElementSibling.firstElementChild.classList.remove('hide');
-        weakCount++;
-    }
-    if (activeElement.classList.contains('trait') && activeElement.classList.contains('rank') && activeElement.value > '1') {
-        activeElement.nextElementSibling.firstElementChild.classList.add('hide');
-        weakCount--;
-    }
-
-    if (weakCount > 3) {
-        $('#errorModal').modal('show');
-    }
-}
-
 function showPowerSource() {
-    var rank = document.getElementsByClassName('rank');
-    for (i = 0; i < rank.length; i++) {
-        if (rank[i].classList.contains('trait')) {
-            if (parseInt(rank[i].value) >= 6) {
-                rank[i].parentNode.nextElementSibling.classList.remove('hide');
-            }
-            else {
-                rank[i].parentNode.nextElementSibling.classList.add('hide');
-            }
+    document.querySelectorAll('.trait').forEach((trait, i) => {
+        let rank = parseInt(trait.querySelector('.rank').value);
+        if (rank >= 6) {
+            trait.querySelector(`.${noSpaceName(traits[i].name)}ps`).hidden=false;
+            trait.querySelector('.weak').hidden=true;
+        } else if (rank == 1) {
+            trait.querySelector('.weak').hidden=false;
+        } else {
+            trait.querySelector(`.${noSpaceName(traits[i].name)}ps`).hidden=true;
+            trait.querySelector('.weak').hidden=true;
         }
+    })
+    if (document.querySelectorAll('.weak:not([hidden])').length > 3) {
+        $('#errorModal').modal('show');
+    };
+
+    document.querySelectorAll('.power').forEach((power, i) => {
+        let rank = parseInt(power.querySelector('.rank').value);
+        if (rank >= 1) {
+            document.querySelector(`.${noSpaceName(powers[i].name)}ps`).classList.remove('hide');
+        } else {
+            document.querySelector(`.${noSpaceName(powers[i].name)}ps`).classList.add('hide');
+        }
+    });
+
+    document.querySelectorAll('.perk').forEach((perk, i) => {
+        let rank = parseInt(perk.querySelector('.rank').value);
+        if (rank >= 1) {
+            document.querySelector(`.${noSpaceName(perks[i].name)}ps`).classList.remove('hide');
+        } else {
+            document.querySelector(`.${noSpaceName(perks[i].name)}ps`).classList.add('hide');
+        }
+    });
+
+    /* 
         if (rank[i].classList.contains('power') || rank[i].classList.contains('perk')) {
             if (parseInt(rank[i].value) >= 1) {
                 rank[i].parentNode.nextElementSibling.classList.remove('hide');
@@ -57,8 +65,7 @@ function showPowerSource() {
             else {
                 rank[i].parentNode.nextElementSibling.classList.add('hide');
             }
-        }
-    }
+        } */
 }
 
 function showProsCons() {
@@ -71,14 +78,6 @@ function showProsCons() {
             rank[i].parentElement.nextElementSibling.nextElementSibling.classList.add('hide');
         }
     }
-}
-
-function clearProsCons() {
-    var button = event.srcElement;
-    var dropdown = button.parentElement.parentElement.firstElementChild.nextElementSibling;
-    dropdown.selectedIndex = 0;
-    setSpend();
-    tallyHD();
 }
 
 function populateDropdowns() {
@@ -101,9 +100,9 @@ function populateDropdowns() {
     dropdown.add(defaultOption);
     dropdown.selectedIndex = 0;
 
-    for (let i = 0; i < levels.length; i++) {
+    for (let i = 0; i < powerLevels.length; i++) {
         option = document.createElement('option');
-        option.text = powerLevels[levels[i]].name;
+        option.text = powerLevels[i].name;
         option.value = i;
         dropdown.add(option);
     }
@@ -157,10 +156,11 @@ function populateDropdowns() {
 }
 
 function populateForm() {
+    // Traits
     let traitContainer = document.getElementById('traitContainer');
-    for (let i = 0; i < trait.length; i++) {
-        let noSpaceName = traits[i].name.replace(/\s/g, '');
+    for (let i = 0; i < traits.length; i++) {
         traitContainer.innerHTML +=
+            '<div class="trait" id="' + noSpaceName(traits[i].name) + 'Group" data-name="' + traits[i].name + '">' +
             '<div class="input-group mt-3">' +
             '<div class="input-group w-100">' +
             '<span class="input-group-text w-100">' + traits[i].name + '</span>' +
@@ -168,46 +168,47 @@ function populateForm() {
             '<div class="input-group">' +
             '<div class="input-group-prepend">' +
             '<span class="input-group-text">Points spent:</span>' +
-            '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
+            '<span class="input-group-text spend" id="' + noSpaceName(traits[i].name) + 'Spend">0</span>' +
             '<span class="input-group-text">Rank:</span>' +
             '</div>' +
-            '<input type="number" class="form-control trait rank" id="' + noSpaceName + 'Value" value="2" min="1">' +
+            '<input type="number" class="form-control rank" id="' + noSpaceName(traits[i].name) + 'Value" value="2" min="1">' +
             '<div class="input-group-append">' +
-            '<span class="input-group-text hide" id="weak" data-toggle="tooltip" title="You\re only allowed 3 weak attributes">Weak</span>' +
+            '<span class="input-group-text weak" hidden data-toggle="tooltip" title="You\re only allowed 3 weak attributes">Weak</span>' +
             '</div>' +
             '</div>' +
-            '<div class="input-group hide">' +
+            '<div class="input-group ' + noSpaceName(traits[i].name) + 'ps">' +
             '<div class="input-group-prepend">' +
             '<span class="input-group-text w-100">Power Source:</span></div>' +
-            '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
+            '<select class="custom-select powersource" id="' + noSpaceName(traits[i].name) + 'PowerSource">' +
             '<option></option>' +
             '</select>' +
             '</div>' +
-            '<select multiple class="custom-select pcs hide" id="' + noSpaceName + 'PCs">' +
-            '</select>';
+            '<select multiple class="custom-select pcs hide" id="' + noSpaceName(traits[i].name) + 'PCs">' +
+            '</select>' +
+            '</div>';
 
         for (let j = 0; j < prosCons.length; j++) {
-            let dropdown = document.getElementById(noSpaceName + 'PCs');
+            let dropdown = document.getElementById(noSpaceName(traits[i].name) + 'PCs');
             if (prosCons[j].tpp == traits[i].name) {
                 option = document.createElement('option');
                 option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
-                option.value = prosCons[j].cost;
+                option.dataset.cost = prosCons[j].cost;
                 dropdown.add(option);
             }
             if (prosCons[j].tpp == 'tpp') {
                 option = document.createElement('option');
                 option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
-                option.value = prosCons[j].cost;
+                option.dataset.cost = prosCons[j].cost;
                 dropdown.add(option);
             }
         }
     }
+    // Powers
     let powerContainer = document.getElementById('powerContainer');
     for (let i = 0; i < powers.length; i++) {
-        let noSpaceName = powers[i].name.replace(/\s/g, '');
         if (powers[i].strong === true) {
-
             powerContainer.innerHTML +=
+                '<div class="power ' + noSpaceName(powers[i].name) + 'Group" data-name="' + powers[i].name + '">' +
                 '<div class="input-group mt-3">' +
                 '<div class="input-group w-100">' +
                 '<span class="input-group-text w-100">' + powers[i].name + '</span>' +
@@ -215,46 +216,48 @@ function populateForm() {
                 '<div class="input-group">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text">Points spent:</span>' +
-                '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
+                '<span class="input-group-text spend" id="' + noSpaceName(powers[i].name) + 'Spend">0</span>' +
                 '<span class="input-group-text">Rank:</span>' +
                 '</div>' +
-                '<input type="number" class="form-control power rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
+                '<input type="number" class="form-control rank" id="' + noSpaceName(powers[i].name) + 'Value" value="0" min="0">' +
                 '<div class="input-group-append">' +
                 '<span class="input-group-text" id="strong" data-toggle="tooltip" title="Strong attributes cost twice as much">Strong</span>' +
                 '</div>' +
                 '</div>' +
-                '<div class="input-group hide">' +
+                '<div class="input-group ' + noSpaceName(powers[i].name) + 'ps hide">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Power Source:</span></div>' +
-                '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
+                '<select class="custom-select powersource" id="' + noSpaceName(powers[i].name) + 'PowerSource">' +
                 '<option></option>' +
                 '</select>' +
                 '</div>' +
-                '<select multiple class="custom-select pcs hide" id="' + noSpaceName + 'PCs">' +
-                '</select>';
+                '<select multiple class="custom-select pcs hide" id="' + noSpaceName(powers[i].name) + 'PCs">' +
+                '</select>' +
+                '</div>';
             for (let j = 0; j < prosCons.length; j++) {
-                let dropdown = document.getElementById(noSpaceName + 'PCs');
+                let dropdown = document.getElementById(noSpaceName(powers[i].name) + 'PCs');
                 if (prosCons[j].tpp == powers[i].name) {
                     option = document.createElement('option');
                     option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
-                    option.value = prosCons[j].cost;
+                    option.dataset.cost = prosCons[j].cost;
                     dropdown.add(option);
                 }
                 if (prosCons[j].tpp == 'tp') {
                     option = document.createElement('option');
                     option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
-                    option.value = prosCons[j].cost;
+                    option.dataset.cost = prosCons[j].cost;
                     dropdown.add(option);
                 }
                 if (prosCons[j].tpp == 'tpp') {
                     option = document.createElement('option');
                     option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
-                    option.value = prosCons[j].cost;
+                    option.dataset.cost = prosCons[j].cost;
                     dropdown.add(option);
                 }
             }
         } else {
             powerContainer.innerHTML +=
+                '<div class="power ' + noSpaceName(powers[i].name) + 'Group" data-name="' + powers[i].name + '">' +
                 '<div class="input-group mt-3">' +
                 '<div class="input-group w-100">' +
                 '<span class="input-group-text w-100">' + powers[i].name + '</span>' +
@@ -262,49 +265,51 @@ function populateForm() {
                 '<div class="input-group">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text">Points spent:</span>' +
-                '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
+                '<span class="input-group-text spend" id="' + noSpaceName(powers[i].name) + 'Spend">0</span>' +
                 '<span class="input-group-text">Rank:</span>' +
                 '</div>' +
-                '<input type="number" class="form-control power rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
+                '<input type="number" class="form-control rank" id="' + noSpaceName(powers[i].name) + 'Value" value="0" min="0">' +
                 '</div>' +
-                '<div class="input-group hide">' +
+                '<div class="input-group ' + noSpaceName(powers[i].name) + 'ps hide">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Power Source:</span></div>' +
-                '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
+                '<select class="custom-select powersource" id="' + noSpaceName(powers[i].name) + 'PowerSource">' +
                 '<option></option>' +
                 '</select>' +
                 '</div>' +
-                '<select multiple class="custom-select pcs hide" id="' + noSpaceName + 'PCs">' +
-                '</select>';
+                '<select multiple class="custom-select pcs hide" id="' + noSpaceName(powers[i].name) + 'PCs">' +
+                '</select>' +
+                '</div>';
             for (let j = 0; j < prosCons.length; j++) {
-                let dropdown = document.getElementById(noSpaceName + 'PCs');
+                let dropdown = document.getElementById(noSpaceName(powers[i].name) + 'PCs');
                 if (prosCons[j].tpp == powers[i].name) {
                     option = document.createElement('option');
                     option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
-                    option.value = prosCons[j].cost;
+                    option.dataset.cost = prosCons[j].cost;
                     dropdown.add(option);
                 }
                 if (prosCons[j].tpp == 'tp') {
                     option = document.createElement('option');
                     option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
-                    option.value = prosCons[j].cost;
+                    option.dataset.cost = prosCons[j].cost;
                     dropdown.add(option);
                 }
                 if (prosCons[j].tpp == 'tpp') {
                     option = document.createElement('option');
                     option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
-                    option.value = prosCons[j].cost;
+                    option.dataset.cost = prosCons[j].cost;
                     dropdown.add(option);
                 }
             }
 
         }
     }
+    //Perks
     let perkContainer = document.getElementById('perkContainer');
     for (let i = 0; i < perks.length; i++) {
-        let noSpaceName = perks[i].name.replace(/\s/g, '');
         if (perks[i].multiple === true) {
             perkContainer.innerHTML +=
+                '<div class="perk ' + noSpaceName(perks[i].name) + 'Group" data-name="' + perks[i].name + '">' +
                 '<div class="input-group mt-3">' +
                 '<div class="input-group w-100">' +
                 '<span class="input-group-text w-100">' + perks[i].name + '</span>' +
@@ -312,37 +317,39 @@ function populateForm() {
                 '<div class="input-group">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text">Points spent:</span>' +
-                '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
+                '<span class="input-group-text spend" id="' + noSpaceName(perks[i].name) + 'Spend">0</span>' +
                 '<span class="input-group-text">Rank:</span>' +
                 '</div>' +
-                '<input type="number" class="form-control perk rank" id="' + noSpaceName + 'Value" value="0" min="0">' +
+                '<input type="number" class="form-control rank" id="' + noSpaceName(perks[i].name) + 'Value" value="0" min="0">' +
                 '</div>' +
-                '<div class="input-group hide">' +
+                '<div class="input-group ' + noSpaceName(perks[i].name) + 'ps hide">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Power Source:</span></div>' +
-                '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
+                '<select class="custom-select powersource" id="' + noSpaceName(perks[i].name) + 'PowerSource">' +
                 '<option></option>' +
                 '</select>' +
                 '</div>' +
-                '<select multiple class="custom-select pcs hide" id="' + noSpaceName + 'PCs">' +
-                '</select>';
+                '<select multiple class="custom-select pcs hide" id="' + noSpaceName(perks[i].name) + 'PCs">' +
+                '</select>' +
+                '</div>';
             for (let j = 0; j < prosCons.length; j++) {
-                let dropdown = document.getElementById(noSpaceName + 'PCs');
+                let dropdown = document.getElementById(noSpaceName(perks[i].name) + 'PCs');
                 if (prosCons[j].tpp == perks[i].name) {
                     option = document.createElement('option');
                     option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
-                    option.value = prosCons[j].cost;
+                    option.dataset.cost = prosCons[j].cost;
                     dropdown.add(option);
                 }
                 if (prosCons[j].tpp == 'tpp') {
                     option = document.createElement('option');
                     option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
-                    option.value = prosCons[j].cost;
+                    option.dataset.cost = prosCons[j].cost;
                     dropdown.add(option);
                 }
             }
         } else {
             perkContainer.innerHTML +=
+                '<div class="perk ' + noSpaceName(perks[i].name) + 'Group" data-name="' + perks[i].name + '">' +
                 '<div class="input-group mt-3">' +
                 '<div class="input-group w-100">' +
                 '<span class="input-group-text w-100">' + perks[i].name + '</span>' +
@@ -350,32 +357,33 @@ function populateForm() {
                 '<div class="input-group">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text">Points spent:</span>' +
-                '<span class="input-group-text spend" id="' + noSpaceName + 'Spend">0</span>' +
+                '<span class="input-group-text spend" id="' + noSpaceName(perks[i].name) + 'Spend">0</span>' +
                 '<span class="input-group-text">Rank:</span>' +
                 '</div>' +
-                '<input type="number" class="form-control perk rank" id="' + noSpaceName + 'Value" value="0" min="0" max="1">' +
+                '<input type="number" class="form-control rank" id="' + noSpaceName(perks[i].name) + 'Value" value="0" min="0" max="1">' +
                 '</div>' +
-                '<div class="input-group hide">' +
+                '<div class="input-group ' + noSpaceName(perks[i].name) + 'ps hide">' +
                 '<div class="input-group-prepend">' +
                 '<span class="input-group-text w-100">Power Source:</span></div>' +
-                '<select class="custom-select powersource" id="' + noSpaceName + 'PowerSource">' +
+                '<select class="custom-select powersource" id="' + noSpaceName(perks[i].name) + 'PowerSource">' +
                 '<option></option>' +
                 '</select>' +
                 '</div>' +
-                '<select multiple class="custom-select pcs hide" id="' + noSpaceName + 'PCs">' +
-                '</select>';
+                '<select multiple class="custom-select pcs hide" id="' + noSpaceName(perks[i].name) + 'PCs">' +
+                '</select>' +
+                '</div>';
             for (let j = 0; j < prosCons.length; j++) {
-                let dropdown = document.getElementById(noSpaceName + 'PCs');
+                let dropdown = document.getElementById(noSpaceName(perks[i].name) + 'PCs');
                 if (prosCons[j].tpp == perks[i].name) {
                     option = document.createElement('option');
                     option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
-                    option.value = prosCons[j].cost;
+                    option.dataset.cost = prosCons[j].cost;
                     dropdown.add(option);
                 }
                 if (prosCons[j].tpp == 'tpp') {
                     option = document.createElement('option');
                     option.text = prosCons[j].name + ' (' + prosCons[j].cost + ')';
-                    option.value = prosCons[j].cost;
+                    option.dataset.cost = prosCons[j].cost;
                     dropdown.add(option);
                 }
             }
@@ -387,8 +395,6 @@ function heroDice() {
     let x = document.getElementById('gameTierSelect').value;
     if (x == 999) {
         document.getElementById('gameTierHD').innerHTML = "";
-        //document.getElementById('gameTierMax').innerHTML = "";
-
         let ranks = document.getElementsByClassName('maxRank')
         for (let i = 0; i < ranks.length; i++) {
             ranks[i].innerHTML = "";
@@ -396,20 +402,19 @@ function heroDice() {
         heroDicePool = "";
     }
     else {
-        document.getElementById('gameTierHD').innerHTML = powerLevels[levels[x]].hd;
-        //document.getElementById('gameTierMax').innerHTML = powerLevels[levels[x]].maxRank;
+        document.getElementById('gameTierHD').innerHTML = powerLevels[x].hd;
 
         let ranks = document.getElementsByClassName('maxRank')
         for (let i = 0; i < ranks.length; i++) {
-            ranks[i].innerHTML = powerLevels[levels[x]].maxRank;
+            ranks[i].innerHTML = powerLevels[x].maxRank;
         }
 
-        heroDicePool = powerLevels[levels[x]].hd;
-        hdRemaining = powerLevels[levels[x]].hd;
+        heroDicePool = powerLevels[x].hd;
+        hdRemaining = powerLevels[x].hd;
 
-        let selectInputs = document.querySelectorAll('.trait, .power');
+        let selectInputs = document.querySelectorAll('.rank');
         for (let i = 0; i < selectInputs.length; i++) {
-            selectInputs[i].max = powerLevels[levels[x]].maxRank;
+            selectInputs[i].max = powerLevels[x].maxRank;
         }
         document.getElementById('hdRemaining').innerHTML = hdRemaining;
     }
@@ -434,67 +439,43 @@ function tallyHD() {
 }
 
 function setSpend() {
-    //loop for traits
-    let selectTraits = document.querySelectorAll('.trait');
-    for (i = 0; i < selectTraits.length; i++) {
-        let noSpaceName = traits[i].name.replace(/\s/g, '');
-        let currentRank = parseInt(selectTraits[i].value);
-        traits[i].rank = currentRank - 2;
-        let pcSelect = document.getElementById(noSpaceName + 'PCs');
+    document.querySelectorAll('.trait, .power, .perk').forEach(container => {
+        let traitSpend = parseInt(container.querySelector('.rank').value);
         let pcSpend = 0;
-        for (j = 0; j < pcSelect.length; j++) {
-            opt = pcSelect.options[j];
-            if (opt.selected === true) {
-                pcSpend += parseInt(opt.value);
-            }
+        if (container.classList.contains('trait')) {
+            traitSpend -= 2;
         }
-        document.getElementById(noSpaceName + 'Spend').innerHTML = traits[i].rank + pcSpend;
-    }
+        if (container.classList.contains('power')) {
+            powers.forEach(power => {
+                if (power.name == container.dataset.name && power.strong) {
+                    traitSpend *= 2;
+                }
+            })
+        }
+        if (container.classList.contains('perk')) {
+            perks.forEach(perk => {
+                if (perk.name == container.dataset.name) {
+                    traitSpend *= perk.cost;
+                }
+            })
+        }
+        container.querySelectorAll('.pcs option:checked').forEach(option => {
+            if (option.dataset.cost != undefined) {
+                pcSpend += parseInt(option.dataset.cost);
+            }
+        })
+        container.querySelector('.spend').innerText = traitSpend + pcSpend;
+    })
+}
 
-    //loop for powers
-    let selectPowers = document.querySelectorAll('.power');
-    for (i = 0; i < selectPowers.length; i++) {
-        let noSpaceName = powers[i].name.replace(/\s/g, '');
-        let pcSelect = document.getElementById(noSpaceName + 'PCs');
-        let currentRank = parseInt(selectPowers[i].value);
-        if (powers[i].strong === true) {
-            powers[i].rank = Math.trunc(currentRank * 2);
-        }
-        else {
-            powers[i].rank = currentRank;
-        }
-        let pcSpend = 0;
-        for (j = 0; j < pcSelect.length; j++) {
-            opt = pcSelect.options[j];
-            if (opt.selected === true) {
-                pcSpend += parseInt(opt.value);
-            }
-        }
-        document.getElementById(noSpaceName + 'Spend').innerHTML = powers[i].rank + pcSpend;
-    }
-    //loop for perks
-    let selectperks = document.querySelectorAll('.perk');
-    for (i = 0; i < selectperks.length; i++) {
-        let noSpaceName = perks[i].name.replace(/\s/g, '');
-        let pcSelect = document.getElementById(noSpaceName + 'PCs');
-        let currentRank = parseInt(selectperks[i].value);
-        perks[i].rank = currentRank;
-        let pcSpend = 0;
-        for (j = 0; j < pcSelect.length; j++) {
-            opt = pcSelect.options[j];
-            if (opt.selected === true) {
-                pcSpend += parseInt(opt.value);
-            }
-        }
-        document.getElementById(noSpaceName + 'Spend').innerHTML = perks[i].cost * perks[i].rank + pcSpend;
-    }
+function noSpaceName(name) {
+    return name.replace(/[^a-zA-Z0-9]/g, '');
 }
 
 const tier = document.getElementById('gameTierSelect');
 tier.addEventListener('change', heroDice);
 
 const form = document.getElementById('builderForm');
-form.addEventListener('change', weakAttribute);
 form.addEventListener('change', setSpend);
 form.addEventListener('change', tallyHD);
 form.addEventListener('change', advancement);
