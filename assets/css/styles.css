@@ -18,7 +18,8 @@ ul {
 }
 .header {
     background-color: black;
-    color: white
+    color: white;
+    White-space: nowrap
 }
 .subheader {
     font-size: 1.2rem;
