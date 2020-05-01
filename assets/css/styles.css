@@ -16,3 +16,55 @@ body {
 ul {
     width: 100%;
 }
+.header {
+    background-color: black;
+    color: white
+}
+.subheader {
+    font-size: 1.2rem;
+    background-color: rgb(240, 240, 240)
+}
+.Magic {
+    background-color: blue;
+}
+.Natural{
+    background-color: green;
+}
+
+.Psionic{
+    background-color: blueviolet;
+}
+
+.Super{
+    background-color: rgb(255, 132, 132);
+}
+
+.Tech{
+    background-color: teal;
+}
+
+.Training{
+background-color: yellow;
+}
+
+.Custom{
+background-color: orange;
+}
+
+
+/* layout helpers */
+/* .row {
+    border-style: solid; 
+    border-radius: 1px;
+    border-color: red;
+}
+.col, .col-1, .col-2, .col-3 {
+    border-style: solid;
+    border-radius: 1px;
+    border-color: green;
+}
+span {
+    border-style: solid; 
+    border-radius: 1px;
+    border-color: blue;
+} */

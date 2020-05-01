@@ -31,6 +31,5 @@ function submitFormNext() {
 }
 
 function submitFormNextAgain(){
-    location.replace('sheet.html')
-    //navigate to character sheet
+    location.href('sheet.html')
 }
